@@ -3,7 +3,7 @@ import AddOutlined from '@material-ui/icons/AddOutlined';
 import MoreHorizOutlined from '@material-ui/icons/MoreHorizOutlined';
 import { h } from './utils';
 import './note-header.scss';
-function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, targetRef, position, count, title }) {
+function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, position, count, title }) {
     return h('div',{
         className:`${prefix}--header`
     },[
@@ -13,8 +13,7 @@ function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, targetRef, 
         }, h(AddOutlined) ),
         h('span',{
             key: 'note-header-button-2',
-            className:"title", 
-            ref:targetRef
+            className:"title"
         },title),
         h('button',{
             key: 'note-header-button-3',

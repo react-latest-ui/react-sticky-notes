@@ -1,14 +1,12 @@
-const pkg = require('./package.json');
-const path = require('path');
+
+var path = require('path');
 const webpack = require("webpack");
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/app.js',
     mode: "development",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
-        library: '',
-        libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -35,11 +33,11 @@ module.exports = {
             }]
 
     },
-    /*externals: {
-        'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
-    }*/
-    externals: [
-        ...Object.keys(pkg.peerDependencies),
-        ...Object.keys(pkg.dependencies)
-    ]
+    devServer: {
+        contentBase: path.join(__dirname, "public/"),
+        port: 4000,
+        publicPath: "http://localhost:4000/dist/",
+        hotOnly: true
+    },
+    plugins: [new webpack.HotModuleReplacementPlugin()]
 };

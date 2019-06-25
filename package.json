@@ -15,6 +15,9 @@
 		"react-dom": "^16.8.6",
 		"react-scripts": "3.0.1"
 	},
+	"peerDependencies": {
+		"react": "^16.8.6"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.4.5",
 		"@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -26,10 +29,10 @@
 		"style-loader": "^0.23.0",
 		"webpack": "^4.19.1",
 		"webpack-cli": "^3.1.1",
-		"webpack-dev-server": "^3.1.8"
+		"webpack-dev-server": "^3.7.2"
 	},
 	"scripts": {
-		"start": "webpack-dev-server --mode development",
+		"start": "webpack-dev-server --mode development --config webpack.config.dev-server.js",
 		"build": "webpack --mode production"
 	}
 }
