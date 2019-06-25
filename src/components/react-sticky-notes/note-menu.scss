@@ -1,0 +1,45 @@
+@keyframes shadowanim {
+    0% {box-shadow:0px 0px 0px 25px inset rgba(0,0,0,0.15),0px 0px 0px 15px inset rgba(0,0,0,0.15),0px 0px 0px 5px inset rgba(0,0,0,0.15);opacity: 0.2;}
+    20% {opacity: 0.9; }
+    50% {opacity: 1; }
+    70% {opacity: 0.9; }
+    100% {box-shadow:0px 0px 0px 0px inset rgba(0,0,0,0.15); opacity: 0.2; }
+}
+.s-notes{
+    &--colors{
+        padding: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__color{
+            display: flex;
+            flex-grow: 1;
+            flex-basis: 20%;
+            padding: 1px;
+            button{
+                display: block;
+                cursor: pointer;
+                border-radius: 50%;
+                border: none;
+                box-shadow: 0px 0px 0px 5px inset rgba(0,0,0,.15);
+                padding:0 0 100%;
+                opacity: 1;
+                flex-grow: 1;
+                transition: all 0.4s linear;
+                outline: none;
+                &:hover,&:focus{
+                    box-shadow: 0px 0px 0px 10px inset rgba(0,0,0,.15);
+                }
+            }
+            &--selected{
+                button{
+                    animation-name: shadowanim;
+                    animation-duration: 2s;
+                    animation-iteration-count: 100;
+                    opacity: .75;
+                }
+            }
+        }
+    }
+}
