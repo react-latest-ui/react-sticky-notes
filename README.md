@@ -1,40 +1,74 @@
 # React Sticky Notes
 
-Make your React components sticky!
+Sticky Notes for React Application
 
 ## Installation
 
-```sh
-npm install react-sticky-notes
+Install the React Sticky Notes [package](https://www.npmjs.com/package/@react-latest-ui/react-sticky-notes) package using [npm](https://www.npmjs.com/):
+
+```bash
+npm install react-sticky-notes --save
 ```
 
-## Overview & Basic Example
+## Features
 
-The goal of `react-sticky-notes` is make it easier for developers to build UIs that have sticky elements. Some examples include a sticky navbar, or a two-column layout where the left side sticks while the right side scrolls.
+* Pure React Sticky Notes
+* Draggable & Resizable Stickies
+* Inline Content Editable
+* Configurable Sticky Colors
 
-`react-sticky-notes` works by calculating the position of a `<ReactStickyNotes>` component.
+## Usage
 
-```js
-  <ReactStickyNotes width="600px" height="400px" />
+```javascript
+import React, { Component } from 'react';
+import ReactStickyNotes from 'react-sticky-notes'; //ES6
+
+class MyApp extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			notes: []
+		}
+	}  
+	render() {
+		return (
+			<ReactStickyNotes
+				notes={this.state.notes}
+				icons={this.state.icons}
+				width={'100%'}
+				height={'100%'}
+			/>
+		)
+	}
+});
 ```
-* `width` _(string)_ - css width of the container
-* `height` _(number)_ - css height of the container
-### Full Example
 
-Here's an example of all of those pieces together:
+### React Stickies Props
 
-app.js
+```javascript
 
-```js
-import React from 'react';
-import ReactStickyNotes from 'react-sticky-notes';
-// ...
+// Display title on header
+title: ?string,
 
-class App extends React.Component {
-  render() {
-    return (
-      <ReactStickyNotes width="600px" height="400px" />
-    );
-  },
-};
-``
+// Configurable custom sticky notes colors
+colors: ?Array = [HexCodes],
+
+// Layout configuration
+// Container width
+width: ?String,
+// Container height
+height: ?String,
+```
+
+## Contribute
+
+If you have a feature request, please add it as an issue or make a pull request.
+
+## TODO List
+
+- [x] Basic Notes with CRUD
+- [x] Draggable Notes
+- [x] Update Notes state
+- [x] Notes position handling
+- [x] Resizable handles on corners
+- [ ] ---- 
