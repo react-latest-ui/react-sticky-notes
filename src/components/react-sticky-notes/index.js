@@ -52,12 +52,13 @@ class ReactStickyNotes extends React.Component{
 	  }
 	render(){
         const prefix = 's-notes';
-		const { width, height } = this.props;
+		const { width, height, backgroundColor } = this.props;
 		return h(Notes,{
 			...this.state,
 			prefix,
 			width,
 			height,
+			backgroundColor,
 			addItem:this.addItem, 
 			updateItem:this.updateItem, 
 			deleteItem:this.deleteItem,
