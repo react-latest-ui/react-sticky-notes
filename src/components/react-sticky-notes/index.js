@@ -1,8 +1,7 @@
 import React from 'react';
 import Notes from './notes';
 import reducer from './reducers/reducer';
-import { h, colorCodes, getNotes } from './utils';
-const defaultIcons = { add: h('span','add new'), menu: h('span','menu'), delete: h('span','delete') }
+import { h, colorCodes, getNotes, iconAdd, iconMenu, iconTrash } from './utils';
 class ReactStickyNotes extends React.Component{
 	constructor(){
 		super();
@@ -60,7 +59,12 @@ class ReactStickyNotes extends React.Component{
 			width,
 			height,
 			backgroundColor,
-			icons: { ...defaultIcons, ...icons },
+			icons: { 
+				add:iconAdd,
+				menu:iconMenu, 
+				trash:iconTrash,
+				...icons 
+			},
 			addItem:this.addItem, 
 			updateItem:this.updateItem, 
 			deleteItem:this.deleteItem,
