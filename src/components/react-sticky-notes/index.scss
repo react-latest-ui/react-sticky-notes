@@ -12,4 +12,50 @@
     *,*::before,*::after{
         box-sizing: border-box;
     }
+    .s-icon{
+        font-size: 16px;
+        position: relative;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        white-space: nowrap;
+        &:before,&:after{
+            display: inline-block;
+        }
+        &--add,&--trash{
+            backface-visibility: hidden;
+            -webkit-font-smoothing: subpixel-antialiased;
+            &:before,&:after{
+                content: "";
+                background-color: rgba(255, 255, 255, 0.75);
+                position: absolute;
+            }
+            &:before{
+                width: 1em;
+                height: .13em;
+                top: 50%;
+                left: 0;
+                margin-top: -.06em;                
+            }
+            &:after{
+                width: .12em;
+                height: 1em;
+                left: 50%;
+                top: 0;
+                margin-left: -.06em;  
+            }
+        }
+        &--trash{
+            transform: perspective(1px) scale(1.1) rotate(50deg);
+            transform-origin: 50% 50%;
+        }
+        &--menu{
+            position: relative;
+            width: auto;
+            &:before{
+                content: "•••";
+                letter-spacing: .1em;
+            }
+        }
+    }
 }
