@@ -11,7 +11,7 @@ class Note extends React.Component{
         this.targetRef = React.createRef();
     }
     render(){
-    	const { index, count, toggle, setToggle, prefix, title, text, color, setColor, addItem, updateItem, deleteItem, colorCodes, position } = this.props;
+    	const { index, count, toggle, setToggle, prefix, title, text, color, setColor, addItem, updateItem, deleteItem, colorCodes, position, icons } = this.props;
         return h(NoteDraggable,{
             className:`${prefix}--note`,
             position,
@@ -27,6 +27,7 @@ class Note extends React.Component{
                 targetRef: this.targetRef,
                 index, 
                 prefix, 
+                icons,
                 addItem, 
                 deleteItem, 
                 setToggle, 
