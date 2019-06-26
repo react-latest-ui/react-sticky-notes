@@ -1,4 +1,4 @@
-# react-sticky-notes
+# React Sticky Notes
 
 Make your React components sticky!
 
