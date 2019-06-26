@@ -27,7 +27,7 @@ app.js
 
 ```js
 import React from 'react';
-import { StickyContainer, Sticky } from 'react-sticky-notes';
+import ReactStickyNotes from 'react-sticky-notes';
 // ...
 
 class App extends React.Component {
