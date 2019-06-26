@@ -1,7 +1,6 @@
 import { h } from './utils';
 import './note-header.scss';
 function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, position, count, title, targetRef, icons }) {
-    console.log(icons)
     return h('div',{
         className:`${prefix}--header`
     },[
