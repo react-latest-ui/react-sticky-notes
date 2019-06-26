@@ -26,7 +26,7 @@ function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, position, c
             disabled: count===1?true:false,
             onClick:()=>deleteItem(index)
         }, 
-            h(icons.delete)
+            h(icons.trash)
         ),
     ])
 }
