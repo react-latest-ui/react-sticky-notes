@@ -58,6 +58,9 @@ export default class Draggable {
             }
             if( this.currentY>y1 ){
                 this.currentY = y1;
+                if(el.parentElement.offsetHeight<el.offsetHeight){
+                    this.currentY = 0;
+                }
             }
 
             this.xOffset = this.currentX;
