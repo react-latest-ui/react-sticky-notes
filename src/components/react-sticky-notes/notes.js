@@ -19,7 +19,7 @@ class Notes extends React.Component{
         this.props.updateItem(index,{color})
     }
     render(){
-        const {prefix, items, addItem, updateItem, deleteItem, colorCodes, width, height, backgroundColor} = this.props;
+        const {prefix, items, addItem, updateItem, deleteItem, colorCodes, width, height, backgroundColor, icons} = this.props;
         return h('div', { className: prefix, style:{width, height, backgroundColor}  },
             items?items.map((item, index)=>
                 h(Note,{ 
@@ -28,6 +28,7 @@ class Notes extends React.Component{
                     key: index, 
                     prefix, 
                     index, 
+                    icons,
                     addItem, 
                     updateItem, 
                     deleteItem, 
