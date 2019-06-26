@@ -1,30 +1,33 @@
-import DeleteOutlined from '@material-ui/icons/DeleteOutlined';
-import AddOutlined from '@material-ui/icons/AddOutlined';
-import MoreHorizOutlined from '@material-ui/icons/MoreHorizOutlined';
 import { h } from './utils';
 import './note-header.scss';
-function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, targetRef, position, count, title }) {
+function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, position, count, title, targetRef, icons }) {
     return h('div',{
         className:`${prefix}--header`
     },[
         h('button',{
             key: 'note-header-button-1',
             onClick:()=>addItem(index, {position})
-        }, h(AddOutlined) ),
+        }, 
+            h(icons.add)
+        ),
         h('span',{
             key: 'note-header-button-2',
-            className:"title", 
-            ref:targetRef
+            className:"title",
+            ref: targetRef
         },title),
         h('button',{
             key: 'note-header-button-3',
-            onClick:()=>setToggle(toggle=>toggle===index+1?false:index+1)
-        }, h(MoreHorizOutlined) ),
+            onClick:()=>setToggle(index+1)
+        }, 
+            h(icons.menu) 
+        ),
         h('button',{
             key: 'note-header-button-4',
             disabled: count===1?true:false,
             onClick:()=>deleteItem(index)
-        }, h(DeleteOutlined) ),
+        }, 
+            h(icons.trash)
+        ),
     ])
 }
 export default NoteHeader;

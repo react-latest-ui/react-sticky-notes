@@ -1,6 +1,6 @@
 import { h } from './utils'
 import './note-menu.scss';
-function NoteMenu({ index, prefix, color, colorCodes, onColorSelect }) {
+function NoteMenu({ index, prefix, color, colorCodes, setColor }) {
     return h('div', {
         className: `${prefix}--colors`
     }, colorCodes.map((colorCode) => h('div', {
@@ -9,7 +9,7 @@ function NoteMenu({ index, prefix, color, colorCodes, onColorSelect }) {
     },
         h('button', {
             name: colorCode,
-            onClick: () => onColorSelect(index, colorCode),
+            onClick: () => setColor(index, colorCode),
             style: {
                 backgroundColor: `hsl(${colorCode},50%, 50%)`
             }
