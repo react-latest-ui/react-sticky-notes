@@ -2,17 +2,17 @@ import React from 'react';
 import NoteHeader from './note-header';
 import NoteText from './note-text';
 import NoteMenu from './note-menu';
-//import NoteDraggable from './note-draggable';
+import NoteDraggable from './note-draggable';
 import { h } from './utils';
 import './note.scss';
 class Note extends React.Component{
     constructor(props){
         super(props);
+        this.targetRef = React.createRef();
     }
     render(){
-		const props = this.props;
-    	const { index,toggle, prefix, color, updateItem, colorCodes, position } = this.props;
-        return h('div',{
+    	const { index, count, toggle, setToggle, prefix, title, text, color, setColor, addItem, updateItem, deleteItem, colorCodes, position } = this.props;
+        return h(NoteDraggable,{
             className:`${prefix}--note`,
             position,
             onDragComplete:(position)=>updateItem(index, {position}),
@@ -22,9 +22,16 @@ class Note extends React.Component{
             }
         },[
             h(NoteHeader, {
-                ...props,
                 key:'note-header',
-                position
+                targetRef: this.targetRef,
+                index, 
+                prefix, 
+                addItem, 
+                deleteItem, 
+                setToggle, 
+                position, 
+                count, 
+                title
             }),
             h('div',{
                 key:'note-body',
@@ -33,7 +40,7 @@ class Note extends React.Component{
                     backgroundColor: toggle===index+1?"#ffffff":""
                 }
             },
-                toggle===index+1&&colorCodes?h(NoteMenu, { ...props, key: 'note-menu', colorCodes, updateItem }):h(NoteText, {...props, key: 'note-text'})
+                toggle===index+1&&colorCodes?h(NoteMenu, { key: 'note-menu', colorCodes, updateItem, index, prefix, color, setColor, colorCodes }):h(NoteText, { key: 'note-text', index, prefix, text, updateItem })
             )
     
         ])

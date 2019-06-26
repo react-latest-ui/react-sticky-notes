@@ -2,15 +2,17 @@ import React from 'react';
 import Notes from './notes';
 import reducer from './reducers/reducer';
 import { h, colorCodes, getNotes } from './utils';
-const dispatch = () => {
-	
-}
 class ReactStickyNotes extends React.Component{
 	constructor(){
 		super();
 		this.state = {
 			items: getNotes(colorCodes)
 		};
+	}
+	dispatch = ({type,payload}) => {
+		this.setState(
+			reducer(this.state,{type,payload})
+		)
 	}
 	addItem = (index, {position}) => {
 		const newProps = {
@@ -24,7 +26,7 @@ class ReactStickyNotes extends React.Component{
 			y:0
 		  }
 		}
-		dispatch({
+		this.dispatch({
 			type: 'add',
 			payload:{
 			  ...newProps
@@ -32,7 +34,7 @@ class ReactStickyNotes extends React.Component{
 		});
 	  }
 	updateItem = (index, newProps ) => {
-		dispatch({
+		this.dispatch({
 			type: 'update',
 			payload:{
 			  index,
@@ -41,7 +43,7 @@ class ReactStickyNotes extends React.Component{
 		});
 	  }
 	 deleteItem = ( index ) => {
-		dispatch({
+		this.dispatch({
 			type: 'delete',
 			payload:{
 			  index
@@ -49,9 +51,11 @@ class ReactStickyNotes extends React.Component{
 		});
 	  }
 	render(){
+        const prefix = 's-notes';
 		const { width, height } = this.props;
 		return h(Notes,{
 			...this.state,
+			prefix,
 			width,
 			height,
 			addItem:this.addItem, 

@@ -23,10 +23,12 @@ export default class Draggable {
     }
     beingToForwarding() {
         const el = this.options.element;
-        [].forEach.call(el.parentElement.children, (elem) => {
-            elem.style.zIndex = 0;
-        });
-        el.style.zIndex = 1;
+        if(el){
+            [].forEach.call(el.parentElement.children, (elem) => {
+                elem.style.zIndex = 0;
+            });
+            el.style.zIndex = 1;
+        }
     }
     onClick = () => {
         this.beingToForwarding();
@@ -94,6 +96,8 @@ export default class Draggable {
         document.removeEventListener('mouseup', this.onMouseUp, null);
     }
     setTranslate(x, y) {
-        this.options.element.style.transform = `translate3d(${x}px,${y}px,0)`;
+        if(this.options.element){
+            this.options.element.style.transform = `translate3d(${x}px,${y}px,0)`;
+        }
     }
 }
