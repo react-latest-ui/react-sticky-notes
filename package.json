@@ -35,6 +35,7 @@
 	},
 	"scripts": {
 		"start": "webpack-dev-server --mode development --config webpack.config.dev-server.js",
+		"watch": "webpack --watch --mode production",
 		"build": "webpack --mode production"
 	}
 }

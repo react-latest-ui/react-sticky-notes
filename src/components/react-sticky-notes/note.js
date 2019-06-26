@@ -15,6 +15,7 @@ class Note extends React.Component{
         return h(NoteDraggable,{
             className:`${prefix}--note`,
             position,
+            target: this.targetRef,
             onDragComplete:(position)=>updateItem(index, {position}),
             onInit:(options)=>updateItem(index, options),
             style: {

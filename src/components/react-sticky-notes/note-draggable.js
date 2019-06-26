@@ -13,7 +13,7 @@ class NoteDraggable extends React.Component {
 		this.draggable = new Draggable();
 	}
 	componentDidMount() {
-		const el = this.element?this.element.current:null
+		const el = this.element?this.element.current:null;
 		const options = {
 			element: el, 
 			target: this.props.target?this.props.target.current:el, 
@@ -30,7 +30,7 @@ class NoteDraggable extends React.Component {
 		
 	}
 	onMouseDown = (e) => {
-		if(e.currentTarget===this.state.options.target){
+		if(e.target===this.state.options.target){
 			this.draggable.onMouseDown(e);
 			this.setState({
 				active: true
