@@ -27,22 +27,22 @@ class NoteDraggable extends React.Component {
 		this.setState({options}, ()=> {
 			this.draggable.init(options);
 		})
-		
 	}
 	onMouseDown = (e) => {
-		if(e.target===this.state.options.target){
+		if(this.state.active && e.target===this.state.options.target){
 			this.draggable.onMouseDown(e);
-			this.setState({
-				active: true
-			})
-		}else{
-			this.draggable.beingToForwarding();
 		}
 	}
 	onMouseUp = (e) => {
 		if(this.state.active){
 			this.draggable.onMouseUp(e);
 		}
+	}
+	onClick = (e) => {
+		this.setState({
+			active: true
+		})
+		this.draggable.beingToForwarding();
 	}
 	render() {
 		return (
