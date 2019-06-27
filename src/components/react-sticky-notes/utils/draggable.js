@@ -35,8 +35,7 @@ export default class Draggable {
     }
     onMouseMove = (e) => {
         if (this.active) {
-            
-            
+            const el = this.options.element;
             e.preventDefault();
             if (e.type === "touchmove") {
                 this.currentX = e.touches[0].clientX - this.initialX;
