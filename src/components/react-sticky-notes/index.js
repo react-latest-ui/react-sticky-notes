@@ -2,75 +2,90 @@ import React from 'react';
 import Notes from './notes';
 import reducer from './reducers/reducer';
 import { h, colorCodes, getNotes, iconAdd, iconMenu, iconTrash } from './utils';
-class ReactStickyNotes extends React.Component{
-	constructor(){
-		super();
+class ReactStickyNotes extends React.Component {
+	constructor(props) {
+		super(props);
+		const colors = props.colorCodes ? props.colorCodes : colorCodes;
 		this.state = {
-			items: getNotes(colorCodes)
+			colors,
+			items: getNotes(colors, props.notes)
 		};
 	}
-	dispatch = ({type,payload}) => {
+	dispatch = ({ type, payload }) => {
 		this.setState(
-			reducer(this.state,{type,payload})
+			reducer(this.state, { type, payload })
 		)
 	}
-	addItem = (index, {position}) => {
+	getColor() {
+		return this.state.colors[Math.floor(Math.random() * this.state.colors.length)];
+	}
+	addItem = (index, { position }) => {
 		const newProps = {
-		  color: colorCodes[Math.floor(Math.random()*colorCodes.length)],
-		  text:'', 
-		  position:position?{
-			x:position.x+24,
-			y:position.y+24
-		  }:{
-			x:0,
-			y:0
-		  }
+			color: this.getColor(),
+			text: '',
+			position: position ? {
+				x: position.x + 24,
+				y: position.y + 24
+			} : {
+					x: 0,
+					y: 0
+				}
 		}
 		this.dispatch({
 			type: 'add',
-			payload:{
-			  ...newProps
+			payload: {
+				...newProps
 			}
 		});
-	  }
-	updateItem = (index, newProps ) => {
+	}
+	updateItem = (index, newProps) => {
 		this.dispatch({
 			type: 'update',
-			payload:{
-			  index,
-			  ...newProps
+			payload: {
+				index,
+				...newProps
 			}
 		});
-	  }
-	 deleteItem = ( index ) => {
+	}
+	selectItem = (index, newProps) => {
+		this.dispatch({
+			type: 'select',
+			payload: {
+				index,
+				...newProps
+			}
+		});
+	}
+	deleteItem = (index) => {
 		this.dispatch({
 			type: 'delete',
-			payload:{
-			  index
+			payload: {
+				index
 			}
 		});
-	  }
-	render(){
-        const prefix = 's-notes';
+	}
+	render() {
+		const prefix = 's-notes';
 		const { width, height, backgroundColor, icons } = this.props;
-		return h(Notes,{
+		return h(Notes, {
 			...this.state,
 			prefix,
 			width,
 			height,
 			backgroundColor,
-			icons: { 
-				add:iconAdd,
-				menu:iconMenu, 
-				trash:iconTrash,
-				...icons 
+			icons: {
+				add: iconAdd,
+				menu: iconMenu,
+				trash: iconTrash,
+				...icons
 			},
-			addItem:this.addItem, 
-			updateItem:this.updateItem, 
-			deleteItem:this.deleteItem,
+			addItem: this.addItem,
+			updateItem: this.updateItem,
+			selectItem: this.selectItem,
+			deleteItem: this.deleteItem,
 			colorCodes
 		}, null);
-  }
+	}
 
 }
 export default ReactStickyNotes;

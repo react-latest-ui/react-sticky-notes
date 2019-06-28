@@ -27,7 +27,10 @@ class MyApp extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			notes: []
+			notes: [{
+				text:'',
+				color: "#ffffff",
+        	}]
 		}
 	}  
 	render() {

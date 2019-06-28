@@ -11,7 +11,7 @@ function NoteMenu({ index, prefix, color, colorCodes, setColor }) {
             name: colorCode,
             onClick: () => setColor(index, colorCode),
             style: {
-                backgroundColor: `hsl(${colorCode},50%, 50%)`
+                backgroundColor: colorCode
             }
         })
     )))

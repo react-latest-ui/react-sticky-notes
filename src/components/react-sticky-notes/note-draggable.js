@@ -16,7 +16,6 @@ class NoteDraggable extends React.Component {
 		const el = this.element?this.element.current:null;
 		const options = {
 			element: el, 
-			target: this.props.target?this.props.target.current:el, 
 			position: this.props.position?{
 				x: this.props.position.x,
 				y: this.props.position.y
@@ -29,7 +28,7 @@ class NoteDraggable extends React.Component {
 		})
 	}
 	onMouseDown = (e) => {
-		if(this.state.active && e.target===this.state.options.target){
+		if(this.state.active&&e.target===this.props.target.current){
 			this.draggable.onMouseDown(e);
 		}
 	}
@@ -41,8 +40,9 @@ class NoteDraggable extends React.Component {
 	onClick = (e) => {
 		this.setState({
 			active: true
+		}, ()=>{
+			this.props.onSelect(this.state.active);
 		})
-		this.draggable.beingToForwarding();
 	}
 	render() {
 		return (

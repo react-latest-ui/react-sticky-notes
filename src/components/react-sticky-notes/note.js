@@ -11,18 +11,20 @@ class Note extends React.Component{
         this.targetRef = React.createRef();
     }
     render(){
-    	const { index, count, toggle, setToggle, prefix, title, text, color, setColor, addItem, updateItem, deleteItem, colorCodes, position, icons } = this.props;
+    	const { index, count, isActive,  toggle, setToggle, prefix, title, text, color, setColor, setActive, addItem, updateItem, selectItem, deleteItem, colorCodes, position, icons } = this.props;
         return h(NoteDraggable,{
             className:`${prefix}--note`,
             position,
+            isActive,
             target: this.targetRef,
             onDragComplete:(position)=>updateItem(index, {position}),
             onInit:(options)=>updateItem(index, options),
+            onSelect:(active)=>selectItem(index, {isActive:active}),
             style: {
-                backgroundColor: `hsl(${color},50%, 50%)`
+                backgroundColor: color
             }
         },[
-            h(NoteHeader, {
+            isActive?h(NoteHeader, {
                 key:'note-header',
                 targetRef: this.targetRef,
                 index, 
@@ -34,7 +36,7 @@ class Note extends React.Component{
                 position, 
                 count, 
                 title
-            }),
+            }):null,
             h('div',{
                 key:'note-body',
                 className:`${prefix}--note__body`,

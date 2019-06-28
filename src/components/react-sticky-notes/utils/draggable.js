@@ -12,7 +12,6 @@ export default class Draggable {
             this.xOffset = options.position.x;
             this.yOffset = options.position.y;
             this.setTranslate(options.position.x,options.position.y);
-            this.beingToForwarding();
         }
         if(options.onInit){
             options.onInit({
@@ -21,52 +20,38 @@ export default class Draggable {
             });
         }
     }
-    beingToForwarding() {
-        const el = this.options.element;
-        if(el){
-            [].forEach.call(el.parentElement.children, (elem) => {
-                elem.style.zIndex = 0;
-            });
-            el.style.zIndex = 1;
-        }
-    }
-    onClick = () => {
-        this.beingToForwarding();
-    }
     onMouseMove = (e) => {
-        if (this.active) {
-            const el = this.options.element;
-            e.preventDefault();
-            if (e.type === "touchmove") {
-                this.currentX = e.touches[0].clientX - this.initialX;
-                this.currentY = e.touches[0].clientY - this.initialY;
-            } else {
-                this.currentX = e.clientX - this.initialX;
-                this.currentY = e.clientY - this.initialY;
-            }
-            const x1 = this.options.element.parentElement.offsetWidth-this.options.element.offsetWidth;
-            const y1 = this.options.element.parentElement.offsetHeight-this.options.element.offsetHeight
-            if( this.currentX<0 ){
-                this.currentX = 0;
-            }
-            if( this.currentY<0 ){
+        const el = this.options.element;
+        e.preventDefault();
+        if (e.type === "touchmove") {
+            this.currentX = e.touches[0].clientX - this.initialX;
+            this.currentY = e.touches[0].clientY - this.initialY;
+        } else {
+            this.currentX = e.clientX - this.initialX;
+            this.currentY = e.clientY - this.initialY;
+        }
+        const x1 = this.options.element.parentElement.offsetWidth-this.options.element.offsetWidth;
+        const y1 = this.options.element.parentElement.offsetHeight-this.options.element.offsetHeight
+        if( this.currentX<0 ){
+            this.currentX = 0;
+        }
+        if( this.currentY<0 ){
+            this.currentY = 0;
+        }
+        if( this.currentX>x1 ){
+            this.currentX = x1;
+        }
+        if( this.currentY>y1 ){
+            this.currentY = y1;
+            if(el.parentElement.offsetHeight<el.offsetHeight){
                 this.currentY = 0;
             }
-            if( this.currentX>x1 ){
-                this.currentX = x1;
-            }
-            if( this.currentY>y1 ){
-                this.currentY = y1;
-                if(el.parentElement.offsetHeight<el.offsetHeight){
-                    this.currentY = 0;
-                }
-            }
-
-            this.xOffset = this.currentX;
-            this.yOffset = this.currentY;
-
-            this.setTranslate(this.currentX, this.currentY);
         }
+
+        this.xOffset = this.currentX;
+        this.yOffset = this.currentY;
+
+        this.setTranslate(this.currentX, this.currentY);
     }
     onMouseDown = (e) => {
         if (e.type === "touchstart") {
@@ -76,9 +61,6 @@ export default class Draggable {
             this.initialX = e.clientX - this.xOffset;
             this.initialY = e.clientY - this.yOffset;
         }
-        this.active = true;
-        this.beingToForwarding();
-        
         document.addEventListener('mousemove', this.onMouseMove, null);
         document.addEventListener('mouseup', this.onMouseUp, null);
         
@@ -86,7 +68,6 @@ export default class Draggable {
     onMouseUp = (e) => {
         this.initialX = this.currentX;
         this.initialY = this.currentY;
-        this.active = false;
         if(this.options.onDragComplete){
             this.options.onDragComplete.call(this, {
                 x:this.initialX,
