@@ -1,20 +1,22 @@
 import { h } from './utils';
 import './note-header.scss';
-function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, position, count, title, targetRef, icons }) {
+function NoteHeader({ index, prefix, selected, addItem, deleteItem, setToggle, position, title, targetRef, icons }) {
     return h('div',{
-        className:`${prefix}--header`
+        className:`${prefix}--header ${selected?prefix+'--header__selected':''}`
     },[
         h('button',{
             key: 'note-header-button-1',
-            onClick:()=>addItem(index, {position})
+            onClick:()=>addItem({index, position, selected: true})
         }, 
             h(icons.add)
         ),
-        h('span',{
+        h('button',{
             key: 'note-header-button-2',
             className:"title",
             ref: targetRef
-        },title),
+        },
+        title?title:"A"
+        ),
         h('button',{
             key: 'note-header-button-3',
             onClick:()=>setToggle(index+1)
@@ -23,7 +25,6 @@ function NoteHeader({ index, prefix, addItem, deleteItem, setToggle, position, c
         ),
         h('button',{
             key: 'note-header-button-4',
-            disabled: count===1?true:false,
             onClick:()=>deleteItem(index)
         }, 
             h(icons.trash)

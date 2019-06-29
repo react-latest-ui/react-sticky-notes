@@ -4,8 +4,7 @@ export const getNotes = (colorCodes, notes ) => {
 			text: '',
 			position: { x: 0, y: 0 },
 			color: colorCodes[Math.floor(Math.random() * colorCodes.length)],
-			limitX: 0,
-			limitY: 0
+			selected:true
 		}
 	];
 	return _notes;

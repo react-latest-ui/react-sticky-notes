@@ -5,11 +5,14 @@
         top: 0;
         box-shadow: 1px 1px 2px rgba(0,0,0,.15);
         background-color: hsl(50, 50%, 50%);
+        &__selected{
+            box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+        }
         &__body{
+            display: flex;
+            min-width: 200px;
             resize:both;
             overflow: auto;
-            height: 200px;
-            width: 200px;
         }
     }
 }

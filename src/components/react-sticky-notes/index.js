@@ -3,33 +3,55 @@ import Notes from './notes';
 import reducer from './reducers/reducer';
 import { h, colorCodes, getNotes, iconAdd, iconMenu, iconTrash } from './utils';
 class ReactStickyNotes extends React.Component {
+	static defaultProps = {
+		prefix: 's-notes',
+		colorCodes,
+		displayFooter: true,
+		sessionKey: 'react-sticky-notes',
+		width: 220,
+		height: 220,
+		containerWidth: '100%',
+		containerHeight: '100%',
+		icons: {
+			add: iconAdd,
+			menu: iconMenu,
+			trash: iconTrash
+		}
+	}
 	constructor(props) {
 		super(props);
-		const colors = props.colorCodes ? props.colorCodes : colorCodes;
 		this.state = {
-			colors,
-			items: getNotes(colors, props.notes)
+			items: getNotes(props.colorCodes, props.notes)
 		};
 	}
 	dispatch = ({ type, payload }) => {
 		this.setState(
-			reducer(this.state, { type, payload })
+			reducer(this.state, { type, payload }),
+			()=>{
+				if(this.props.sessionKey){
+					localStorage.setItem(this.props.sessionKey, JSON.stringify(this.state.items));
+				}
+				if(this.props.onChange){
+					this.props.onChange(
+						this.state.items
+					)
+				}
+			}
 		)
 	}
 	getColor() {
-		return this.state.colors[Math.floor(Math.random() * this.state.colors.length)];
+		return this.props.colorCodes[Math.floor(Math.random() * this.props.colorCodes.length)];
 	}
-	addItem = (index, { position }) => {
+	addItem = (options) => {
 		const newProps = {
+			index:options?options.index+1:this.state.items.length,
 			color: this.getColor(),
 			text: '',
-			position: position ? {
-				x: position.x + 24,
-				y: position.y + 24
-			} : {
-					x: 0,
-					y: 0
-				}
+			selected: true,
+			position: {
+				x: 0,
+				y: 0
+			}
 		}
 		this.dispatch({
 			type: 'add',
@@ -65,20 +87,18 @@ class ReactStickyNotes extends React.Component {
 		});
 	}
 	render() {
-		const prefix = 's-notes';
-		const { width, height, backgroundColor, icons } = this.props;
+		const { items } = this.state;
+		const { width, height, containerWidth, containerHeight, backgroundColor, icons, prefix, displayFooter } = this.props;
 		return h(Notes, {
-			...this.state,
+			displayFooter,
+			items,
 			prefix,
 			width,
 			height,
+			containerWidth, 
+			containerHeight,
 			backgroundColor,
-			icons: {
-				add: iconAdd,
-				menu: iconMenu,
-				trash: iconTrash,
-				...icons
-			},
+			icons,
 			addItem: this.addItem,
 			updateItem: this.updateItem,
 			selectItem: this.selectItem,

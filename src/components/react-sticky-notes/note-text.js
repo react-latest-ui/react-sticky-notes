@@ -7,9 +7,9 @@ function NoteText({ index, prefix, text, updateItem }) {
         contentEditable:"true",
         onBlur:(e)=>updateItem(index, {
             title: String(e.target.innerText).substr(0,10),
-            text: nlToBr(e.target.innerText)
+            text: e.target.innerText
         }),
-        dangerouslySetInnerHTML:{__html:text}
+        dangerouslySetInnerHTML:{__html:nlToBr(text)}
     })
 }
 export default NoteText;

@@ -4,5 +4,12 @@ import DeleteOutlined from '@material-ui/icons/DeleteOutlined';
 import AddOutlined from '@material-ui/icons/AddOutlined';
 import MoreHorizOutlined from '@material-ui/icons/MoreHorizOutlined';
 import ReactStickyNotes from './components/react-sticky-notes';
+import './app.scss';
 const icons = { add:AddOutlined,menu: MoreHorizOutlined, trash: DeleteOutlined };
-ReactDOM.render(<ReactStickyNotes width={'100%'} height={'100%'} icons={icons} />, document.getElementById("root"));
+ReactDOM.render(
+    <ReactStickyNotes 
+        icons={icons}
+		prefix = 'ss-notes'
+    />, 
+    document.getElementById("root")
+);

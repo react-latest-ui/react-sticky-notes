@@ -3,6 +3,13 @@
         display: flex;
         background-color: rgba(0,0,0,.25);
         border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s linear;
+        &__selected{
+            visibility: visible;
+            opacity: 1;
+        }
         .title{
             flex-grow: 1;
             line-height: 30px;

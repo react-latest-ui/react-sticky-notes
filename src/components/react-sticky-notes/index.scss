@@ -1,5 +1,4 @@
 .s-notes{
-    text-align: center;
     background-color: #282c34;
     color: white;
     width: 100%;
@@ -55,6 +54,65 @@
             &:before{
                 content: "•••";
                 letter-spacing: .1em;
+            }
+        }
+    }
+    &--navbar{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        white-space: nowrap;
+        overflow: auto;
+        max-width: 100%;
+        &__item{
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            opacity: .8;
+            padding-right: 32px;
+            &--select, &--delete{
+                cursor: pointer;
+                border: none;
+                outline: none;
+                color: #fff;
+            }
+            &--select{
+                width: 80px;
+                height: 22px;
+                padding: 0px 5px;
+                white-space: nowrap;
+                background: none;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-size: 12px;
+            }
+            &--delete{
+                position: absolute;
+                right: 2px;
+                top: 2px;
+                padding: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.25);
+                &:hover,&:focus{
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+            }
+            &--add{
+                opacity: 0.8;
+                cursor: pointer;
+                border: none;
+                background: #333;
+                color: #fff;
+                padding: 0;
+                vertical-align: middle;
+                &:hover,&:focus{
+                    opacity: 1;
+                }
+            }
+            &:hover,&:focus{
+                opacity: 1;
             }
         }
     }

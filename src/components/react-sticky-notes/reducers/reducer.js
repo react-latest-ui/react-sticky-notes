@@ -3,13 +3,10 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'add':
             items = items.map((item, index)=>{
-                item.isActive = false;
+                item.selected = false;
                 return item;
             });
-            items.push({
-                isActive:true,
-                ...action.payload
-            });
+            items.splice(action.payload.index, 0, action.payload);
             break;
         case 'update':
             items = items.map((item, index)=>{
@@ -21,11 +18,7 @@ const reducer = (state, action) => {
             break;
         case 'select':
             items = items.map((item, index)=>{
-                if(index===action.payload.index){
-                    item.isActive = true;
-                }else{
-                    item.isActive = false;
-                }
+                item.selected = (index===action.payload.index)?true:false;
                 return item;
             });
             break;
@@ -33,7 +26,6 @@ const reducer = (state, action) => {
                 items = state.items;
             break;
     }
-    localStorage.setItem('react-sticky-notes', JSON.stringify(items));
     return {items};
 }
 export default reducer;
