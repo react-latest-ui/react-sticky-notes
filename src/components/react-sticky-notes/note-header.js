@@ -1,33 +1,36 @@
-import { h } from './utils';
-import './note-header.scss';
+import { h, getElementStyle } from './utils';
 function NoteHeader({ index, prefix, selected, addItem, deleteItem, setToggle, position, title, targetRef, icons }) {
     return h('div',{
-        className:`${prefix}--header ${selected?prefix+'--header__selected':''}`
+        className:`${prefix}--header ${selected?prefix+'--header__selected':''}`,
+        style: getElementStyle('note-header',{selected})
     },[
         h('button',{
             key: 'note-header-button-1',
+            className:`${prefix}--header__button--add`,
             onClick:()=>addItem({index, position, selected: true})
         }, 
-            h(icons.add)
+            icons.add
         ),
         h('button',{
             key: 'note-header-button-2',
-            className:"title",
+            className:`${prefix}--header__button--title`,
             ref: targetRef
         },
-        title?title:"A"
+            title?title:"..."
         ),
         h('button',{
             key: 'note-header-button-3',
+            className:`${prefix}--header__button--menu`,
             onClick:()=>setToggle(index+1)
         }, 
-            h(icons.menu) 
+            icons.menu
         ),
         h('button',{
             key: 'note-header-button-4',
+            className:`${prefix}--header__button--trash`,
             onClick:()=>deleteItem(index)
         }, 
-            h(icons.trash)
+            icons.trash
         ),
     ])
 }

@@ -1,4 +1,4 @@
-.s-notes{
+@mixin note() {
     &--note{
         position: absolute;
         left: 0;
@@ -11,8 +11,6 @@
         &__body{
             display: flex;
             min-width: 200px;
-            resize:both;
-            overflow: auto;
         }
     }
 }

@@ -8,8 +8,9 @@ import './app.scss';
 const icons = { add:AddOutlined,menu: MoreHorizOutlined, trash: DeleteOutlined };
 ReactDOM.render(
     <ReactStickyNotes 
-        icons={icons}
-		prefix = 'ss-notes'
+        //icons={icons}
+        prefix = 's-notes'
+        useCSS={true}
     />, 
     document.getElementById("root")
 );

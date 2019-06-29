@@ -1,119 +1,17 @@
+@import 'navbar.scss';
+@import 'note.scss';
+@import 'notes.scss';
+@import 'note-header.scss';
+@import 'note-text.scss';
+@import 'note-menu.scss';
 .s-notes{
-    background-color: #282c34;
-    color: white;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow: hidden;
     *,*::before,*::after{
         box-sizing: border-box;
     }
-    .s-icon{
-        font-size: 16px;
-        position: relative;
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-        white-space: nowrap;
-        &:before,&:after{
-            display: inline-block;
-        }
-        &--add,&--trash{
-            backface-visibility: hidden;
-            -webkit-font-smoothing: subpixel-antialiased;
-            &:before,&:after{
-                content: "";
-                background-color: rgba(255, 255, 255, 0.75);
-                position: absolute;
-            }
-            &:before{
-                width: 1em;
-                height: .13em;
-                top: 50%;
-                left: 0;
-                margin-top: -.06em;                
-            }
-            &:after{
-                width: .12em;
-                height: 1em;
-                left: 50%;
-                top: 0;
-                margin-left: -.06em;  
-            }
-        }
-        &--trash{
-            transform: perspective(1px) scale(1.1) rotate(50deg);
-            transform-origin: 50% 50%;
-        }
-        &--menu{
-            position: relative;
-            width: auto;
-            &:before{
-                content: "•••";
-                letter-spacing: .1em;
-            }
-        }
-    }
-    &--navbar{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        white-space: nowrap;
-        overflow: auto;
-        max-width: 100%;
-        &__item{
-            display: inline-block;
-            position: relative;
-            vertical-align: middle;
-            opacity: .8;
-            padding-right: 32px;
-            &--select, &--delete{
-                cursor: pointer;
-                border: none;
-                outline: none;
-                color: #fff;
-            }
-            &--select{
-                width: 80px;
-                height: 22px;
-                padding: 0px 5px;
-                white-space: nowrap;
-                background: none;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                font-size: 12px;
-            }
-            &--delete{
-                position: absolute;
-                right: 2px;
-                top: 2px;
-                padding: 0;
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                background-color: rgba(0, 0, 0, 0.25);
-                &:hover,&:focus{
-                    background-color: rgba(0, 0, 0, 0.5);
-                }
-            }
-            &--add{
-                opacity: 0.8;
-                cursor: pointer;
-                border: none;
-                background: #333;
-                color: #fff;
-                padding: 0;
-                vertical-align: middle;
-                &:hover,&:focus{
-                    opacity: 1;
-                }
-            }
-            &:hover,&:focus{
-                opacity: 1;
-            }
-        }
-    }
+    @include notes();
+    @include note();
+    @include navbar();
+    @include noteHeader();
+    @include noteText();
+    @include noteMenu();
 }

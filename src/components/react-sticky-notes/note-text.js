@@ -1,5 +1,4 @@
-import { h, nlToBr } from './utils'
-import './note-text.scss';
+import { h, nlToBr, getElementStyle } from './utils'
 function NoteText({ index, prefix, text, updateItem }) {
     return h('div',{
         className:`${prefix}--text`,
@@ -9,7 +8,8 @@ function NoteText({ index, prefix, text, updateItem }) {
             title: String(e.target.innerText).substr(0,10),
             text: e.target.innerText
         }),
-        dangerouslySetInnerHTML:{__html:nlToBr(text)}
+        dangerouslySetInnerHTML:{__html:nlToBr(text)},
+        style: getElementStyle('note-input')
     })
 }
 export default NoteText;

@@ -1,39 +1,43 @@
-.s-notes{
+@mixin noteHeader() {
     &--header{
         display: flex;
         background-color: rgba(0,0,0,.25);
         border-bottom: 1px solid rgba(0, 0, 0, 0.25);
         opacity: 0;
-        visibility: hidden;
         transition: all .3s linear;
         &__selected{
-            visibility: visible;
             opacity: 1;
-        }
-        .title{
-            flex-grow: 1;
-            line-height: 30px;
-            text-align: left;
-            user-select: none;
         }
         svg{
             line-height: 1;
             vertical-align: middle;
         }
-        button{
-            background: none;
-            border:none;
-            cursor: pointer;
-            transition: all .2s linear;
-            padding: 5px;
-            color: rgba(255,255,255,.75);
-            outline: none;
-            &:hover,&:focus{
-                background-color: rgba(0,0,0,.25);
-                outline: none;
+        &__button{
+            &--title{
+                flex-grow: 1;
+                line-height: 30px;
+                text-align: left;
+                user-select: none;
             }
-            &:disabled{
-                cursor: not-allowed;
+            &--title, &--add, &--menu, &--trash{
+                line-height: 30px;
+                background: none;
+                border:none;
+                cursor: pointer;
+                transition: all .2s linear;
+                padding: 5px;
+                color: rgba(255,255,255,.75);
+                outline: none;
+                &:hover,&:focus{
+                    background-color: rgba(0,0,0,.25);
+                    outline: none;
+                }
+                &:disabled{
+                    cursor: not-allowed;
+                }
+            }
+            &--add, &--menu, &--trash{
+                width: 32px;
             }
         }
     }

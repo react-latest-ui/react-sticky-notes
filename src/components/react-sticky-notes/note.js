@@ -4,7 +4,6 @@ import NoteText from './note-text';
 import NoteMenu from './note-menu';
 import NoteDraggable from './note-draggable';
 import { h, getElementStyle } from './utils';
-import './note.scss';
 class Note extends React.Component{
     constructor(props){
         super(props);
@@ -38,12 +37,26 @@ class Note extends React.Component{
             h('div',{
                 key:'note-body',
                 className:`${prefix}--note__body`,
-                style:{
-                    backgroundColor: toggle===index+1?"#ffffff":"",
-                    maxHeight: `${containerHeight-position.y-34}px`
-                }
+                style: getElementStyle('note-body', this.props)
             },
-                toggle===index+1&&colorCodes?h(NoteMenu, { key: 'note-menu', colorCodes, updateItem, index, prefix, color, setColor, colorCodes }):h(NoteText, { key: 'note-text', index, prefix, text, updateItem })
+                toggle===index+1&&selected&&colorCodes?
+                h(NoteMenu, { 
+                    key: 'note-menu', 
+                    colorCodes, 
+                    updateItem, 
+                    index, 
+                    prefix, 
+                    color, 
+                    setColor, 
+                    colorCodes
+                }):
+                h(NoteText, { 
+                    key: 'note-text', 
+                    index, 
+                    prefix, 
+                    text, 
+                    updateItem
+                })
             )
     
         ])

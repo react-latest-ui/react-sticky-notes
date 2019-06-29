@@ -1,4 +1,4 @@
-.s-notes{
+@mixin noteText() {
     &--text{
         padding: 10px;
         font-size: 12px;

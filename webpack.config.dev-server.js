@@ -6,7 +6,8 @@ module.exports = {
     mode: "development",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: '/dist/',
     },
     devtool: 'inline-source-map',
     module: {
@@ -37,7 +38,6 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "public/"),
         port: 4000,
-        publicPath: "http://localhost:4000/dist/",
         hotOnly: true
     },
     plugins: [new webpack.HotModuleReplacementPlugin()]

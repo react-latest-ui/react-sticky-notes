@@ -1,61 +1,7 @@
 import React from 'react';
 import Note from './note';
-import './index.scss';
-import { getElementStyle } from './utils';
-const h = React.createElement;
-const NavBarItem = ({prefix, icons,index, color, text, selectItem, deleteItem}) => {
-    return h('div',{
-        className:`${prefix}--navbar__item`,
-        style:{
-            backgroundColor: color
-        }
-    },[
-        h('button',{
-            key: `navbar-item__${index}--select`,
-            className:`${prefix}--navbar__item--select`,
-            type: 'button',
-            onClick: ()=>selectItem(index, {selected:true})
-        }, text?text:'Add your notes'),
-        h('button',{
-            key: `navbar-item__${index}--delete`,
-            type: 'button',
-            className:`${prefix}--navbar__item--delete`,
-            onClick: ()=>deleteItem(index, {selected:true}),
-        }, 'x'),
-    ]);
-}
-const NavBarItemAdd = ({prefix, icons, addItem}) => {
-    return h('button',{
-        key: `${prefix}--navbar__item--add`,
-        type: 'button',
-        className:`${prefix}--navbar__item--add`,
-        onClick: ()=>addItem(),
-    }, h(icons.add) );
-}
-const NavBar = ({prefix, items, addItem, selectItem, deleteItem, icons, displayFooter}) => {
-    return h('div',{
-        className:`${prefix}--navbar`,
-    },[
-        displayFooter&&items?items.map((item, index)=>
-            h(NavBarItem,{
-                key: `navbar-item__${index}`,
-                index,
-                prefix,
-                icons,
-                text:item.text,
-                color:item.color,
-                selectItem,
-                deleteItem
-            },item.text)
-        ):null,
-        h(NavBarItemAdd,{
-            key: `navbar-item__add`,
-            prefix,
-            icons,
-            addItem,
-        })
-    ]);
-}
+import NavBar from './navbar';
+import { h, getElementStyle } from './utils';
 class Notes extends React.Component{
     constructor(props){
         super(props);

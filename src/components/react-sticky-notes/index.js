@@ -1,9 +1,9 @@
-import React from 'react';
-import Notes from './notes';
+import React,{ Component, Suspense } from 'react';
 import reducer from './reducers/reducer';
 import { h, colorCodes, getNotes, iconAdd, iconMenu, iconTrash } from './utils';
-class ReactStickyNotes extends React.Component {
+class ReactStickyNotes extends Component {
 	static defaultProps = {
+		useCSS: true,
 		prefix: 's-notes',
 		colorCodes,
 		displayFooter: true,
@@ -21,8 +21,20 @@ class ReactStickyNotes extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			component: null,
 			items: getNotes(props.colorCodes, props.notes)
 		};
+	}
+	componentDidMount(){
+		if(this.props.useCSS){
+			this.setState({
+				component: React.lazy(() => import(/* webpackChunkName: "notes" */ './notes-with-style'))
+			})
+		}else{
+			this.setState({
+				component: React.lazy(() => import(/* webpackChunkName: "notes" */ './notes'))
+			})
+		}
 	}
 	dispatch = ({ type, payload }) => {
 		this.setState(
@@ -89,22 +101,34 @@ class ReactStickyNotes extends React.Component {
 	render() {
 		const { items } = this.state;
 		const { width, height, containerWidth, containerHeight, backgroundColor, icons, prefix, displayFooter } = this.props;
-		return h(Notes, {
-			displayFooter,
-			items,
-			prefix,
-			width,
-			height,
-			containerWidth, 
-			containerHeight,
-			backgroundColor,
-			icons,
-			addItem: this.addItem,
-			updateItem: this.updateItem,
-			selectItem: this.selectItem,
-			deleteItem: this.deleteItem,
-			colorCodes
-		}, null);
+		return this.state.component?
+		h(Suspense,{
+			fallback: h('div', {
+				style: {
+					width: "100%",
+					padding: "60px",
+					fontSize: "2.5em",
+					textAlign: "center"
+				}
+			}, "Loading..."),
+		},
+			h(this.state.component, {
+				displayFooter,
+				items,
+				prefix,
+				width,
+				height,
+				containerWidth, 
+				containerHeight,
+				backgroundColor,
+				icons,
+				addItem: this.addItem,
+				updateItem: this.updateItem,
+				selectItem: this.selectItem,
+				deleteItem: this.deleteItem,
+				colorCodes
+			})
+		) :null;
 	}
 
 }
