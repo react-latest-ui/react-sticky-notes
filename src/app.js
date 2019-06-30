@@ -10,7 +10,7 @@ ReactDOM.render(
     <ReactStickyNotes 
         //icons={icons}
         prefix = 's-notes'
-        useCSS={true}
+        useCSS={false}
     />, 
     document.getElementById("root")
 );

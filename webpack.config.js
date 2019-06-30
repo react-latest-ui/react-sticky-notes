@@ -8,14 +8,16 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         library: '',
-        libraryTarget: 'commonjs2'
+        libraryTarget: 'commonjs2',
+        publicPath: '/dist/',
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
                 test: /\.js$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /(node_modules|bower_components|build)/,
+                exclude: /(node_modules|bower_components|build|dist)/,
                 use: {
                     loader: 'babel-loader',
                     options: {

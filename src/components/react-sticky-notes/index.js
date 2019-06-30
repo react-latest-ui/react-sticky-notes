@@ -1,4 +1,4 @@
-import React,{ Component, Suspense } from 'react';
+import { Component } from 'react';
 import reducer from './reducers/reducer';
 import { h, colorCodes, getNotes, iconAdd, iconMenu, iconTrash } from './utils';
 class ReactStickyNotes extends Component {
@@ -27,13 +27,22 @@ class ReactStickyNotes extends Component {
 	}
 	componentDidMount(){
 		if(this.props.useCSS){
-			this.setState({
-				component: React.lazy(() => import(/* webpackChunkName: "notes" */ './notes-with-style'))
-			})
+			console.log("notes-with-style");
+			import(/* webpackChunkName: "notes" */ "./notes-with-style").then((component)=>{
+				console.log('notes-with-style',component);
+				this.setState({
+					component: component.default
+				})
+			});
 		}else{
-			this.setState({
-				component: React.lazy(() => import(/* webpackChunkName: "notes" */ './notes'))
-			})
+			import(/* webpackChunkName: "notes" */ './notes').then((component)=>{
+				console.log('notes',component);
+				this.setState({
+					component: component.default
+				})
+			}).catch((err)=>{
+				console.log(err); 
+			});
 		}
 	}
 	dispatch = ({ type, payload }) => {
@@ -101,34 +110,22 @@ class ReactStickyNotes extends Component {
 	render() {
 		const { items } = this.state;
 		const { width, height, containerWidth, containerHeight, backgroundColor, icons, prefix, displayFooter } = this.props;
-		return this.state.component?
-		h(Suspense,{
-			fallback: h('div', {
-				style: {
-					width: "100%",
-					padding: "60px",
-					fontSize: "2.5em",
-					textAlign: "center"
-				}
-			}, "Loading..."),
-		},
-			h(this.state.component, {
-				displayFooter,
-				items,
-				prefix,
-				width,
-				height,
-				containerWidth, 
-				containerHeight,
-				backgroundColor,
-				icons,
-				addItem: this.addItem,
-				updateItem: this.updateItem,
-				selectItem: this.selectItem,
-				deleteItem: this.deleteItem,
-				colorCodes
-			})
-		) :null;
+		return this.state.component? h(this.state.component, {
+			displayFooter,
+			items,
+			prefix,
+			width,
+			height,
+			containerWidth, 
+			containerHeight,
+			backgroundColor,
+			icons,
+			addItem: this.addItem,
+			updateItem: this.updateItem,
+			selectItem: this.selectItem,
+			deleteItem: this.deleteItem,
+			colorCodes
+		}) :null;
 	}
 
 }
