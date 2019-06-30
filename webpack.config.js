@@ -8,7 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         library: '',
-        libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
+        libraryTarget: 'commonjs2'
     },
     module: {
         rules: [
@@ -39,7 +39,6 @@ module.exports = {
         'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
     }*/
     externals: [
-        ...Object.keys(pkg.peerDependencies),
-        ...Object.keys(pkg.dependencies)
+        ...Object.keys(pkg.peerDependencies)
     ]
 };
