@@ -1,4 +1,4 @@
-import { h, getElementStyle } from './utils';
+import { h, getElementStyle } from './../utils';
 function NoteHeader({ index, prefix, selected, addItem, deleteItem, setToggle, position, title, targetRef, icons }) {
     return h('div',{
         className:`${prefix}--header ${selected?prefix+'--header__selected':''}`,

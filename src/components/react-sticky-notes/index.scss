@@ -1,10 +1,10 @@
-@import 'navbar.scss';
-@import 'note.scss';
-@import 'notes.scss';
-@import 'note-header.scss';
-@import 'note-text.scss';
-@import 'note-menu.scss';
-.s-notes{
+@import './partials/navbar.scss';
+@import './partials/note.scss';
+@import './partials/notes.scss';
+@import './partials/note-header.scss';
+@import './partials/note-text.scss';
+@import './partials/note-menu.scss';
+.rs-notes{
     *,*::before,*::after{
         box-sizing: border-box;
     }

@@ -1,5 +1,5 @@
 
-import { h } from './utils';
+import { h } from './../utils';
 function NavBarItemAdd({prefix, icons, addItem}){
     return h('button',{
         key: `${prefix}--navbar__item--add`,

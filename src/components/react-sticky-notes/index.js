@@ -1,10 +1,11 @@
 import { Component } from 'react';
 import reducer from './reducers/reducer';
+import Notes from './partials/notes';
 import { h, colorCodes, getNotes, iconAdd, iconMenu, iconTrash } from './utils';
 class ReactStickyNotes extends Component {
 	static defaultProps = {
 		useCSS: true,
-		prefix: 's-notes',
+		cssPrefix: 'rs-notes',
 		colorCodes,
 		displayFooter: true,
 		sessionKey: 'react-sticky-notes',
@@ -21,28 +22,13 @@ class ReactStickyNotes extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			component: null,
 			items: getNotes(props.colorCodes, props.notes)
 		};
 	}
 	componentDidMount(){
 		if(this.props.useCSS){
 			console.log("notes-with-style");
-			import(/* webpackChunkName: "notes" */ "./notes-with-style").then((component)=>{
-				console.log('notes-with-style',component);
-				this.setState({
-					component: component.default
-				})
-			});
-		}else{
-			import(/* webpackChunkName: "notes" */ './notes').then((component)=>{
-				console.log('notes',component);
-				this.setState({
-					component: component.default
-				})
-			}).catch((err)=>{
-				console.log(err); 
-			});
+			require('./index.scss');
 		}
 	}
 	dispatch = ({ type, payload }) => {
@@ -109,23 +95,23 @@ class ReactStickyNotes extends Component {
 	}
 	render() {
 		const { items } = this.state;
-		const { width, height, containerWidth, containerHeight, backgroundColor, icons, prefix, displayFooter } = this.props;
-		return this.state.component? h(this.state.component, {
+		const { width, height, containerWidth, containerHeight, backgroundColor, icons, cssPrefix, displayFooter } = this.props;
+		return h(Notes, {
 			displayFooter,
 			items,
-			prefix,
 			width,
 			height,
 			containerWidth, 
 			containerHeight,
 			backgroundColor,
 			icons,
+			prefix: cssPrefix,
 			addItem: this.addItem,
 			updateItem: this.updateItem,
 			selectItem: this.selectItem,
 			deleteItem: this.deleteItem,
 			colorCodes
-		}) :null;
+		});
 	}
 
 }

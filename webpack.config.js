@@ -3,15 +3,13 @@ const path = require('path');
 const webpack = require("webpack");
 module.exports = {
     entry: './src/index.js',
-    mode: "development",
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         library: '',
-        libraryTarget: 'commonjs2',
-        publicPath: '/dist/',
+        libraryTarget: 'commonjs2'
     },
-    devtool: 'inline-source-map',
+    devtool: false,
     module: {
         rules: [
             {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Note from './note';
 import NavBar from './navbar';
-import { h, getElementStyle } from './utils';
+import { h, getElementStyle } from './../utils';
 class Notes extends React.Component{
     constructor(props){
         super(props);

@@ -3,7 +3,7 @@ import NoteHeader from './note-header';
 import NoteText from './note-text';
 import NoteMenu from './note-menu';
 import NoteDraggable from './note-draggable';
-import { h, getElementStyle } from './utils';
+import { h, getElementStyle } from './../utils';
 class Note extends React.Component{
     constructor(props){
         super(props);

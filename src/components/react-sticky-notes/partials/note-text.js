@@ -1,4 +1,4 @@
-import { h, nlToBr, getElementStyle } from './utils'
+import { h, nlToBr, getElementStyle } from './../utils';
 function NoteText({ index, prefix, text, updateItem }) {
     return h('div',{
         className:`${prefix}--text`,

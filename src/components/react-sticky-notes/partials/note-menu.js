@@ -1,4 +1,4 @@
-import { h, getElementStyle } from './utils'
+import { h, getElementStyle } from './../utils';
 function NoteMenu({ index, prefix, color, colorCodes, setColor }) {
     return h('div', {
         className: `${prefix}--colors`,

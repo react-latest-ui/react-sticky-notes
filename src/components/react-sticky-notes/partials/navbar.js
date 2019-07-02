@@ -1,4 +1,4 @@
-import { h } from './utils';
+import { h } from './../utils';
 import NavBarItem from './navbar-item';
 import NavBarItemAdd from './navbar-item-add';
 function NavBar({prefix, items, addItem, selectItem, deleteItem, icons, displayFooter}){

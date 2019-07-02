@@ -1,4 +1,4 @@
-import { h } from './utils';
+import { h } from './../utils';
 function NavBarItem({prefix, icons,index, color, text, selectItem, deleteItem}){
     return h('span',{
         className:`${prefix}--navbar__item`,
