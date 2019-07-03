@@ -3,7 +3,7 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
     switch(nodeName){
         case "container":
                 style = { 
-                    position: 'absolute',
+                    position: 'relative',
                     width: props.containerWidth, 
                     height: props.containerHeight, 
                     backgroundColor: props.backgroundColor 
@@ -12,17 +12,18 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
         case "note":
                 style = {
                     position: 'absolute',
+                    left: `${props.position.x}px`,
+                    top: `${props.position.y}px`,
                     backgroundColor: props.color,
-                    zIndex: props.selected?1:0,
-                    transform: `translate3d(${props.position.x}px,${props.position.y}px,0)`
+                    zIndex: props.selected?1:0
                 }
         break;
         case "note-body":
             style = {
                 width: props.width,
                 height: props.height,
+                minWidth: props.width,
                 backgroundColor: props.toggle===props.index+1&&props.selected?"#ffffff":"",
-                maxHeight: `${props.containerHeight-props.position.y-34}px`,
                 resize:"both",
                 overflow: "auto"
             }
