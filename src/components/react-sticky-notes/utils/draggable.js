@@ -7,7 +7,6 @@ export default class Draggable {
         this.options = options;
     }
     onMouseMove = (e) => {
-        e.preventDefault();
         const el = this.options.element;
         const parentElement = el.parentElement;
         const pRect = parentElement?parentElement.getBoundingClientRect():{left:0,top:0};
@@ -34,6 +33,8 @@ export default class Draggable {
 
         document.addEventListener('mousemove', this.onMouseMove, null);
         document.addEventListener('mouseup', this.onMouseUp, null);
+        document.addEventListener('touchmove', this.onMouseMove, null);
+        document.addEventListener('touchend', this.onMouseUp, null);
         
     }
     onMouseUp = (e) => {
@@ -46,6 +47,8 @@ export default class Draggable {
         
         document.removeEventListener('mousemove', this.onMouseMove);
         document.removeEventListener('mouseup', this.onMouseUp, null);
+        document.removeEventListener('touchmove', this.onMouseMove, null);
+        document.removeEventListener('touchend', this.onMouseUp, null);
     }
     setTranslate(x, y) {
         if(this.options.element){
