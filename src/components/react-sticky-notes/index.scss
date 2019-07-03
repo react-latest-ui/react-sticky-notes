@@ -8,6 +8,7 @@
     *,*::before,*::after{
         box-sizing: border-box;
     }
+    text-align: left;
     @include notes();
     @include note();
     @include navbar();
