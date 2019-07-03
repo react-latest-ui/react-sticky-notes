@@ -43,7 +43,8 @@ class NoteDraggable extends React.Component {
 				style: this.props.style,
 				ref: this.element,
 				onClick: this.onClick,
-				onMouseDown:this.onMouseDown
+				onMouseDown:this.onMouseDown,
+				onTouchStart:this.onMouseDown
 			}, 
 				this.props.children
 			)
