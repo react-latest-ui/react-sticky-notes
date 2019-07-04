@@ -10,20 +10,21 @@ class Note extends React.Component{
         this.targetRef = React.createRef();
     }
     render(){
-    	const { index, selected, toggle, setToggle, prefix, title, text, color, setColor, addItem, updateItem, selectItem, deleteItem, colorCodes, position, icons } = this.props;
+    	const { id, index, selected, toggle, setToggle, prefix, title, text, color, setColor, addItem, updateItem, selectItem, deleteItem, colorCodes, position, icons } = this.props;
         return h(NoteDraggable,{
             className:`${prefix}--note ${selected?prefix+'--note__selected':''}`,
             position,
             selected,
             target: this.targetRef,
-            onDragComplete:(position)=>updateItem(index, {position}),
+            onDragComplete:(position)=>updateItem(index, {id, position}),
             onInit:(options)=>updateItem(index, options),
-            onSelect:(active)=>selectItem(index, {selected:active}),
+            onSelect:(active)=>selectItem(index, {id, selected:active}),
             style: getElementStyle('note', this.props)
         },[
             h(NoteHeader, {
                 key:'note-header',
                 targetRef: this.targetRef,
+                id,
                 index, 
                 prefix,
                 selected, 
@@ -42,6 +43,7 @@ class Note extends React.Component{
                 toggle===index+1&&selected&&colorCodes?
                 h(NoteMenu, { 
                     key: 'note-menu', 
+                    id,
                     colorCodes, 
                     updateItem, 
                     index, 
@@ -52,6 +54,7 @@ class Note extends React.Component{
                 }):
                 h(NoteText, { 
                     key: 'note-text', 
+                    id,
                     index, 
                     prefix, 
                     text, 
