@@ -1,13 +1,13 @@
 import { h, getElementStyle } from './../utils';
-function NoteHeader({ id, index, prefix, selected, addItem, deleteItem, setToggle, position, title, targetRef, icons }) {
+function NoteHeader({ data, index, prefix, addItem, updateItem, deleteItem, setToggle, targetRef, icons }) {
     return h('div',{
-        className:`${prefix}--header ${selected?prefix+'--header__selected':''}`,
-        style: getElementStyle('note-header',{selected})
+        className:`${prefix}--header ${data.selected?prefix+'--header__selected':''}`,
+        style: getElementStyle('note-header',{data})
     },[
         h('button',{
             key: 'note-header-button-1',
             className:`${prefix}--header__button--add`,
-            onClick:()=>addItem({index, id, position, selected: true})
+            onClick:()=>addItem({index, id: data.id, position:data.position, selected: true})
         }, 
             icons.add
         ),
@@ -16,19 +16,26 @@ function NoteHeader({ id, index, prefix, selected, addItem, deleteItem, setToggl
             className:`${prefix}--header__button--title`,
             ref: targetRef
         },
-            title?title:"..."
+            data.title?data.title:"..."
         ),
         h('button',{
             key: 'note-header-button-3',
             className:`${prefix}--header__button--menu`,
-            onClick:()=>setToggle(index, {id})
+            onClick:()=>setToggle(index, {id: data.id})
         }, 
             icons.menu
         ),
         h('button',{
+            key: 'note-header-button--minmax',
+            className:`${prefix}--header__button--minmax`,
+            onClick:()=>updateItem(index, { id: data.id, viewSize: 'minimized', selected: false })
+        }, 
+            icons.minimize
+        ),
+        h('button',{
             key: 'note-header-button-4',
             className:`${prefix}--header__button--trash`,
-            onClick:()=>deleteItem(index, {id})
+            onClick:()=>deleteItem(index, {id: data.id})
         }, 
             icons.trash
         ),

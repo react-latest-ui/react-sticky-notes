@@ -20,7 +20,7 @@
                 user-select: none;
                 cursor: move;
             }
-            &--title, &--add, &--menu, &--trash{
+            &--title, &--add, &--menu, &--trash, &--minmax{
                 line-height: 30px;
                 background: none;
                 border:none;
@@ -36,7 +36,7 @@
                     cursor: not-allowed;
                 }
             }
-            &--add, &--menu, &--trash{
+            &--add, &--menu, &--trash, &--minmax{
                 width: 32px;
                 cursor: pointer;
             }

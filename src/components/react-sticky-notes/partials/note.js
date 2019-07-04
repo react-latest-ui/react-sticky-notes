@@ -5,59 +5,58 @@ import NoteMenu from './note-menu';
 import NoteDraggable from './note-draggable';
 import { h, getElementStyle } from './../utils';
 class Note extends React.Component{
+    state = {
+        viewSize: 'normal'
+    }
     constructor(props){
         super(props);
         this.targetRef = React.createRef();
     }
     render(){
-    	const { id, index, selected, toggle, setToggle, prefix, title, text, color, setColor, addItem, updateItem, selectItem, deleteItem, colorCodes, position, icons } = this.props;
+    	const { data, index, toggle, setToggle, prefix, setColor, addItem, updateItem, selectItem, deleteItem, colorCodes, icons } = this.props;
         return h(NoteDraggable,{
-            className:`${prefix}--note ${selected?prefix+'--note__selected':''}`,
-            position,
-            selected,
+            className:`${prefix}--note ${data.selected?prefix+'--note__selected':''}`,
+            position:data.position,
+            selected:data.selected,
             target: this.targetRef,
-            onDragComplete:(position)=>updateItem(index, {id, position}),
+            onDragComplete:(position)=>updateItem(index, {id:data.id, position:data.position}),
             onInit:(options)=>updateItem(index, options),
-            onSelect:(active)=>selectItem(index, {id, selected:active}),
+            onSelect:(active)=>selectItem(index, {id:data.id, selected:active}),
             style: getElementStyle('note', this.props)
         },[
             h(NoteHeader, {
                 key:'note-header',
                 targetRef: this.targetRef,
-                id,
+                data,
                 index, 
                 prefix,
-                selected, 
                 icons,
                 addItem, 
                 deleteItem, 
                 setToggle, 
-                position, 
-                title
+                updateItem
             }),
             h('div',{
                 key:'note-body',
                 className:`${prefix}--note__body`,
                 style: getElementStyle('note-body', this.props)
             },
-                toggle===index&&selected&&colorCodes?
+                toggle===index&&data.selected&&colorCodes?
                 h(NoteMenu, { 
                     key: 'note-menu', 
-                    id,
+                    data,
                     colorCodes, 
                     updateItem, 
                     index, 
                     prefix, 
-                    color, 
                     setColor, 
                     colorCodes
                 }):
                 h(NoteText, { 
                     key: 'note-text', 
-                    id,
+                    data,
                     index, 
                     prefix, 
-                    text, 
                     updateItem
                 })
             )

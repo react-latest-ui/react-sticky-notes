@@ -18,7 +18,12 @@ const reducer = (state, action) => {
             break;
         case 'select':
             items = items.map((item, index)=>{
-                item.selected = (index===action.payload.index)?true:false;
+                if( index===action.payload.index ){
+                    item.selected = true;
+                    item.viewSize = null;
+                }else{
+                    item.selected = false;
+                }
                 return item;
             });
             break;

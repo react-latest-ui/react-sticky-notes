@@ -1,5 +1,7 @@
 import React from 'react';
 import Note from './note';
+import NoteMaximized from './note-maximized';
+import NoteMinimized from './note-minimized';
 import { h, getElementStyle } from './../utils';
 class Notes extends React.Component{
     constructor(props){
@@ -23,17 +25,42 @@ class Notes extends React.Component{
                 key: prefix, 
                 className: prefix,
                 style: getElementStyle('container', this.props)
-            }, items?items.map((item, index)=>
-                h(Note,{ 
-                    index, 
-                    key: `note-${index}`, 
-                    ...item,
-                    ...this.state,
-                    ...this.props,
-                    toggle:this.state.toggle,
-                    setToggle:this.setToggle,
-                    setColor:this.setColor
-                },null)
+            }, items?items.map((data, index)=> {
+                let _note = null;
+                switch(data.viewSize){
+                    case "minimized":
+                        _note = h(NoteMinimized, { 
+                            key: `note-${data.id}`, 
+                            prefix,
+                            index, 
+                            data,
+                            updateItem: this.props.updateItem
+                        });
+                        break;
+                    case "maximized":
+                        _note = h(NoteMaximized, { 
+                            key: `note-${data.id}`, 
+                            prefix,
+                            index, 
+                            data,
+                            updateItem: this.props.updateItem
+                        });
+                        break;
+                    default:
+                        _note = h(Note, { 
+                            key: `note-${data.id}`, 
+                            index, 
+                            data,
+                            ...this.state,
+                            ...this.props,
+                            toggle:this.state.toggle,
+                            setToggle:this.setToggle,
+                            setColor:this.setColor
+                        })
+                    break;
+                }
+                return _note;
+            }
             ):null
         )
     }

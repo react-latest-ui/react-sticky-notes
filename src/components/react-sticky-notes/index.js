@@ -2,7 +2,8 @@ import { Component } from 'react';
 import reducer from './reducers/reducer';
 import Notes from './partials/notes';
 import NavBar from './navbar';
-import { h, colorCodes, getNotes, getUUID, iconAdd, iconMenu, iconTrash } from './utils';
+import * as icons from './icons';
+import { h, colorCodes, getNotes, getUUID } from './utils';
 class ReactStickyNotes extends Component {
 	static defaultProps = {
 		useCSS: true,
@@ -14,11 +15,7 @@ class ReactStickyNotes extends Component {
 		noteHeight: 220,
 		containerWidth: '100%',
 		containerHeight: '100%',
-		icons: {
-			add: iconAdd,
-			menu: iconMenu,
-			trash: iconTrash
-		}
+		icons
 	}
 	constructor(props) {
 		super(props);
