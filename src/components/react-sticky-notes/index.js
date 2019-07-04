@@ -101,9 +101,8 @@ class ReactStickyNotes extends Component {
 		const { items } = this.state;
 		const { noteWidth, noteHeight, containerWidth, containerHeight, backgroundColor, icons, prefix, navbar } = this.props;
 		return [
-				h(Notes, {
+			h(Notes, {
 				key: `${prefix}--notes`,
-				navbar,
 				items,
 				noteWidth,
 				noteHeight,
@@ -118,7 +117,7 @@ class ReactStickyNotes extends Component {
 				selectItem: this.selectItem,
 				deleteItem: this.deleteItem
 			}),
-			h(NavBar,{
+			navbar?h(NavBar,{
 				key: `${prefix}--navbar`,
 				...this.props,
 				items,
@@ -127,7 +126,7 @@ class ReactStickyNotes extends Component {
 				updateItem: this.updateItem,
 				selectItem: this.selectItem,
 				deleteItem: this.deleteItem
-			})
+			}):null
 		]
 	}
 
