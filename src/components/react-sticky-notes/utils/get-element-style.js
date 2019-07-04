@@ -20,9 +20,9 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
         break;
         case "note-body":
             style = {
-                width: props.width,
-                height: props.height,
-                minWidth: props.width,
+                width: props.noteWidth,
+                height: props.noteHeight,
+                minWidth: props.noteWidth,
                 backgroundColor: props.toggle===props.index+1&&props.selected?"#ffffff":"",
                 resize:"both",
                 overflow: "auto"

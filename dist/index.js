@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  background-color: #282c34;\n  color: #ffffff;\n  overflow: hidden; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note {\n    position: absolute;\n    left: 0;\n    top: 0;\n    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);\n    background-color: #bfaa40; }\n    .rs-notes--note__selected {\n      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }\n    .rs-notes--note__body {\n      display: flex;\n      min-width: 200px; }\n  .rs-notes--navbar {\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    white-space: nowrap;\n    overflow: auto;\n    max-width: 100%; }\n    .rs-notes--navbar__item {\n      display: inline-block;\n      position: relative;\n      vertical-align: middle;\n      opacity: .8;\n      padding-right: 32px; }\n      .rs-notes--navbar__item--select, .rs-notes--navbar__item--delete {\n        cursor: pointer;\n        border: none;\n        outline: none;\n        color: #fff; }\n      .rs-notes--navbar__item--select {\n        width: 80px;\n        height: 22px;\n        padding: 0px 5px;\n        white-space: nowrap;\n        background: none;\n        text-overflow: ellipsis;\n        overflow: hidden;\n        font-size: 12px; }\n      .rs-notes--navbar__item--delete {\n        position: absolute;\n        right: 2px;\n        top: 2px;\n        padding: 0;\n        width: 18px;\n        height: 18px;\n        border-radius: 50%;\n        background-color: rgba(0, 0, 0, 0.25); }\n        .rs-notes--navbar__item--delete:hover, .rs-notes--navbar__item--delete:focus {\n          background-color: rgba(0, 0, 0, 0.5); }\n      .rs-notes--navbar__item--add {\n        width: 18px;\n        height: 18px;\n        opacity: 0.8;\n        cursor: pointer;\n        border: none;\n        background: #333;\n        color: #fff;\n        padding: 0;\n        vertical-align: middle; }\n        .rs-notes--navbar__item--add:hover, .rs-notes--navbar__item--add:focus {\n          opacity: 1; }\n      .rs-notes--navbar__item:hover, .rs-notes--navbar__item:focus {\n        opacity: 1; }\n  .rs-notes--header {\n    display: flex;\n    background-color: rgba(0, 0, 0, 0.25);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25);\n    opacity: 0;\n    transition: all .3s linear; }\n    .rs-notes--header__selected {\n      opacity: 1; }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header__button--title {\n      flex-grow: 1;\n      line-height: 30px;\n      text-align: left;\n      user-select: none; }\n    .rs-notes--header__button--title, .rs-notes--header__button--add, .rs-notes--header__button--menu, .rs-notes--header__button--trash {\n      line-height: 30px;\n      background: none;\n      border: none;\n      cursor: pointer;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      outline: none; }\n      .rs-notes--header__button--title:hover, .rs-notes--header__button--title:focus, .rs-notes--header__button--add:hover, .rs-notes--header__button--add:focus, .rs-notes--header__button--menu:hover, .rs-notes--header__button--menu:focus, .rs-notes--header__button--trash:hover, .rs-notes--header__button--trash:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header__button--title:disabled, .rs-notes--header__button--add:disabled, .rs-notes--header__button--menu:disabled, .rs-notes--header__button--trash:disabled {\n        cursor: not-allowed; }\n    .rs-notes--header__button--add, .rs-notes--header__button--menu, .rs-notes--header__button--trash {\n      width: 32px; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n", ""]);
+exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note {\n    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); }\n    .rs-notes--note__selected {\n      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }\n  .rs-notes--navbar {\n    white-space: nowrap; }\n    .rs-notes--navbar__item {\n      display: inline-block;\n      position: relative;\n      vertical-align: middle;\n      opacity: .8;\n      padding-right: 32px; }\n      .rs-notes--navbar__item--select, .rs-notes--navbar__item--delete {\n        cursor: pointer;\n        border: none;\n        outline: none;\n        color: #fff; }\n      .rs-notes--navbar__item--select {\n        text-align: left;\n        width: 80px;\n        height: 22px;\n        padding: 0px 5px;\n        white-space: nowrap;\n        background: none;\n        text-overflow: ellipsis;\n        overflow: hidden;\n        font-size: 12px; }\n      .rs-notes--navbar__item--delete {\n        text-align: center;\n        position: absolute;\n        right: 2px;\n        top: 2px;\n        padding: 0;\n        width: 18px;\n        height: 18px;\n        border-radius: 50%;\n        background-color: rgba(0, 0, 0, 0.25); }\n        .rs-notes--navbar__item--delete:hover, .rs-notes--navbar__item--delete:focus {\n          background-color: rgba(0, 0, 0, 0.5); }\n      .rs-notes--navbar__item--add {\n        text-align: center;\n        width: 24px;\n        height: 24px;\n        opacity: 0.8;\n        cursor: pointer;\n        border: none;\n        background: #333;\n        color: #fff;\n        padding: 0;\n        vertical-align: middle; }\n        .rs-notes--navbar__item--add:hover, .rs-notes--navbar__item--add:focus {\n          opacity: 1; }\n      .rs-notes--navbar__item:hover, .rs-notes--navbar__item:focus {\n        opacity: 1; }\n  .rs-notes--header {\n    display: flex;\n    background-color: rgba(0, 0, 0, 0.25);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25);\n    opacity: 0;\n    transition: all .3s linear; }\n    .rs-notes--header__selected {\n      opacity: 1; }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header__button--title {\n      flex-grow: 1;\n      line-height: 30px;\n      text-align: left;\n      user-select: none; }\n    .rs-notes--header__button--title, .rs-notes--header__button--add, .rs-notes--header__button--menu, .rs-notes--header__button--trash {\n      line-height: 30px;\n      background: none;\n      border: none;\n      cursor: pointer;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      outline: none; }\n      .rs-notes--header__button--title:hover, .rs-notes--header__button--title:focus, .rs-notes--header__button--add:hover, .rs-notes--header__button--add:focus, .rs-notes--header__button--menu:hover, .rs-notes--header__button--menu:focus, .rs-notes--header__button--trash:hover, .rs-notes--header__button--trash:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header__button--title:disabled, .rs-notes--header__button--add:disabled, .rs-notes--header__button--menu:disabled, .rs-notes--header__button--trash:disabled {\n        cursor: not-allowed; }\n    .rs-notes--header__button--add, .rs-notes--header__button--menu, .rs-notes--header__button--trash {\n      width: 32px; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n", ""]);
 
 // exports
 
@@ -713,10 +713,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _reducers_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/reducer */ "./src/components/react-sticky-notes/reducers/reducer.js");
 /* harmony import */ var _partials_notes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/notes */ "./src/components/react-sticky-notes/partials/notes.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navbar */ "./src/components/react-sticky-notes/navbar/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ "./src/components/react-sticky-notes/utils/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -741,6 +750,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var ReactStickyNotes =
 /*#__PURE__*/
 function (_Component) {
@@ -753,9 +763,13 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ReactStickyNotes).call(this, props));
 
-    _defineProperty(_assertThisInitialized(_this), "dispatch", function (_ref) {
-      var type = _ref.type,
-          payload = _ref.payload;
+    _defineProperty(_assertThisInitialized(_this), "dispatch", function (options) {
+      var type = options.type,
+          payload = options.payload;
+
+      if (_this.props.onBeforeChange) {
+        payload = _this.props.onBeforeChange(type, payload, _toConsumableArray(_this.state.items));
+      }
 
       _this.setState(Object(_reducers_reducer__WEBPACK_IMPORTED_MODULE_1__["default"])(_this.state, {
         type: type,
@@ -766,7 +780,7 @@ function (_Component) {
         }
 
         if (_this.props.onChange) {
-          _this.props.onChange(_this.state.items);
+          _this.props.onChange(type, payload, _toConsumableArray(_this.state.items));
         }
       });
     });
@@ -817,7 +831,7 @@ function (_Component) {
     });
 
     _this.state = {
-      items: Object(_utils__WEBPACK_IMPORTED_MODULE_3__["getNotes"])(props.colorCodes, props.notes)
+      items: Object(_utils__WEBPACK_IMPORTED_MODULE_4__["getNotes"])(props.colorCodes, props.notes)
     };
     return _this;
   }
@@ -826,8 +840,6 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       if (this.props.useCSS) {
-        console.log("notes-with-style");
-
         __webpack_require__(/*! ./index.scss */ "./src/components/react-sticky-notes/index.scss");
       }
     }
@@ -841,30 +853,40 @@ function (_Component) {
     value: function render() {
       var items = this.state.items;
       var _this$props = this.props,
-          width = _this$props.width,
-          height = _this$props.height,
+          noteWidth = _this$props.noteWidth,
+          noteHeight = _this$props.noteHeight,
           containerWidth = _this$props.containerWidth,
           containerHeight = _this$props.containerHeight,
           backgroundColor = _this$props.backgroundColor,
           icons = _this$props.icons,
-          cssPrefix = _this$props.cssPrefix,
-          displayFooter = _this$props.displayFooter;
-      return Object(_utils__WEBPACK_IMPORTED_MODULE_3__["h"])(_partials_notes__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        displayFooter: displayFooter,
+          prefix = _this$props.prefix,
+          navbar = _this$props.navbar;
+      return [Object(_utils__WEBPACK_IMPORTED_MODULE_4__["h"])(_partials_notes__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        key: "".concat(prefix, "--notes"),
+        navbar: navbar,
         items: items,
-        width: width,
-        height: height,
+        noteWidth: noteWidth,
+        noteHeight: noteHeight,
         containerWidth: containerWidth,
         containerHeight: containerHeight,
         backgroundColor: backgroundColor,
         icons: icons,
-        prefix: cssPrefix,
+        prefix: prefix,
+        colorCodes: _utils__WEBPACK_IMPORTED_MODULE_4__["colorCodes"],
         addItem: this.addItem,
         updateItem: this.updateItem,
         selectItem: this.selectItem,
-        deleteItem: this.deleteItem,
-        colorCodes: _utils__WEBPACK_IMPORTED_MODULE_3__["colorCodes"]
-      });
+        deleteItem: this.deleteItem
+      }), Object(_utils__WEBPACK_IMPORTED_MODULE_4__["h"])(_navbar__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({
+        key: "".concat(prefix, "--navbar")
+      }, this.props, {
+        items: items,
+        colorCodes: _utils__WEBPACK_IMPORTED_MODULE_4__["colorCodes"],
+        addItem: this.addItem,
+        updateItem: this.updateItem,
+        selectItem: this.selectItem,
+        deleteItem: this.deleteItem
+      }))];
     }
   }]);
 
@@ -873,18 +895,18 @@ function (_Component) {
 
 _defineProperty(ReactStickyNotes, "defaultProps", {
   useCSS: true,
-  cssPrefix: 'rs-notes',
-  colorCodes: _utils__WEBPACK_IMPORTED_MODULE_3__["colorCodes"],
-  displayFooter: true,
+  prefix: 'rs-notes',
+  colorCodes: _utils__WEBPACK_IMPORTED_MODULE_4__["colorCodes"],
+  navbar: true,
   sessionKey: 'react-sticky-notes',
-  width: 220,
-  height: 220,
+  noteWidth: 220,
+  noteHeight: 220,
   containerWidth: '100%',
   containerHeight: '100%',
   icons: {
-    add: _utils__WEBPACK_IMPORTED_MODULE_3__["iconAdd"],
-    menu: _utils__WEBPACK_IMPORTED_MODULE_3__["iconMenu"],
-    trash: _utils__WEBPACK_IMPORTED_MODULE_3__["iconTrash"]
+    add: _utils__WEBPACK_IMPORTED_MODULE_4__["iconAdd"],
+    menu: _utils__WEBPACK_IMPORTED_MODULE_4__["iconMenu"],
+    trash: _utils__WEBPACK_IMPORTED_MODULE_4__["iconTrash"]
   }
 });
 
@@ -922,10 +944,60 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./src/components/react-sticky-notes/partials/navbar-item-add.js":
-/*!***********************************************************************!*\
-  !*** ./src/components/react-sticky-notes/partials/navbar-item-add.js ***!
-  \***********************************************************************/
+/***/ "./src/components/react-sticky-notes/navbar/index.js":
+/*!***********************************************************!*\
+  !*** ./src/components/react-sticky-notes/navbar/index.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _navbar_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar-item */ "./src/components/react-sticky-notes/navbar/navbar-item.js");
+/* harmony import */ var _navbar_item_add__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar-item-add */ "./src/components/react-sticky-notes/navbar/navbar-item-add.js");
+
+
+
+
+function NavBar(_ref) {
+  var prefix = _ref.prefix,
+      items = _ref.items,
+      addItem = _ref.addItem,
+      selectItem = _ref.selectItem,
+      deleteItem = _ref.deleteItem,
+      icons = _ref.icons,
+      navbar = _ref.navbar;
+  return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+    className: "".concat(prefix, "--navbar")
+  }, [navbar && items ? items.map(function (item, index) {
+    return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_navbar_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: "navbar-item__".concat(index),
+      navbar: navbar,
+      index: index,
+      prefix: prefix,
+      icons: icons,
+      text: item.text,
+      color: item.color,
+      selectItem: selectItem,
+      deleteItem: deleteItem
+    }, item.text);
+  }) : null, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_navbar_item_add__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    key: "navbar-item__add",
+    prefix: prefix,
+    icons: icons,
+    addItem: addItem
+  })]);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/navbar/navbar-item-add.js":
+/*!*********************************************************************!*\
+  !*** ./src/components/react-sticky-notes/navbar/navbar-item-add.js ***!
+  \*********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -952,10 +1024,10 @@ function NavBarItemAdd(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/react-sticky-notes/partials/navbar-item.js":
-/*!*******************************************************************!*\
-  !*** ./src/components/react-sticky-notes/partials/navbar-item.js ***!
-  \*******************************************************************/
+/***/ "./src/components/react-sticky-notes/navbar/navbar-item.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/react-sticky-notes/navbar/navbar-item.js ***!
+  \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -999,55 +1071,6 @@ function NavBarItem(_ref) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (NavBarItem);
-
-/***/ }),
-
-/***/ "./src/components/react-sticky-notes/partials/navbar.js":
-/*!**************************************************************!*\
-  !*** ./src/components/react-sticky-notes/partials/navbar.js ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
-/* harmony import */ var _navbar_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar-item */ "./src/components/react-sticky-notes/partials/navbar-item.js");
-/* harmony import */ var _navbar_item_add__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar-item-add */ "./src/components/react-sticky-notes/partials/navbar-item-add.js");
-
-
-
-
-function NavBar(_ref) {
-  var prefix = _ref.prefix,
-      items = _ref.items,
-      addItem = _ref.addItem,
-      selectItem = _ref.selectItem,
-      deleteItem = _ref.deleteItem,
-      icons = _ref.icons,
-      displayFooter = _ref.displayFooter;
-  return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
-    className: "".concat(prefix, "--navbar")
-  }, [displayFooter && items ? items.map(function (item, index) {
-    return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_navbar_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      key: "navbar-item__".concat(index),
-      index: index,
-      prefix: prefix,
-      icons: icons,
-      text: item.text,
-      color: item.color,
-      selectItem: selectItem,
-      deleteItem: deleteItem
-    }, item.text);
-  }) : null, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_navbar_item_add__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    key: "navbar-item__add",
-    prefix: prefix,
-    icons: icons,
-    addItem: addItem
-  })]);
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (NavBar);
 
 /***/ }),
 
@@ -1151,7 +1174,8 @@ function (_React$Component) {
         style: this.props.style,
         ref: this.element,
         onClick: this.onClick,
-        onMouseDown: this.onMouseDown
+        onMouseDown: this.onMouseDown,
+        onTouchStart: this.onMouseDown
       }, this.props.children);
     }
   }]);
@@ -1365,9 +1389,6 @@ function (_React$Component) {
       var _this$props = this.props,
           index = _this$props.index,
           selected = _this$props.selected,
-          width = _this$props.width,
-          height = _this$props.height,
-          containerHeight = _this$props.containerHeight,
           toggle = _this$props.toggle,
           setToggle = _this$props.setToggle,
           prefix = _this$props.prefix,
@@ -1454,8 +1475,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _note__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./note */ "./src/components/react-sticky-notes/partials/note.js");
-/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar */ "./src/components/react-sticky-notes/partials/navbar.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
@@ -1477,7 +1497,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -1510,77 +1529,33 @@ function (_React$Component) {
     });
 
     _this.state = {
-      toggle: false,
-      containerWidth: 0,
-      containerHeight: 0
+      toggle: false
     };
-    _this.notesContainer = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
     return _this;
   }
 
   _createClass(Notes, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (this.notesContainer && this.notesContainer.current) {
-        this.setState({
-          containerWidth: this.notesContainer.current.offsetWidth,
-          containerHeight: this.notesContainer.current.offsetHeight
-        });
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
       var _this$props = this.props,
           prefix = _this$props.prefix,
-          addItem = _this$props.addItem,
-          updateItem = _this$props.updateItem,
-          selectItem = _this$props.selectItem,
-          deleteItem = _this$props.deleteItem,
-          colorCodes = _this$props.colorCodes,
-          containerWidth = _this$props.containerWidth,
-          containerHeight = _this$props.containerHeight,
-          width = _this$props.width,
-          height = _this$props.height,
-          backgroundColor = _this$props.backgroundColor,
-          icons = _this$props.icons,
-          items = _this$props.items,
-          displayFooter = _this$props.displayFooter;
-      return Object(_utils__WEBPACK_IMPORTED_MODULE_3__["h"])('div', {
+          items = _this$props.items;
+      return Object(_utils__WEBPACK_IMPORTED_MODULE_2__["h"])('div', {
         key: prefix,
         className: prefix,
-        ref: this.notesContainer,
-        style: Object(_utils__WEBPACK_IMPORTED_MODULE_3__["getElementStyle"])('container', this.props)
-      }, [items ? items.map(function (item, index) {
-        return Object(_utils__WEBPACK_IMPORTED_MODULE_3__["h"])(_note__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({}, item, _this2.state, {
-          count: items.length,
-          key: index,
-          prefix: prefix,
+        style: Object(_utils__WEBPACK_IMPORTED_MODULE_2__["getElementStyle"])('container', this.props)
+      }, items ? items.map(function (item, index) {
+        return Object(_utils__WEBPACK_IMPORTED_MODULE_2__["h"])(_note__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({
           index: index,
-          icons: icons,
-          width: width,
-          height: height,
-          addItem: addItem,
-          updateItem: updateItem,
-          selectItem: selectItem,
-          deleteItem: deleteItem,
-          colorCodes: colorCodes,
+          key: "note-".concat(index)
+        }, item, _this2.state, _this2.props, {
           toggle: _this2.state.toggle,
           setToggle: _this2.setToggle,
           setColor: _this2.setColor
         }), null);
-      }) : null, Object(_utils__WEBPACK_IMPORTED_MODULE_3__["h"])(_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        key: "".concat(prefix, "--navbar"),
-        displayFooter: displayFooter,
-        prefix: prefix,
-        icons: icons,
-        items: items,
-        addItem: addItem,
-        selectItem: selectItem,
-        deleteItem: deleteItem
-      })]);
+      }) : null);
     }
   }]);
 
@@ -1696,9 +1671,9 @@ function () {
 
     _classCallCheck(this, Draggable);
 
-    _defineProperty(this, "initialX", 0);
+    _defineProperty(this, "dx", 0);
 
-    _defineProperty(this, "initialY", 0);
+    _defineProperty(this, "dy", 0);
 
     _defineProperty(this, "currentX", 0);
 
@@ -1707,47 +1682,45 @@ function () {
     _defineProperty(this, "onMouseMove", function (e) {
       e.preventDefault();
       var el = _this.options.element;
+      var parentElement = el.parentElement;
+      var pRect = parentElement ? parentElement.getBoundingClientRect() : {
+        left: 0,
+        top: 0
+      };
 
-      var position = _this.getPosition(e, _this.initialX, _this.initialY);
+      var position = _this.getPosition(e, _this.dx, _this.dy);
 
-      _this.currentX = position.x;
-      _this.currentY = position.y;
-      var x1 = _this.options.element.parentElement.offsetWidth - _this.options.element.offsetWidth;
-      var y1 = _this.options.element.parentElement.offsetHeight - _this.options.element.offsetHeight;
-
-      if (_this.currentX < 0) {
-        _this.currentX = 0;
-      }
-
-      if (_this.currentY < 0) {
-        _this.currentY = 0;
-      }
-
-      if (_this.currentX > x1) {
-        _this.currentX = x1;
-      }
-
-      if (_this.currentY > y1) {
-        _this.currentY = y1;
-
-        if (el.parentElement.offsetHeight < el.offsetHeight) {
-          _this.currentY = 0;
-        }
-      }
+      var x = position.left - pRect.left;
+      var y = position.top - pRect.top;
+      _this.currentX = x > 0 ? x : 0;
+      _this.currentY = y > 0 ? y : 0;
 
       _this.setTranslate(_this.currentX, _this.currentY);
     });
 
     _defineProperty(this, "onMouseDown", function (e) {
       var el = _this.options.element;
+      var parentElement = el.parentElement;
       var rect = el.getBoundingClientRect();
+      var pRect = parentElement ? parentElement.getBoundingClientRect() : {
+        left: 0,
+        top: 0
+      };
+      _this.currentX = -pRect.left + rect.left;
+      _this.currentY = -pRect.top + rect.top;
 
-      var position = _this.getPosition(e, rect.x, rect.y);
+      var position = _this.getPosition(e);
 
-      _this.initialX = position.x;
-      _this.initialY = position.y;
+      _this.dx = position.left - rect.left;
+      _this.dy = position.top - rect.top;
       document.addEventListener('mousemove', _this.onMouseMove, null);
       document.addEventListener('mouseup', _this.onMouseUp, null);
+      document.addEventListener('touchmove', _this.onMouseMove, {
+        passive: false
+      });
+      document.addEventListener('touchend', _this.onMouseUp, {
+        passive: false
+      });
     });
 
     _defineProperty(this, "onMouseUp", function (e) {
@@ -1759,7 +1732,9 @@ function () {
       }
 
       document.removeEventListener('mousemove', _this.onMouseMove);
-      document.removeEventListener('mouseup', _this.onMouseUp, null);
+      document.removeEventListener('mouseup', _this.onMouseUp);
+      document.removeEventListener('touchmove', _this.onMouseMove);
+      document.removeEventListener('touchend', _this.onMouseUp);
     });
   }
 
@@ -1767,29 +1742,32 @@ function () {
     key: "init",
     value: function init(options) {
       this.options = options;
-      /*if(options.position){
-          this.xOffset = options.position.x;
-          this.yOffset = options.position.y;
-          this.setTranslate(options.position.x,options.position.y);
-      }*/
     }
   }, {
     key: "setTranslate",
     value: function setTranslate(x, y) {
       if (this.options.element) {
-        this.options.element.style.transform = "translate3d(".concat(x, "px,").concat(y, "px,0)");
+        this.options.element.style.left = "".concat(x, "px");
+        this.options.element.style.top = "".concat(y, "px");
       }
     }
   }, {
     key: "getPosition",
-    value: function getPosition(e, dx, dy) {
+    value: function getPosition(e) {
+      var dx = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      var dy = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
       if (/touch/.test(e.type)) {
         return {
+          left: e.touches[0].clientX - dx,
+          top: e.touches[0].clientY - dy,
           x: e.touches[0].clientX - dx,
           y: e.touches[0].clientY - dy
         };
       } else {
         return {
+          left: e.clientX - dx,
+          top: e.clientY - dy,
           x: e.clientX - dx,
           y: e.clientY - dy
         };
@@ -1821,7 +1799,7 @@ var getElementStyle = function getElementStyle(nodeName, props) {
   switch (nodeName) {
     case "container":
       style = {
-        position: 'absolute',
+        position: 'relative',
         width: props.containerWidth,
         height: props.containerHeight,
         backgroundColor: props.backgroundColor
@@ -1831,18 +1809,19 @@ var getElementStyle = function getElementStyle(nodeName, props) {
     case "note":
       style = {
         position: 'absolute',
+        left: "".concat(props.position.x, "px"),
+        top: "".concat(props.position.y, "px"),
         backgroundColor: props.color,
-        zIndex: props.selected ? 1 : 0,
-        transform: "translate3d(".concat(props.position.x, "px,").concat(props.position.y, "px,0)")
+        zIndex: props.selected ? 1 : 0
       };
       break;
 
     case "note-body":
       style = {
-        width: props.width,
-        height: props.height,
+        width: props.noteWidth,
+        height: props.noteHeight,
+        minWidth: props.noteWidth,
         backgroundColor: props.toggle === props.index + 1 && props.selected ? "#ffffff" : "",
-        maxHeight: "".concat(props.containerHeight - props.position.y - 34, "px"),
         resize: "both",
         overflow: "auto"
       };

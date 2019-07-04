@@ -1,16 +1,17 @@
 import { Component } from 'react';
 import reducer from './reducers/reducer';
 import Notes from './partials/notes';
+import NavBar from './navbar';
 import { h, colorCodes, getNotes, iconAdd, iconMenu, iconTrash } from './utils';
 class ReactStickyNotes extends Component {
 	static defaultProps = {
 		useCSS: true,
-		cssPrefix: 'rs-notes',
+		prefix: 'rs-notes',
 		colorCodes,
-		displayFooter: true,
+		navbar: true,
 		sessionKey: 'react-sticky-notes',
-		width: 220,
-		height: 220,
+		noteWidth: 220,
+		noteHeight: 220,
 		containerWidth: '100%',
 		containerHeight: '100%',
 		icons: {
@@ -27,11 +28,14 @@ class ReactStickyNotes extends Component {
 	}
 	componentDidMount(){
 		if(this.props.useCSS){
-			console.log("notes-with-style");
 			require('./index.scss');
 		}
 	}
-	dispatch = ({ type, payload }) => {
+	dispatch = (options) => {
+		let { type, payload } = options;
+		if(this.props.onBeforeChange){
+			payload = this.props.onBeforeChange(type, payload, [...this.state.items])
+		}
 		this.setState(
 			reducer(this.state, { type, payload }),
 			()=>{
@@ -39,9 +43,7 @@ class ReactStickyNotes extends Component {
 					localStorage.setItem(this.props.sessionKey, JSON.stringify(this.state.items));
 				}
 				if(this.props.onChange){
-					this.props.onChange(
-						this.state.items
-					)
+					this.props.onChange(type, payload, [...this.state.items])
 				}
 			}
 		)
@@ -95,23 +97,36 @@ class ReactStickyNotes extends Component {
 	}
 	render() {
 		const { items } = this.state;
-		const { width, height, containerWidth, containerHeight, backgroundColor, icons, cssPrefix, displayFooter } = this.props;
-		return h(Notes, {
-			displayFooter,
-			items,
-			width,
-			height,
-			containerWidth, 
-			containerHeight,
-			backgroundColor,
-			icons,
-			prefix: cssPrefix,
-			addItem: this.addItem,
-			updateItem: this.updateItem,
-			selectItem: this.selectItem,
-			deleteItem: this.deleteItem,
-			colorCodes
-		});
+		const { noteWidth, noteHeight, containerWidth, containerHeight, backgroundColor, icons, prefix, navbar } = this.props;
+		return [
+				h(Notes, {
+				key: `${prefix}--notes`,
+				navbar,
+				items,
+				noteWidth,
+				noteHeight,
+				containerWidth, 
+				containerHeight,
+				backgroundColor,
+				icons,
+				prefix,
+				colorCodes,
+				addItem: this.addItem,
+				updateItem: this.updateItem,
+				selectItem: this.selectItem,
+				deleteItem: this.deleteItem
+			}),
+			h(NavBar,{
+				key: `${prefix}--navbar`,
+				...this.props,
+				items,
+				colorCodes,
+				addItem: this.addItem,
+				updateItem: this.updateItem,
+				selectItem: this.selectItem,
+				deleteItem: this.deleteItem
+			})
+		]
 	}
 
 }

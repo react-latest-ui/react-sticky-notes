@@ -1,13 +1,14 @@
 import { h } from './../utils';
 import NavBarItem from './navbar-item';
 import NavBarItemAdd from './navbar-item-add';
-function NavBar({prefix, items, addItem, selectItem, deleteItem, icons, displayFooter}){
+function NavBar({prefix, items, addItem, selectItem, deleteItem, icons, navbar}){
     return h('div',{
         className:`${prefix}--navbar`,
     },[
-        displayFooter&&items?items.map((item, index)=>
+        navbar&&items?items.map((item, index)=>
             h(NavBarItem,{
                 key: `navbar-item__${index}`,
+                navbar,
                 index,
                 prefix,
                 icons,
