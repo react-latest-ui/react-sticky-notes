@@ -12,6 +12,7 @@ function NavBar({prefix, items, addItem, selectItem, deleteItem, icons, navbar})
                 index,
                 prefix,
                 icons,
+                id:item.id,
                 text:item.text,
                 color:item.color,
                 selectItem,
