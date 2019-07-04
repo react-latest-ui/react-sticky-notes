@@ -40,7 +40,7 @@ class Note extends React.Component{
                 className:`${prefix}--note__body`,
                 style: getElementStyle('note-body', this.props)
             },
-                toggle===index+1&&selected&&colorCodes?
+                toggle===index&&selected&&colorCodes?
                 h(NoteMenu, { 
                     key: 'note-menu', 
                     id,
