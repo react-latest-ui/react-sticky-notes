@@ -2,15 +2,15 @@ const reducer = (state, action) => {
     let { items } = state;
     switch (action.type) {
         case 'add':
-            items = items.map((item, index)=>{
+            items = items.map((item)=>{
                 item.selected = false;
                 return item;
             });
-            items.splice(action.payload.index, 0, action.payload);
+            items.splice(action.payload.index, 0, action.payload.data);
             break;
         case 'update':
             items = items.map((item, index)=>{
-                return index===action.payload.index?{...item, ...action.payload }:item;
+                return index===action.payload.index?{...item, ...action.payload.data }:item;
             });
             break;
         case 'delete':
