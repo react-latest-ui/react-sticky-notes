@@ -23,7 +23,7 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
                 width: props.noteWidth,
                 height: props.noteHeight,
                 minWidth: props.noteWidth,
-                backgroundColor: props.toggle===props.index+1&&props.selected?"#ffffff":"",
+                backgroundColor: props.toggle===props.index&&props.selected?"#ffffff":"",
                 resize:"both",
                 overflow: "auto"
             }
