@@ -24,7 +24,6 @@
                 line-height: 30px;
                 background: none;
                 border:none;
-                cursor: pointer;
                 transition: all .2s linear;
                 padding: 5px;
                 color: rgba(255,255,255,.75);
@@ -39,6 +38,7 @@
             }
             &--add, &--menu, &--trash{
                 width: 32px;
+                cursor: pointer;
             }
         }
     }
