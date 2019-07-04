@@ -89,11 +89,12 @@ class ReactStickyNotes extends Component {
 			}
 		});
 	}
-	deleteItem = (index) => {
+	deleteItem = (index, data) => {
 		this.dispatch({
 			type: 'delete',
 			payload: {
-				index
+				index,
+				data
 			}
 		});
 	}
