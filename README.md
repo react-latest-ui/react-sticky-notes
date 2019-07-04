@@ -41,7 +41,7 @@ class MyApp extends Component {
 sessionKey: ?String,
 colors: ?Array = [HexCodes],
 notes: ?Array = [{
-	colorCode: ?HexCode,
+	color: ?HexCode,
 	text: ?String
 }],
 containerWidth: ?String{px|%},
