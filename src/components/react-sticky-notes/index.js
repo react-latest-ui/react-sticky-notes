@@ -2,7 +2,7 @@ import { Component } from 'react';
 import reducer from './reducers/reducer';
 import Notes from './partials/notes';
 import NavBar from './navbar';
-import { h, colorCodes, getNotes, iconAdd, iconMenu, iconTrash } from './utils';
+import { h, colorCodes, getNotes, getUUID, iconAdd, iconMenu, iconTrash } from './utils';
 class ReactStickyNotes extends Component {
 	static defaultProps = {
 		useCSS: true,
@@ -52,8 +52,9 @@ class ReactStickyNotes extends Component {
 		return this.props.colorCodes[Math.floor(Math.random() * this.props.colorCodes.length)];
 	}
 	addItem = (options) => {
+		const index=options?options.index+1:this.state.items.length;
 		const newProps = {
-			index:options?options.index+1:this.state.items.length,
+			id: getUUID(),
 			color: this.getColor(),
 			text: '',
 			selected: true,
@@ -65,7 +66,8 @@ class ReactStickyNotes extends Component {
 		this.dispatch({
 			type: 'add',
 			payload: {
-				...newProps
+				index,
+				data: newProps
 			}
 		});
 	}
@@ -74,7 +76,7 @@ class ReactStickyNotes extends Component {
 			type: 'update',
 			payload: {
 				index,
-				...newProps
+				data: newProps
 			}
 		});
 	}
@@ -83,7 +85,7 @@ class ReactStickyNotes extends Component {
 			type: 'select',
 			payload: {
 				index,
-				...newProps
+				data: newProps
 			}
 		});
 	}
