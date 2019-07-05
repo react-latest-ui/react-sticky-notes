@@ -1,28 +1,24 @@
 import { h } from './../utils';
 import NavBarItem from './navbar-item';
 import NavBarItemAdd from './navbar-item-add';
-function NavBar({prefix, items, addItem, selectItem, deleteItem, icons}){
+function NavBar({prefix, items, addItem, callbacks, icons}){
     return h('div',{
         className:`${prefix}--navbar`,
     },[
-        items?items.map((item, index)=>
+        items?items.map((data)=>
             h(NavBarItem,{
-                key: `navbar-item__${index}`,
-                index,
+                key: `navbar-item__${data.id}`,
+                data,
                 prefix,
                 icons,
-                id:item.id,
-                text:item.text,
-                color:item.color,
-                selectItem,
-                deleteItem
-            },item.text)
+                callbacks
+            })
         ):null,
         h(NavBarItemAdd,{
             key: `navbar-item__add`,
             prefix,
             icons,
-            addItem,
+            callbacks,
         })
     ]);
 }
