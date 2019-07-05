@@ -48,49 +48,46 @@ class ReactStickyNotes extends Component {
 	getColor() {
 		return this.props.colorCodes[Math.floor(Math.random() * this.props.colorCodes.length)];
 	}
-	addItem = (options) => {
-		const index=options?options.index+1:this.state.items.length;
-		const newProps = {
-			id: getUUID(),
-			color: this.getColor(),
-			text: '',
-			selected: true,
-			position: {
-				x: 0,
-				y: 0
-			}
-		}
+	addItem = (e, data) => {
+		const { items } = this.state;
+		const index=data?items.findIndex(item=>item.id===data.id)+1:items.length;
 		this.dispatch({
 			type: 'add',
 			payload: {
 				index,
-				data: newProps
+				data: {
+					id: getUUID(),
+					color: this.getColor(),
+					text: '',
+					selected: true,
+					position: {
+						x: 0,
+						y: 0
+					}
+				}
 			}
 		});
 	}
-	updateItem = (index, newProps) => {
+	updateItem = (e, data) => {
 		this.dispatch({
 			type: 'update',
 			payload: {
-				index,
-				data: newProps
+				data
 			}
 		});
 	}
-	selectItem = (index, newProps) => {
+	selectItem = (e, data) => {
 		this.dispatch({
 			type: 'select',
 			payload: {
-				index,
-				data: newProps
+				data
 			}
 		});
 	}
-	deleteItem = (index, data) => {
+	deleteItem = (e, data) => {
 		this.dispatch({
 			type: 'delete',
 			payload: {
-				index,
 				data
 			}
 		});
