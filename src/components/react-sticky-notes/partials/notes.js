@@ -49,9 +49,8 @@ class Notes extends React.Component{
                     default:
                         _note = h(Note, { 
                             key: `note-${data.id}`, 
-                            index, 
+                            index,
                             data,
-                            ...this.state,
                             ...this.props,
                             toggle:this.state.toggle,
                             setToggle:this.setToggle,
