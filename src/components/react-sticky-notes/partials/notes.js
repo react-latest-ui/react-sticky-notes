@@ -25,41 +25,15 @@ class Notes extends React.Component{
                 key: prefix, 
                 className: prefix,
                 style: getElementStyle('container', this.props)
-            }, items?items.map((data, index)=> {
-                let _note = null;
-                switch(data.viewSize){
-                    case "minimized":
-                        _note = h(NoteMinimized, { 
-                            key: `note-${data.id}`, 
-                            prefix,
-                            index, 
-                            data,
-                            updateItem: this.props.updateItem
-                        });
-                        break;
-                    case "maximized":
-                        _note = h(NoteMaximized, { 
-                            key: `note-${data.id}`, 
-                            prefix,
-                            index, 
-                            data,
-                            updateItem: this.props.updateItem
-                        });
-                        break;
-                    default:
-                        _note = h(Note, { 
-                            key: `note-${data.id}`, 
-                            index,
-                            data,
-                            ...this.props,
-                            toggle:this.state.toggle,
-                            setToggle:this.setToggle,
-                            setColor:this.setColor
-                        })
-                    break;
-                }
-                return _note;
-            }
+            }, 
+                items?items.map((data, index)=> h(Note, { 
+                    key: `note-${data.id}`, 
+                    data,
+                    ...this.props,
+                    toggle:this.state.toggle,
+                    setToggle:this.setToggle,
+                    setColor:this.setColor
+                })
             ):null
         )
     }

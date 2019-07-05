@@ -15,30 +15,29 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
                     left: `${props.data.position.x}px`,
                     top: `${props.data.position.y}px`,
                     backgroundColor: props.data.color,
-                    zIndex: props.data.selected?1:0
+                    zIndex: props.data.selected?1:0,
+                    borderRadius: props.data.viewSize==="minimized"?'50%':'0'
                 }
         break;
+        case "note-minimized":
+            style.backgroundColor=props.data.color,
+            style.padding = '10px';
+            style.borderRadius = '50%';
+        break;
         case "note-body":
-            style = {
-                width: props.noteWidth,
-                height: props.noteHeight
-            }
-            if(props.selected){
+            style.width = props.noteWidth,
+            style.height = props.noteHeight,
+            style.overflow = "auto";
+            if(props.data.selected){
                 style.minWidth = props.noteWidth,
-                style.backgroundColor = props.toggle===props.index?"#ffffff":"";
                 style.resize = "both";
-                style.overflow = "auto";
             }
         break;
         case "note-input":
-            style = {
-                height: "100%",
-            }
+            style.height =  "100%";
         break;
         case "note-header":
-            style = {
-                visibility: props.data.selected?"visible":"hidden",
-            }
+            style.backgroundColor=props.data?props.data.color:'';
         break;
         case "note-minimized":
             style = {
@@ -60,17 +59,15 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
                 height: '10px'
             }
         break;
-        case "menu":
-            style = {
-                height: "100%",
-            }
+        case "note-menu":
+            style.backgroundColor = "#ffffff";
+            style.minHeight = '100%';
         break;
         case "note-color-selector":
             style = {
                 backgroundColor: props.colorCode
             }
         break;
-
     }
     return style;
 }

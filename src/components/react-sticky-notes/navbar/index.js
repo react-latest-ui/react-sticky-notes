@@ -1,25 +1,37 @@
-import { h } from './../utils';
-import NavBarItem from './navbar-item';
-import NavBarItemAdd from './navbar-item-add';
-function NavBar({prefix, items, addItem, callbacks, icons}){
+import { h, getElementStyle } from './../utils';
+import NoteHeader from './../partials/note-header';
+import { ButtonAdd, ButtonTitle, ButtonTrash } from './../buttons';
+function NavBar({prefix, items, callbacks, icons}){
     return h('div',{
         className:`${prefix}--navbar`,
+        style: getElementStyle('navbar')
     },[
-        items?items.map((data)=>
-            h(NavBarItem,{
-                key: `navbar-item__${data.id}`,
-                data,
-                prefix,
+        h( 'div',{
+            key: `${prefix}--navbar__nav`,
+            className:`${prefix}--navbar__nav`,
+            style: getElementStyle('navbar-nav')
+        },
+            items?items.map((data)=>
+                h(NoteHeader,{
+                    key: `navbar-item__${data.id}`,
+                    data,
+                    prefix: `${prefix}--navbar__item`,
+                    icons,
+                    callbacks,
+                    buttons: [ButtonTitle, ButtonTrash]
+                })
+            ):null 
+        ),
+        h('div',{
+            key: `navbar-item__options`,
+        },
+            h( NoteHeader, {
+                prefix: `${prefix}--navbar__item`,
                 icons,
-                callbacks
+                callbacks,
+                buttons: [ButtonAdd, ButtonTrash]
             })
-        ):null,
-        h(NavBarItemAdd,{
-            key: `navbar-item__add`,
-            prefix,
-            icons,
-            callbacks,
-        })
+        )
     ]);
 }
 export default NavBar;

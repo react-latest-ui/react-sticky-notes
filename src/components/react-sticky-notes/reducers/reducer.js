@@ -14,16 +14,24 @@ const reducer = (state, action) => {
             });
             break;
         case 'delete':
-            items.splice(items.findIndex(item=>action.payload.data.id===item.id),1);
+            const index = items.findIndex(item=>action.payload.data.id===item.id);
+            if(index!==-1){
+                items.splice(index,1);
+            }else{
+                items.splice(0,items.length);
+            }
             break;
         case 'select':
             items = items.map((item)=>{
-                if( item.id===action.payload.data.id ){
-                    item.selected = true;
-                    item.viewSize = null;
-                }else{
-                    item.selected = false;
-                }
+                item.menu = false;
+                item.selected = item.id===action.payload.data.id?true:false;
+                return item;
+            });
+            break;
+        case 'changeview':
+            items = items.map((item)=>{
+                item.viewSize = item.id===action.payload.data.id?action.payload.data.viewSize:item.viewSize;
+                item.selected = item.id===action.payload.data.id?true:false;
                 return item;
             });
             break;

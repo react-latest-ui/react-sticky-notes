@@ -1,8 +1,8 @@
 import React from 'react';
 import NoteHeader from './note-header';
-import NoteText from './note-text';
-import NoteMenu from './note-menu';
+import NoteBody from './note-body';
 import NoteDraggable from './note-draggable';
+import {ButtonAdd, ButtonTitle, ButtonMenu, ButtonMinimize, ButtonTrash} from './../buttons';
 import { h, getElementStyle } from './../utils';
 class Note extends React.Component{
     state = {
@@ -13,50 +13,32 @@ class Note extends React.Component{
         this.targetRef = React.createRef();
     }
     render(){
-    	const { data, index, toggle, setToggle, prefix, setColor, callbacks, colorCodes, icons } = this.props;
+    	const { data, prefix, callbacks } = this.props;
         return h(NoteDraggable,{
-            className:`${prefix}--note ${data.selected?prefix+'--note__selected':''}`,
+            className:`${prefix}--note ${data.selected?prefix+'--note__selected':''} ${data.viewSize?prefix+'--note__'+data.viewSize:''}`,
             position:data.position,
             selected:data.selected,
             target: this.targetRef,
             onDragComplete:(pos)=>callbacks.updateItem(null, {id:data.id, position:pos}),
-            onSelect:(active)=>callbacks.selectItem(index, {id:data.id, selected:active}),
             style: getElementStyle('note', this.props)
         },[
-            h(NoteHeader, {
+            data.viewSize==='minimized'?h('div', {
+                key:'note-header--minimized',
+                ref: this.targetRef,
+                style: getElementStyle('note-minimized', this.props),
+                onClick:(e)=>callbacks.changeView(e, {id:data.id, viewSize:null}),
+            }):null,
+            !data.viewSize?h(NoteHeader, {
+                ...this.props,
                 key:'note-header',
                 targetRef: this.targetRef,
-                data,
-                index, 
-                prefix,
-                icons,
-                callbacks, 
-                setToggle
-            }),
-            h('div',{
+                prefix: `${prefix}--header`,
+                buttons: [ButtonAdd, ButtonTitle, ButtonMenu, ButtonMinimize, ButtonTrash]
+            }):null,
+            !data.viewSize?h(NoteBody,{
                 key:'note-body',
-                className:`${prefix}--note__body`,
-                style: getElementStyle('note-body', this.props)
-            },
-                toggle===index&&data.selected&&colorCodes?
-                h(NoteMenu, { 
-                    key: 'note-menu', 
-                    data,
-                    colorCodes, 
-                    callbacks, 
-                    index, 
-                    prefix, 
-                    setColor, 
-                    colorCodes
-                }):
-                h(NoteText, { 
-                    key: 'note-text', 
-                    data,
-                    index, 
-                    prefix, 
-                    callbacks
-                })
-            )
+                ...this.props
+            }):null
     
         ])
     }

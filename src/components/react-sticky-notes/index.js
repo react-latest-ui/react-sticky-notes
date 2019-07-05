@@ -84,6 +84,14 @@ class ReactStickyNotes extends Component {
 			}
 		});
 	}
+	changeView = (e, data) => {
+		this.dispatch({
+			type: 'changeview',
+			payload: {
+				data
+			}
+		});
+	}
 	deleteItem = (e, data) => {
 		this.dispatch({
 			type: 'delete',
@@ -96,6 +104,19 @@ class ReactStickyNotes extends Component {
 		const { items } = this.state;
 		const { noteWidth, noteHeight, containerWidth, containerHeight, backgroundColor, icons, prefix, navbar } = this.props;
 		return [
+			navbar?h(NavBar,{
+				key: `${prefix}--navbar`,
+				...this.props,
+				items,
+				colorCodes,
+				callbacks: {
+					changeView: this.changeView,
+					addItem: this.addItem,
+					updateItem: this.updateItem,
+					selectItem: this.selectItem,
+					deleteItem: this.deleteItem
+				}
+			}):null,
 			h(Notes, {
 				key: `${prefix}--notes`,
 				items,
@@ -108,24 +129,13 @@ class ReactStickyNotes extends Component {
 				prefix,
 				colorCodes,
 				callbacks: {
+					changeView: this.changeView,
 					addItem: this.addItem,
 					updateItem: this.updateItem,
 					selectItem: this.selectItem,
 					deleteItem: this.deleteItem
 				}
-			}),
-			navbar?h(NavBar,{
-				key: `${prefix}--navbar`,
-				...this.props,
-				items,
-				colorCodes,
-				callbacks: {
-					addItem: this.addItem,
-					updateItem: this.updateItem,
-					selectItem: this.selectItem,
-					deleteItem: this.deleteItem
-				}
-			}):null
+			})
 		]
 	}
 

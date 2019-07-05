@@ -1,60 +1,35 @@
 @mixin navbar() {
     &--navbar{
         white-space: nowrap;
+        display: flex;
+        justify-content: space-between;
+        &__nav{
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+        }
+        &__options{
+            display: flex;
+        }
         &__item{
-            display: inline-block;
+            display: flex;
+            flex-grow: 1;
             position: relative;
             vertical-align: middle;
-            opacity: .8;
-            padding-right: 32px;
-            &--select, &--delete{
+            &--button{
                 cursor: pointer;
-                border: none;
-                outline: none;
-                color: #fff;
-            }
-            &--select{
-                text-align: left;
-                width: 80px;
-                height: 22px;
-                padding: 0px 5px;
-                white-space: nowrap;
+                opacity: .8;
                 background: none;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                font-size: 12px;
-            }
-            &--delete{
-                text-align: center;
-                position: absolute;
-                right: 2px;
-                top: 2px;
-                padding: 0;
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                background-color: rgba(0, 0, 0, 0.25);
-                &:hover,&:focus{
-                    background-color: rgba(0, 0, 0, 0.5);
-                }
-            }
-            &--add{
-                text-align: center;
-                width: 24px;
-                height: 24px;
-                opacity: 0.8;
-                cursor: pointer;
                 border: none;
-                background: #333;
-                color: #fff;
-                padding: 0;
-                vertical-align: middle;
+                color:#fff;
+                padding: 3px 5px;
+                &__title{
+                    text-align: left;
+                    flex-grow: 1;
+                }
                 &:hover,&:focus{
                     opacity: 1;
                 }
-            }
-            &:hover,&:focus{
-                opacity: 1;
             }
         }
     }
