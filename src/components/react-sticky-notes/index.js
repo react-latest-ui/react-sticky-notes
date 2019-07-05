@@ -107,20 +107,24 @@ class ReactStickyNotes extends Component {
 				icons,
 				prefix,
 				colorCodes,
-				addItem: this.addItem,
-				updateItem: this.updateItem,
-				selectItem: this.selectItem,
-				deleteItem: this.deleteItem
+				callbacks: {
+					addItem: this.addItem,
+					updateItem: this.updateItem,
+					selectItem: this.selectItem,
+					deleteItem: this.deleteItem
+				}
 			}),
 			navbar?h(NavBar,{
 				key: `${prefix}--navbar`,
 				...this.props,
 				items,
 				colorCodes,
-				addItem: this.addItem,
-				updateItem: this.updateItem,
-				selectItem: this.selectItem,
-				deleteItem: this.deleteItem
+				callbacks: {
+					addItem: this.addItem,
+					updateItem: this.updateItem,
+					selectItem: this.selectItem,
+					deleteItem: this.deleteItem
+				}
 			}):null
 		]
 	}
