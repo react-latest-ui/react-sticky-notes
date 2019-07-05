@@ -1,23 +1,23 @@
 import { h } from './../utils';
-function NavBarItem({id, prefix, icons,index, color, text, selectItem, deleteItem}){
+function NavBarItem({data, prefix, icons, callbacks}){
     return h('span',{
         className:`${prefix}--navbar__item`,
         style:{
-            backgroundColor: color
+            backgroundColor: data.color
         }
     },[
         h('button',{
-            key: `navbar-item__${index}--select`,
+            key: `navbar-item__${data.id}--select`,
             className:`${prefix}--navbar__item--select`,
             type: 'button',
-            onClick: ()=>selectItem(index, {id, selected:true})
-        }, text?text:'...'),
+            onClick: (e)=>callbacks.selectItem(e, {id:data.id, selected:true})
+        }, data.title?data.title:'...'),
         h('button',{
-            key: `navbar-item__${index}--delete`,
+            key: `navbar-item__${data.id}--delete`,
             type: 'button',
             className:`${prefix}--navbar__item--delete`,
-            onClick: ()=>deleteItem(index, {id, selected:true}),
-        }, 'x'),
+            onClick: (e)=>callbacks.deleteItem(e, {id:data.id, selected:true}),
+        }, icons.trash),
     ]);
 }
 export default NavBarItem;
