@@ -1,5 +1,5 @@
 import { h, getElementStyle } from './../utils';
-function NoteHeader({ data, index, prefix, addItem, updateItem, deleteItem, setToggle, targetRef, icons }) {
+function NoteHeader({ data, index, prefix, callbacks, setToggle, targetRef, icons }) {
     return h('div',{
         className:`${prefix}--header ${data.selected?prefix+'--header__selected':''}`,
         style: getElementStyle('note-header',{data})
@@ -7,7 +7,7 @@ function NoteHeader({ data, index, prefix, addItem, updateItem, deleteItem, setT
         h('button',{
             key: 'note-header-button-1',
             className:`${prefix}--header__button--add`,
-            onClick:()=>addItem({index, id: data.id, position:data.position, selected: true})
+            onClick:()=>callbacks.addItem({index, id: data.id, position:data.position, selected: true})
         }, 
             icons.add
         ),
@@ -28,14 +28,14 @@ function NoteHeader({ data, index, prefix, addItem, updateItem, deleteItem, setT
         h('button',{
             key: 'note-header-button--minmax',
             className:`${prefix}--header__button--minmax`,
-            onClick:()=>updateItem(index, { id: data.id, viewSize: 'minimized', selected: false })
+            onClick:(e)=>callbacks.updateItem(e, { id: data.id, viewSize: 'minimized', selected: false })
         }, 
             icons.minimize
         ),
         h('button',{
             key: 'note-header-button-4',
             className:`${prefix}--header__button--trash`,
-            onClick:()=>deleteItem(index, {id: data.id})
+            onClick:()=>callbacks.deleteItem(index, {id: data.id})
         }, 
             icons.trash
         ),
