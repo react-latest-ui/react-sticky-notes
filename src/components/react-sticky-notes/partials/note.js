@@ -13,15 +13,14 @@ class Note extends React.Component{
         this.targetRef = React.createRef();
     }
     render(){
-    	const { data, index, toggle, setToggle, prefix, setColor, addItem, updateItem, selectItem, deleteItem, colorCodes, icons } = this.props;
+    	const { data, index, toggle, setToggle, prefix, setColor, callbacks, colorCodes, icons } = this.props;
         return h(NoteDraggable,{
             className:`${prefix}--note ${data.selected?prefix+'--note__selected':''}`,
             position:data.position,
             selected:data.selected,
             target: this.targetRef,
-            onDragComplete:(position)=>updateItem(index, {id:data.id, position:data.position}),
-            onInit:(options)=>updateItem(index, options),
-            onSelect:(active)=>selectItem(index, {id:data.id, selected:active}),
+            onDragComplete:(pos)=>callbacks.updateItem(null, {id:data.id, position:pos}),
+            onSelect:(active)=>callbacks.selectItem(index, {id:data.id, selected:active}),
             style: getElementStyle('note', this.props)
         },[
             h(NoteHeader, {
@@ -31,10 +30,8 @@ class Note extends React.Component{
                 index, 
                 prefix,
                 icons,
-                addItem, 
-                deleteItem, 
-                setToggle, 
-                updateItem
+                callbacks, 
+                setToggle
             }),
             h('div',{
                 key:'note-body',
@@ -46,7 +43,7 @@ class Note extends React.Component{
                     key: 'note-menu', 
                     data,
                     colorCodes, 
-                    updateItem, 
+                    callbacks, 
                     index, 
                     prefix, 
                     setColor, 
@@ -57,7 +54,7 @@ class Note extends React.Component{
                     data,
                     index, 
                     prefix, 
-                    updateItem
+                    callbacks
                 })
             )
     
