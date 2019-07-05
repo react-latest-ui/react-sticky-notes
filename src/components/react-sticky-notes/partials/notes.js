@@ -15,9 +15,9 @@ class Notes extends React.Component{
             toggle: this.state.toggle===toggle?false:toggle
         });
     }
-    setColor = (index, {id, colorCode}) => {
+    setColor = (e, {id, colorCode}) => {
         this.setToggle(false);
-        this.props.updateItem(index,{id, color: colorCode})
+        this.props.callbacks.updateItem(e,{id, color: colorCode})
     }
     render(){
         const {prefix, items} = this.props;
