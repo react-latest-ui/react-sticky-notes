@@ -9,16 +9,16 @@ const reducer = (state, action) => {
             items.splice(action.payload.index, 0, action.payload.data);
             break;
         case 'update':
-            items = items.map((item, index)=>{
-                return index===action.payload.index?{...item, ...action.payload.data }:item;
+            items = items.map((item)=>{
+                return item.id===action.payload.data.id?{...item, ...action.payload.data }:item;
             });
             break;
         case 'delete':
-            items.splice(action.payload.index,1);
+            items.splice(items.findIndex(item=>action.payload.data.id===item.id),1);
             break;
         case 'select':
-            items = items.map((item, index)=>{
-                if( index===action.payload.index ){
+            items = items.map((item)=>{
+                if( item.id===action.payload.data.id ){
                     item.selected = true;
                     item.viewSize = null;
                 }else{
