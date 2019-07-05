@@ -1,10 +1,10 @@
 import { h, nlToBr, getElementStyle } from './../utils';
-function NoteText({ data, index, prefix, updateItem }) {
+function NoteText({ data, index, prefix, callbacks }) {
     return h('div',{
         className:`${prefix}--text`,
         placeholder:"react-hooks",
         contentEditable:"true",
-        onBlur:(e)=>updateItem(index, {
+        onBlur:(e)=>callbacks.updateItem(index, {
             id:data.id,
             title: String(e.target.innerText).substr(0,10),
             text: e.target.innerText
