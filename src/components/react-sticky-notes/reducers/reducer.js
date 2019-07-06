@@ -1,4 +1,5 @@
 const reducer = (state, action) => {
+    const params = Object.keys(action.payload.data);
     let { items } = state;
     switch (action.type) {
         case 'add':
@@ -10,7 +11,16 @@ const reducer = (state, action) => {
             break;
         case 'update':
             items = items.map((item)=>{
-                return item.id===action.payload.data.id?{...item, ...action.payload.data }:item;
+                if(item.id===action.payload.data.id){
+                    item = {...item, ...action.payload.data };
+                }
+                if(params.indexOf('selected')!==-1){
+                    item.selected = item.id===action.payload.data.id?action.payload.data.selected:false;
+                }
+                if(params.indexOf('menu')!==-1){
+                    item.menu = item.id===action.payload.data.id?action.payload.data.menu:false;
+                }
+                return item;
             });
             break;
         case 'delete':
@@ -20,13 +30,6 @@ const reducer = (state, action) => {
             }else{
                 items.splice(0,items.length);
             }
-            break;
-        case 'select':
-            items = items.map((item)=>{
-                item.menu = false;
-                item.selected = item.id===action.payload.data.id?true:false;
-                return item;
-            });
             break;
         case 'changeview':
             items = items.map((item)=>{

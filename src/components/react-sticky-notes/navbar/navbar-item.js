@@ -10,7 +10,7 @@ function NavBarItem({data, prefix, icons, callbacks}){
             key: `navbar-item__${data.id}--select`,
             className:`${prefix}--navbar__item--select`,
             type: 'button',
-            onClick: (e)=>callbacks.selectItem(e, {id:data.id, selected:true})
+            onClick: (e)=>callbacks.updateItem(e, {id:data.id, selected:true})
         }, data.title?data.title:'...'),
         h('button',{
             key: `navbar-item__${data.id}--delete`,

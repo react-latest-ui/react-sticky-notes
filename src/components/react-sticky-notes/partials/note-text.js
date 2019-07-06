@@ -9,6 +9,7 @@ function NoteText({ data, index, prefix, callbacks }) {
             title: String(e.target.innerText).substr(0,10),
             text: e.target.innerText
         }),
+        onFocus:(e)=>callbacks.updateItem(e, {id:data.id, selected:true}),
         dangerouslySetInnerHTML:{__html:nlToBr(data.text)},
         style: getElementStyle('note-input')
     })

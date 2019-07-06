@@ -76,14 +76,6 @@ class ReactStickyNotes extends Component {
 			}
 		});
 	}
-	selectItem = (e, data) => {
-		this.dispatch({
-			type: 'select',
-			payload: {
-				data
-			}
-		});
-	}
 	changeView = (e, data) => {
 		this.dispatch({
 			type: 'changeview',
@@ -113,7 +105,6 @@ class ReactStickyNotes extends Component {
 					changeView: this.changeView,
 					addItem: this.addItem,
 					updateItem: this.updateItem,
-					selectItem: this.selectItem,
 					deleteItem: this.deleteItem
 				}
 			}):null,
@@ -132,7 +123,6 @@ class ReactStickyNotes extends Component {
 					changeView: this.changeView,
 					addItem: this.addItem,
 					updateItem: this.updateItem,
-					selectItem: this.selectItem,
 					deleteItem: this.deleteItem
 				}
 			})

@@ -1,7 +1,5 @@
 import React from 'react';
 import Note from './note';
-import NoteMaximized from './note-maximized';
-import NoteMinimized from './note-minimized';
 import { h, getElementStyle } from './../utils';
 class Notes extends React.Component{
     constructor(props){
@@ -15,10 +13,6 @@ class Notes extends React.Component{
             toggle: this.state.toggle===toggle?false:toggle
         });
     }
-    setColor = (e, {id, colorCode}) => {
-        this.setToggle(false);
-        this.props.callbacks.updateItem(e,{id, color: colorCode})
-    }
     render(){
         const {prefix, items} = this.props;
         return h('div', {
@@ -31,8 +25,7 @@ class Notes extends React.Component{
                     data,
                     ...this.props,
                     toggle:this.state.toggle,
-                    setToggle:this.setToggle,
-                    setColor:this.setColor
+                    setToggle:this.setToggle
                 })
             ):null
         )

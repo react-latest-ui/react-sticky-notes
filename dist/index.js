@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note {\n    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); }\n    .rs-notes--note__selected {\n      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between; }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-grow: 1;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle; }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1; }\n  .rs-notes--header {\n    display: flex;\n    opacity: .75;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header__selected {\n      opacity: 1; }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header--button__title {\n      flex-grow: 1;\n      line-height: 30px;\n      text-align: left;\n      user-select: none;\n      cursor: move; }\n    .rs-notes--header--button__title, .rs-notes--header--button__add, .rs-notes--header--button__menu, .rs-notes--header--button__trash, .rs-notes--header--button__minmax {\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      background-color: rgba(0, 0, 0, 0.25);\n      outline: none; }\n      .rs-notes--header--button__title:hover, .rs-notes--header--button__title:focus, .rs-notes--header--button__add:hover, .rs-notes--header--button__add:focus, .rs-notes--header--button__menu:hover, .rs-notes--header--button__menu:focus, .rs-notes--header--button__trash:hover, .rs-notes--header--button__trash:focus, .rs-notes--header--button__minmax:hover, .rs-notes--header--button__minmax:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button__title:disabled, .rs-notes--header--button__add:disabled, .rs-notes--header--button__menu:disabled, .rs-notes--header--button__trash:disabled, .rs-notes--header--button__minmax:disabled {\n        cursor: not-allowed; }\n    .rs-notes--header--button__add, .rs-notes--header--button__menu, .rs-notes--header--button__trash, .rs-notes--header--button__minmax {\n      width: 32px; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n", ""]);
+exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note {\n    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); }\n    .rs-notes--note__selected {\n      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between;\n    background-color: #999999; }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-grow: 1;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle; }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1; }\n  .rs-notes--header {\n    display: flex;\n    opacity: .75;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header__selected {\n      opacity: 1; }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header--button__title {\n      flex-grow: 1;\n      line-height: 30px;\n      text-align: left;\n      user-select: none;\n      cursor: move; }\n    .rs-notes--header--button__title, .rs-notes--header--button__add, .rs-notes--header--button__menu, .rs-notes--header--button__trash, .rs-notes--header--button__minmax {\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      background-color: rgba(0, 0, 0, 0.25);\n      outline: none; }\n      .rs-notes--header--button__title:hover, .rs-notes--header--button__title:focus, .rs-notes--header--button__add:hover, .rs-notes--header--button__add:focus, .rs-notes--header--button__menu:hover, .rs-notes--header--button__menu:focus, .rs-notes--header--button__trash:hover, .rs-notes--header--button__trash:focus, .rs-notes--header--button__minmax:hover, .rs-notes--header--button__minmax:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button__title:disabled, .rs-notes--header--button__add:disabled, .rs-notes--header--button__menu:disabled, .rs-notes--header--button__trash:disabled, .rs-notes--header--button__minmax:disabled {\n        cursor: not-allowed; }\n    .rs-notes--header--button__add, .rs-notes--header--button__menu, .rs-notes--header--button__trash, .rs-notes--header--button__minmax {\n      width: 32px; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n", ""]);
 
 // exports
 
@@ -745,7 +745,8 @@ function ButtonTitle(_ref2) {
     onClick: function onClick(e) {
       return callbacks.changeView(e, {
         id: data ? data.id : null,
-        selected: true
+        selected: true,
+        menu: false
       });
     }
   }, data.title ? data.title : "...");
@@ -761,7 +762,8 @@ function ButtonMenu(_ref3) {
     onClick: function onClick(e) {
       return callbacks.updateItem(e, {
         id: data ? data.id : null,
-        menu: !data.menu
+        menu: !data.menu,
+        selected: true
       });
     }
   }, icons.menu);
@@ -942,15 +944,6 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "selectItem", function (e, data) {
-      _this.dispatch({
-        type: 'select',
-        payload: {
-          data: data
-        }
-      });
-    });
-
     _defineProperty(_assertThisInitialized(_this), "changeView", function (e, data) {
       _this.dispatch({
         type: 'changeview',
@@ -1009,7 +1002,6 @@ function (_Component) {
           changeView: this.changeView,
           addItem: this.addItem,
           updateItem: this.updateItem,
-          selectItem: this.selectItem,
           deleteItem: this.deleteItem
         }
       })) : null, Object(_utils__WEBPACK_IMPORTED_MODULE_5__["h"])(_partials_notes__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -1027,7 +1019,6 @@ function (_Component) {
           changeView: this.changeView,
           addItem: this.addItem,
           updateItem: this.updateItem,
-          selectItem: this.selectItem,
           deleteItem: this.deleteItem
         }
       })];
@@ -1161,13 +1152,7 @@ function NoteBody(props) {
       callbacks = props.callbacks;
   return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
     className: "".concat(prefix, "--note__body"),
-    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('note-body', props),
-    onClick: function onClick(e) {
-      return callbacks.selectItem(e, {
-        id: data.id,
-        selected: true
-      });
-    }
+    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('note-body', props)
   }, data.menu ? Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_note_menu__WEBPACK_IMPORTED_MODULE_2__["default"], _objectSpread({
     key: 'note-menu'
   }, props)) : Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_note_text__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({
@@ -1313,39 +1298,6 @@ function NoteHeader(props) {
 
 /***/ }),
 
-/***/ "./src/components/react-sticky-notes/partials/note-maximized.js":
-/*!**********************************************************************!*\
-  !*** ./src/components/react-sticky-notes/partials/note-maximized.js ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NoteMaximized; });
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
-
-function NoteMaximized(_ref) {
-  var data = _ref.data,
-      index = _ref.index,
-      prefix = _ref.prefix,
-      callbacks = _ref.callbacks;
-  return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
-    className: "".concat(prefix, "--minimized"),
-    onClick: function onClick() {
-      return callbacks.updateItem(index, {
-        id: data.id,
-        viewSize: null
-      });
-    },
-    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('note-minimized', {
-      data: data
-    })
-  });
-}
-
-/***/ }),
-
 /***/ "./src/components/react-sticky-notes/partials/note-menu.js":
 /*!*****************************************************************!*\
   !*** ./src/components/react-sticky-notes/partials/note-menu.js ***!
@@ -1363,17 +1315,18 @@ function NoteMenu(props) {
       index = props.index,
       prefix = props.prefix,
       colorCodes = props.colorCodes,
-      setColor = props.setColor;
+      callbacks = props.callbacks;
   return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
     className: "".concat(prefix, "--colors"),
     style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('note-menu', props)
   }, colorCodes.map(function (colorCode) {
     return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
       key: colorCode,
-      onClick: function onClick() {
-        return setColor(index, {
+      onClick: function onClick(e) {
+        return callbacks.updateItem(e, {
           id: data.id,
-          colorCode: colorCode
+          color: colorCode,
+          menu: false
         });
       },
       className: "".concat(prefix, "--colors__color ").concat(data.color === colorCode ? prefix + '--colors__color--selected' : ''),
@@ -1385,40 +1338,6 @@ function NoteMenu(props) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (NoteMenu);
-
-/***/ }),
-
-/***/ "./src/components/react-sticky-notes/partials/note-minimized.js":
-/*!**********************************************************************!*\
-  !*** ./src/components/react-sticky-notes/partials/note-minimized.js ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NoteMinimized; });
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
-
-function NoteMinimized(_ref) {
-  var data = _ref.data,
-      index = _ref.index,
-      prefix = _ref.prefix,
-      callbacks = _ref.callbacks;
-  return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
-    className: "".concat(prefix, "--minimized"),
-    onClick: function onClick(e) {
-      return callbacks.updateItem(e, {
-        id: data.id,
-        viewSize: null,
-        selected: true
-      });
-    },
-    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('note-minimized', {
-      data: data
-    })
-  });
-}
 
 /***/ }),
 
@@ -1448,6 +1367,12 @@ function NoteText(_ref) {
         id: data.id,
         title: String(e.target.innerText).substr(0, 10),
         text: e.target.innerText
+      });
+    },
+    onFocus: function onFocus(e) {
+      return callbacks.updateItem(e, {
+        id: data.id,
+        selected: true
       });
     },
     dangerouslySetInnerHTML: {
@@ -1585,9 +1510,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _note__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./note */ "./src/components/react-sticky-notes/partials/note.js");
-/* harmony import */ var _note_maximized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./note-maximized */ "./src/components/react-sticky-notes/partials/note-maximized.js");
-/* harmony import */ var _note_minimized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./note-minimized */ "./src/components/react-sticky-notes/partials/note-minimized.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
@@ -1614,8 +1537,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-
 var Notes =
 /*#__PURE__*/
 function (_React$Component) {
@@ -1634,18 +1555,6 @@ function (_React$Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "setColor", function (e, _ref) {
-      var id = _ref.id,
-          colorCode = _ref.colorCode;
-
-      _this.setToggle(false);
-
-      _this.props.callbacks.updateItem(e, {
-        id: id,
-        color: colorCode
-      });
-    });
-
     _this.state = {
       toggle: false
     };
@@ -1660,18 +1569,17 @@ function (_React$Component) {
       var _this$props = this.props,
           prefix = _this$props.prefix,
           items = _this$props.items;
-      return Object(_utils__WEBPACK_IMPORTED_MODULE_4__["h"])('div', {
+      return Object(_utils__WEBPACK_IMPORTED_MODULE_2__["h"])('div', {
         key: prefix,
         className: prefix,
-        style: Object(_utils__WEBPACK_IMPORTED_MODULE_4__["getElementStyle"])('container', this.props)
+        style: Object(_utils__WEBPACK_IMPORTED_MODULE_2__["getElementStyle"])('container', this.props)
       }, items ? items.map(function (data, index) {
-        return Object(_utils__WEBPACK_IMPORTED_MODULE_4__["h"])(_note__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({
+        return Object(_utils__WEBPACK_IMPORTED_MODULE_2__["h"])(_note__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({
           key: "note-".concat(data.id),
           data: data
         }, _this2.props, {
           toggle: _this2.state.toggle,
-          setToggle: _this2.setToggle,
-          setColor: _this2.setColor
+          setToggle: _this2.setToggle
         }));
       }) : null);
     }
@@ -1698,6 +1606,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var reducer = function reducer(state, action) {
+  var params = Object.keys(action.payload.data);
   var items = state.items;
 
   switch (action.type) {
@@ -1711,7 +1620,19 @@ var reducer = function reducer(state, action) {
 
     case 'update':
       items = items.map(function (item) {
-        return item.id === action.payload.data.id ? _objectSpread({}, item, action.payload.data) : item;
+        if (item.id === action.payload.data.id) {
+          item = _objectSpread({}, item, action.payload.data);
+        }
+
+        if (params.indexOf('selected') !== -1) {
+          item.selected = item.id === action.payload.data.id ? action.payload.data.selected : false;
+        }
+
+        if (params.indexOf('menu') !== -1) {
+          item.menu = item.id === action.payload.data.id ? action.payload.data.menu : false;
+        }
+
+        return item;
       });
       break;
 
@@ -1726,14 +1647,6 @@ var reducer = function reducer(state, action) {
         items.splice(0, items.length);
       }
 
-      break;
-
-    case 'select':
-      items = items.map(function (item) {
-        item.menu = false;
-        item.selected = item.id === action.payload.data.id ? true : false;
-        return item;
-      });
       break;
 
     case 'changeview':
