@@ -13,7 +13,7 @@ function NavBar({viewSize, prefix, items, callbacks, icons}){
         h( 'div',{
             key: `${prefix}--navbar__nav`,
             className:`${prefix}--navbar__nav`,
-            style: getElementStyle('navbar-nav')
+            style: getElementStyle('navbar-nav', null, { flexGrow: 1 } )
         },
             items?items.map((data)=>
                 h(NoteHeader,{
@@ -28,6 +28,7 @@ function NavBar({viewSize, prefix, items, callbacks, icons}){
         ),
         h('div',{
             key: `navbar-item__options`,
+            className:`${prefix}--navbar__nav`
         },
             h( NoteHeader, {
                 prefix: `${prefix}--navbar__item`,

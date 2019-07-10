@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note {\n    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); }\n    .rs-notes--note__selected {\n      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between;\n    background-color: #999999; }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-grow: 1;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle; }\n      .rs-notes--navbar__item:before {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 0;\n        pointer-events: none;\n        background-color: rgba(0, 0, 0, 0.15); }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1;\n          background-color: rgba(0, 0, 0, 0.15); }\n  .rs-notes--header {\n    position: relative;\n    display: flex;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header:before {\n      content: '';\n      width: 100%;\n      height: 100%;\n      position: absolute;\n      left: 0;\n      top: 0;\n      pointer-events: none;\n      background-color: rgba(0, 0, 0, 0.15); }\n    .rs-notes--header--button {\n      cursor: pointer;\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      width: 32px; }\n      .rs-notes--header--button__title {\n        flex-grow: 1;\n        line-height: 30px;\n        text-align: left;\n        user-select: none;\n        cursor: move; }\n      .rs-notes--header--button:hover, .rs-notes--header--button:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button:disabled {\n        cursor: not-allowed; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n", ""]);
+exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between;\n    background-color: #999999; }\n    @media screen and (max-width: 800px) {\n      .rs-notes--navbar {\n        flex-direction: column-reverse; } }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle;\n      overflow: hidden; }\n      .rs-notes--navbar__item:before {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 0;\n        pointer-events: none;\n        background-color: rgba(0, 0, 0, 0.15); }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1;\n          min-width: 80px; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1;\n          background-color: rgba(0, 0, 0, 0.15); }\n  .rs-notes--header {\n    position: relative;\n    display: flex;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header:before {\n      content: '';\n      width: 100%;\n      height: 100%;\n      position: absolute;\n      left: 0;\n      top: 0;\n      pointer-events: none;\n      background-color: rgba(0, 0, 0, 0.15); }\n    .rs-notes--header--button {\n      cursor: pointer;\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      width: 32px; }\n      .rs-notes--header--button__title {\n        flex-grow: 1;\n        line-height: 30px;\n        text-align: left;\n        user-select: none;\n        cursor: move; }\n      .rs-notes--header--button:hover, .rs-notes--header--button:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button:disabled {\n        cursor: not-allowed; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n", ""]);
 
 // exports
 
@@ -1166,7 +1166,9 @@ function NavBar(_ref) {
   }, [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
     key: "".concat(prefix, "--navbar__nav"),
     className: "".concat(prefix, "--navbar__nav"),
-    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('navbar-nav')
+    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('navbar-nav', null, {
+      flexGrow: 1
+    })
   }, items ? items.map(function (data) {
     return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_partials_note_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: "navbar-item__".concat(data.id),
@@ -1177,7 +1179,8 @@ function NavBar(_ref) {
       buttons: buttons
     });
   }) : null), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
-    key: "navbar-item__options"
+    key: "navbar-item__options",
+    className: "".concat(prefix, "--navbar__nav")
   }, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_partials_note_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     prefix: "".concat(prefix, "--navbar__item"),
     viewSize: viewSize,
@@ -1306,7 +1309,8 @@ function (_React$Component) {
           width: '15px',
           height: '15px',
           borderRadius: '50%',
-          backgroundColor: props.data.color
+          backgroundColor: props.data.color,
+          boxShadow: '1px 1px 2px rgba(0,0,0,.15)'
         }
       }));
     }
@@ -1618,7 +1622,9 @@ function (_React$Component) {
             position: pos
           });
         },
-        style: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["getElementStyle"])('note', props)
+        style: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["getElementStyle"])('note', props, {
+          boxShadow: '1px 1px 2px rgba(0,0,0,.15)'
+        })
       }, [Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])(_note_header__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props, {
         key: 'note-header',
         targetRef: this.targetRef,
@@ -1774,7 +1780,10 @@ function () {
     _defineProperty(this, "currentY", 0);
 
     _defineProperty(this, "onMouseMove", function (e) {
-      e.preventDefault();
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+
       var el = _this.options.element;
       var parentElement = el.parentElement;
       var pRect = parentElement ? parentElement.getBoundingClientRect() : {
@@ -1886,29 +1895,33 @@ function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getElementStyle", function() { return getElementStyle; });
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var getElementStyle = function getElementStyle(nodeName, props) {
   var defaultStyle = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   var style = defaultStyle;
 
   switch (nodeName) {
     case "container":
-      style = {
+      style = _objectSpread({}, defaultStyle, {
         position: 'relative',
         width: props.containerWidth,
         height: props.containerHeight,
         backgroundColor: props.backgroundColor
-      };
+      });
       break;
 
     case "note":
-      style = {
+      style = _objectSpread({}, defaultStyle, {
         position: 'absolute',
         left: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? 0 : "".concat(props.data.position.x, "px"),
         top: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? 0 : "".concat(props.data.position.y, "px"),
         width: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : null,
         height: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : null,
         zIndex: props.data.selected ? 1 : 0
-      };
+      });
       break;
 
     case "note-body":
@@ -1929,25 +1942,25 @@ var getElementStyle = function getElementStyle(nodeName, props) {
       break;
 
     case "note-minimized":
-      style = {
+      style = _objectSpread({}, defaultStyle, {
         backgroundColor: props.data.color,
         position: 'absolute',
         left: "".concat(props.data.position.x, "px"),
         top: "".concat(props.data.position.y, "px"),
         width: '10px',
         height: '10px'
-      };
+      });
       break;
 
     case "note-maximized":
-      style = {
+      style = _objectSpread({}, defaultStyle, {
         backgroundColor: props.data.color,
         position: 'absolute',
         left: "".concat(props.data.position.x, "px"),
         top: "".concat(props.data.position.y, "px"),
         width: '10px',
         height: '10px'
-      };
+      });
       break;
 
     case "note-menu":
@@ -1956,15 +1969,16 @@ var getElementStyle = function getElementStyle(nodeName, props) {
       break;
 
     case "note-color-selector":
-      style = {
+      style = _objectSpread({}, defaultStyle, {
         backgroundColor: props.colorCode
-      };
+      });
       break;
 
     case "icon":
-      style = {
-        verticalAlign: 'middle'
-      };
+      style = _objectSpread({}, defaultStyle, {
+        verticalAlign: 'middle',
+        width: '1em'
+      });
       break;
   }
 

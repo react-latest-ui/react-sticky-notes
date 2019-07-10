@@ -7,7 +7,9 @@ export default class Draggable {
         this.options = options;
     }
     onMouseMove = (e) => {
-        e.preventDefault();
+        if (e.cancelable) {
+            e.preventDefault();
+        }
         const el = this.options.element;
         const parentElement = el.parentElement;
         const pRect = parentElement?parentElement.getBoundingClientRect():{left:0,top:0};

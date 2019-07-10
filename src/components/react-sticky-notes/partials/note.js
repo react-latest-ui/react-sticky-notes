@@ -17,7 +17,7 @@ class Note extends React.Component{
                 selected: props.data.selected,
                 target: this.targetRef,
                 onDragComplete:(pos)=> props.callbacks.updateItem(null, {id: props.data.id, position:pos}),
-                style: getElementStyle('note', props )
+                style: getElementStyle('note', props, { boxShadow: '1px 1px 2px rgba(0,0,0,.15)' } )
             }, [
                 h(NoteHeader, {
                     ...props,

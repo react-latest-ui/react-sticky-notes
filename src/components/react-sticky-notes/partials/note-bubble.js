@@ -24,6 +24,7 @@ export default class NoteBubble extends React.Component{
                     height: '15px',
                     borderRadius: '50%',
                     backgroundColor: props.data.color,
+                    boxShadow: '1px 1px 2px rgba(0,0,0,.15)'
                 }
             })
         )

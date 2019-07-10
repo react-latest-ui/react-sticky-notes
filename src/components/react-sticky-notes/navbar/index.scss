@@ -4,9 +4,11 @@
         display: flex;
         justify-content: space-between;
         background-color: #999999;
+        @media screen and (max-width: "800px") {
+            flex-direction: column-reverse;
+        }
         &__nav{
             display: flex;
-            flex-grow: 1;
             flex-wrap: wrap;
         }
         &__options{
@@ -17,6 +19,7 @@
             flex-grow: 1;
             position: relative;
             vertical-align: middle;
+            overflow: hidden;
             &:before{
                 content: '';
                 width: 100%;
@@ -37,6 +40,7 @@
                 &__title{
                     text-align: left;
                     flex-grow: 1;
+                    min-width: 80px;
                 }
                 &:hover,&:focus{
                     opacity: 1;

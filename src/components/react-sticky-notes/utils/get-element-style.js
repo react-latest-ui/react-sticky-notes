@@ -3,14 +3,16 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
     switch(nodeName){
         case "container":
                 style = { 
+                    ...defaultStyle,
                     position: 'relative',
                     width: props.containerWidth, 
                     height: props.containerHeight, 
-                    backgroundColor: props.backgroundColor 
+                    backgroundColor: props.backgroundColor
                 }
         break;
         case "note":
                 style = {
+                    ...defaultStyle,
                     position: 'absolute',
                     left: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:`${props.data.position.x}px`,
                     top: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:`${props.data.position.y}px`,
@@ -37,6 +39,7 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
         break;
         case "note-minimized":
             style = {
+                ...defaultStyle,
                 backgroundColor: props.data.color,
                 position: 'absolute',
                 left: `${props.data.position.x}px`,
@@ -47,6 +50,7 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
         break;
         case "note-maximized":
             style = {
+                ...defaultStyle,
                 backgroundColor: props.data.color,
                 position: 'absolute',
                 left: `${props.data.position.x}px`,
@@ -61,12 +65,15 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
         break;
         case "note-color-selector":
             style = {
+                ...defaultStyle,
                 backgroundColor: props.colorCode
             }
         break;
         case "icon":
             style = {
-                verticalAlign: 'middle'
+                ...defaultStyle,
+                verticalAlign: 'middle',
+                width: '1em'
             }
         break;
     }
