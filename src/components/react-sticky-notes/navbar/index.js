@@ -1,7 +1,11 @@
 import { h, getElementStyle } from './../utils';
 import NoteHeader from './../partials/note-header';
-import { ButtonAdd, ButtonTitle, ButtonTrash } from './../buttons';
-function NavBar({prefix, items, callbacks, icons}){
+import { ButtonAdd, ButtonTitle, ButtonMenu, ButtonTrash, ButtonPageView } from './../buttons';
+function NavBar({viewSize, prefix, items, callbacks, icons}){
+    const buttons = [ ButtonTitle, ButtonTrash];
+    if(viewSize==='pageview'||viewSize==='fullscreen'){
+        buttons.splice(1, 0, ButtonMenu )
+    }
     return h('div',{
         className:`${prefix}--navbar`,
         style: getElementStyle('navbar')
@@ -18,7 +22,7 @@ function NavBar({prefix, items, callbacks, icons}){
                     prefix: `${prefix}--navbar__item`,
                     icons,
                     callbacks,
-                    buttons: [ButtonTitle, ButtonTrash]
+                    buttons: buttons
                 })
             ):null 
         ),
@@ -27,9 +31,10 @@ function NavBar({prefix, items, callbacks, icons}){
         },
             h( NoteHeader, {
                 prefix: `${prefix}--navbar__item`,
+                viewSize: viewSize,
                 icons,
                 callbacks,
-                buttons: [ButtonAdd, ButtonTrash]
+                buttons: [ButtonAdd, ButtonPageView, ButtonTrash]
             })
         )
     ]);

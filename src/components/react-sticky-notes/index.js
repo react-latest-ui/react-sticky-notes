@@ -1,9 +1,8 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import reducer from './reducers/reducer';
-import Notes from './partials/notes';
-import NavBar from './navbar';
 import * as icons from './icons';
 import { h, colorCodes, getNotes, getUUID } from './utils';
+import { NormalView, BubbleView, PageView, FullscreenView } from './views' ;
 class ReactStickyNotes extends Component {
 	static defaultProps = {
 		useCSS: true,
@@ -15,17 +14,28 @@ class ReactStickyNotes extends Component {
 		noteHeight: 220,
 		containerWidth: '100%',
 		containerHeight: '100%',
-		icons
+		icons,
+		useMaterialIcons: true
 	}
 	constructor(props) {
 		super(props);
 		this.state = {
+			viewSize: 'normalview',
 			items: getNotes(props.colorCodes, props.notes)
 		};
 	}
 	componentDidMount(){
 		if(this.props.useCSS){
 			require('./index.scss');
+		}
+		if(this.props.useMaterialIcons){
+			const stylesheet = document.createElement('link');
+			stylesheet.href = "https://fonts.googleapis.com/icon?family=Material+Icons";
+			stylesheet.rel="stylesheet";
+			stylesheet.id="material-icons-css";
+			if(!document.getElementById('material-icons-css')){
+				document.head.appendChild(stylesheet);
+			}
 		}
 	}
 	dispatch = (options) => {
@@ -76,14 +86,6 @@ class ReactStickyNotes extends Component {
 			}
 		});
 	}
-	changeView = (e, data) => {
-		this.dispatch({
-			type: 'changeview',
-			payload: {
-				data
-			}
-		});
-	}
 	deleteItem = (e, data) => {
 		this.dispatch({
 			type: 'delete',
@@ -92,41 +94,41 @@ class ReactStickyNotes extends Component {
 			}
 		});
 	}
+	changeView = (e) => {
+		this.dispatch({
+			type: 'changeview'
+		});
+	}
 	render() {
-		const { items } = this.state;
-		const { noteWidth, noteHeight, containerWidth, containerHeight, backgroundColor, icons, prefix, navbar } = this.props;
-		return [
-			navbar?h(NavBar,{
-				key: `${prefix}--navbar`,
-				...this.props,
-				items,
-				colorCodes,
-				callbacks: {
-					changeView: this.changeView,
-					addItem: this.addItem,
-					updateItem: this.updateItem,
-					deleteItem: this.deleteItem
-				}
-			}):null,
-			h(Notes, {
-				key: `${prefix}--notes`,
-				items,
-				noteWidth,
-				noteHeight,
-				containerWidth, 
-				containerHeight,
-				backgroundColor,
-				icons,
-				prefix,
-				colorCodes,
-				callbacks: {
-					changeView: this.changeView,
-					addItem: this.addItem,
-					updateItem: this.updateItem,
-					deleteItem: this.deleteItem
-				}
-			})
-		]
+		const { items, viewSize } = this.state;
+        let View = null;
+        switch(viewSize){
+            case "pageview":
+                    View = PageView
+                break;
+            case "bubbleview":
+                    View = BubbleView
+                break;
+            case "fullscreen":
+                    View = FullscreenView
+                break;
+            default:
+                    View = NormalView
+                break;
+		}
+		return h( View, {
+			...this.props,
+			items,
+			icons: { ...icons, ...this.props.icons },
+			viewSize,
+			colorCodes,
+			callbacks: {
+				changeView: this.changeView,
+				addItem: this.addItem,
+				updateItem: this.updateItem,
+				deleteItem: this.deleteItem
+			}
+		})
 	}
 
 }

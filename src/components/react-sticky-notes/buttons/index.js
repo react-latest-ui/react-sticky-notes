@@ -15,7 +15,7 @@ export function ButtonTitle({prefix, data, targetRef, callbacks }){
         key: `${prefix}--button__title`,
         className:`${prefix}--button ${prefix}--button__title`,
         ref: targetRef,
-        onClick:(e)=>callbacks.changeView(e, { id: data?data.id:null, selected: true, menu:false })
+        onClick:(e)=>callbacks.updateItem(e, { id: data?data.id:null, menu: false, selected: true, hidden: false })
     },
         data.title?data.title:"..."
     )
@@ -31,13 +31,13 @@ export function ButtonMenu({prefix, data, icons, callbacks }){
     );
 }
 
-export function ButtonMinimize({prefix, data, icons, callbacks }){
+export function ButtonHideShow({prefix, data, icons, callbacks }){
     return h('button',{
-        key: `${prefix}--button__minmax`,
-        className:`${prefix}--button ${prefix}--button__minmax`,
-        onClick:(e)=>callbacks.changeView(e, { id: data?data.id:null, viewSize: 'minimized' })
+        key: `${prefix}--button__hideshow`,
+        className:`${prefix}--button ${prefix}--button__hideshow`,
+        onClick:(e)=>callbacks.updateItem(e, {id: data?data.id:null, hidden: !data.hidden})
     }, 
-        icons.minimize
+        data.hidden?icons.hide:icons.show
     );
 }
 
@@ -51,5 +51,12 @@ export function ButtonTrash({prefix, data, icons, callbacks }){
     );
 }
 
-        
-        
+export function ButtonPageView({prefix, icons, callbacks, viewSize }){
+    return h('button',{
+        key: `${prefix}--button__pageview`,
+        className:`${prefix}--button ${prefix}--button__pageview`,
+        onClick:(e)=> callbacks.changeView(e)
+    }, 
+        icons[viewSize]?icons[viewSize]:`icons.${viewSize}`
+    );
+}

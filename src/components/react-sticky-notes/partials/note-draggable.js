@@ -24,7 +24,7 @@ class NoteDraggable extends React.Component {
 		})
 	}
 	onMouseDown = (e) => {
-		if(e.target===this.props.target.current){
+		if(this.props.target&&e.target===this.props.target.current){
 			this.draggable.onMouseDown(e);
 		}
 	}

@@ -1,7 +1,12 @@
 const reducer = (state, action) => {
-    const params = Object.keys(action.payload.data);
-    let { items } = state;
+    const viewSizes = ['bubbleview', 'normalview', 'pageview','fullscreen'];
+    const params = action.payload&&action.payload.data?Object.keys(action.payload.data):[];
+    let { items, viewSize } = state;
     switch (action.type) {
+		case 'changeview':
+		    const currentViewSize = viewSizes.indexOf(viewSize);
+		    viewSize = currentViewSize>-1&&currentViewSize<viewSizes.length-1?viewSizes[currentViewSize+1]:viewSizes[0];
+        break;
         case 'add':
             items = items.map((item)=>{
                 item.selected = false;
@@ -31,17 +36,10 @@ const reducer = (state, action) => {
                 items.splice(0,items.length);
             }
             break;
-        case 'changeview':
-            items = items.map((item)=>{
-                item.viewSize = item.id===action.payload.data.id?action.payload.data.viewSize:item.viewSize;
-                item.selected = item.id===action.payload.data.id?true:false;
-                return item;
-            });
-            break;
         default:
                 items = state.items;
             break;
     }
-    return {items};
+    return { items, viewSize };
 }
 export default reducer;

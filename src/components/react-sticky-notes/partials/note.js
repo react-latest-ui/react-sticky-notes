@@ -1,46 +1,37 @@
 import React from 'react';
+import { h, getElementStyle } from '../utils';
+import NoteDraggable from './note-draggable';
 import NoteHeader from './note-header';
 import NoteBody from './note-body';
-import NoteDraggable from './note-draggable';
-import {ButtonAdd, ButtonTitle, ButtonMenu, ButtonMinimize, ButtonTrash} from './../buttons';
-import { h, getElementStyle } from './../utils';
+import { ButtonAdd, ButtonTitle, ButtonMenu, ButtonHideShow, ButtonTrash } from './../buttons' ;
 class Note extends React.Component{
-    state = {
-        viewSize: 'normal'
-    }
     constructor(props){
         super(props);
         this.targetRef = React.createRef();
     }
     render(){
-    	const { data, prefix, callbacks } = this.props;
-        return h(NoteDraggable,{
-            className:`${prefix}--note ${data.selected?prefix+'--note__selected':''} ${data.viewSize?prefix+'--note__'+data.viewSize:''}`,
-            position:data.position,
-            selected:data.selected,
-            target: this.targetRef,
-            onDragComplete:(pos)=>callbacks.updateItem(null, {id:data.id, position:pos}),
-            style: getElementStyle('note', this.props)
-        },[
-            data.viewSize==='minimized'?h('div', {
-                key:'note-header--minimized',
-                ref: this.targetRef,
-                style: getElementStyle('note-minimized', this.props),
-                onClick:(e)=>callbacks.changeView(e, {id:data.id, viewSize:null}),
-            }):null,
-            !data.viewSize?h(NoteHeader, {
-                ...this.props,
-                key:'note-header',
-                targetRef: this.targetRef,
-                prefix: `${prefix}--header`,
-                buttons: [ButtonAdd, ButtonTitle, ButtonMenu, ButtonMinimize, ButtonTrash]
-            }):null,
-            !data.viewSize?h(NoteBody,{
-                key:'note-body',
-                ...this.props
-            }):null
-    
-        ])
+        const props = this.props;
+        return h(NoteDraggable, {
+                className:`${props.prefix}--note ${props.data.selected?props.prefix+'--note__selected':''}`,
+                position: props.data.position,
+                selected: props.data.selected,
+                target: this.targetRef,
+                onDragComplete:(pos)=> props.callbacks.updateItem(null, {id: props.data.id, position:pos}),
+                style: getElementStyle('note', props )
+            }, [
+                h(NoteHeader, {
+                    ...props,
+                    key:'note-header',
+                    targetRef: this.targetRef,
+                    prefix: `${props.prefix}--header`,
+                    buttons: [ButtonAdd, ButtonTitle, ButtonMenu, ButtonHideShow, ButtonTrash]
+                }),
+                h(NoteBody,{
+                    key:'note-body',
+                    ...props
+                })
+            ]
+        )
     }
 }
 export default Note;

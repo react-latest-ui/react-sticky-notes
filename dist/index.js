@@ -92,104 +92,9 @@ module.exports =
   !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/components/react-sticky-notes/index.scss ***!
   \*************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note {\n    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); }\n    .rs-notes--note__selected {\n      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between;\n    background-color: #999999; }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-grow: 1;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle; }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1; }\n  .rs-notes--header {\n    display: flex;\n    opacity: .75;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header__selected {\n      opacity: 1; }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header--button__title {\n      flex-grow: 1;\n      line-height: 30px;\n      text-align: left;\n      user-select: none;\n      cursor: move; }\n    .rs-notes--header--button__title, .rs-notes--header--button__add, .rs-notes--header--button__menu, .rs-notes--header--button__trash, .rs-notes--header--button__minmax {\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      background-color: rgba(0, 0, 0, 0.25);\n      outline: none; }\n      .rs-notes--header--button__title:hover, .rs-notes--header--button__title:focus, .rs-notes--header--button__add:hover, .rs-notes--header--button__add:focus, .rs-notes--header--button__menu:hover, .rs-notes--header--button__menu:focus, .rs-notes--header--button__trash:hover, .rs-notes--header--button__trash:focus, .rs-notes--header--button__minmax:hover, .rs-notes--header--button__minmax:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button__title:disabled, .rs-notes--header--button__add:disabled, .rs-notes--header--button__menu:disabled, .rs-notes--header--button__trash:disabled, .rs-notes--header--button__minmax:disabled {\n        cursor: not-allowed; }\n    .rs-notes--header--button__add, .rs-notes--header--button__menu, .rs-notes--header--button__trash, .rs-notes--header--button__minmax {\n      width: 32px; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/lib/css-base.js":
-/*!*************************************************!*\
-  !*** ./node_modules/css-loader/lib/css-base.js ***!
-  \*************************************************/
-/*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/lib/loader.js):\nError: Missing binding E:\\react-latest-ui\\react-sticky-notes\\node_modules\\node-sass\\vendor\\win32-ia32-57\\binding.node\nNode Sass could not find a binding for your current environment: Windows 32-bit with Node.js 8.x\n\nFound bindings for the following environments:\n  - Windows 64-bit with Node.js 10.x\n\nThis usually happens because your environment has changed since running `npm install`.\nRun `npm rebuild node-sass` to download the binding for your current environment.\n    at module.exports (E:\\react-latest-ui\\react-sticky-notes\\node_modules\\node-sass\\lib\\binding.js:15:13)\n    at Object.<anonymous> (E:\\react-latest-ui\\react-sticky-notes\\node_modules\\node-sass\\lib\\index.js:14:35)\n    at Module._compile (E:\\react-latest-ui\\react-sticky-notes\\node_modules\\v8-compile-cache\\v8-compile-cache.js:192:30)\n    at Object.Module._extensions..js (module.js:664:10)\n    at Module.load (module.js:566:32)\n    at tryModuleLoad (module.js:506:12)\n    at Function.Module._load (module.js:498:3)\n    at Module.require (module.js:597:17)\n    at require (E:\\react-latest-ui\\react-sticky-notes\\node_modules\\v8-compile-cache\\v8-compile-cache.js:161:20)\n    at Object.sassLoader (E:\\react-latest-ui\\react-sticky-notes\\node_modules\\sass-loader\\lib\\loader.js:46:72)");
 
 /***/ }),
 
@@ -704,7 +609,7 @@ module.exports = function (css) {
 /*!************************************************************!*\
   !*** ./src/components/react-sticky-notes/buttons/index.js ***!
   \************************************************************/
-/*! exports provided: ButtonAdd, ButtonTitle, ButtonMenu, ButtonMinimize, ButtonTrash */
+/*! exports provided: ButtonAdd, ButtonTitle, ButtonMenu, ButtonHideShow, ButtonTrash, ButtonPageView */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -712,8 +617,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonAdd", function() { return ButtonAdd; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonTitle", function() { return ButtonTitle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonMenu", function() { return ButtonMenu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonMinimize", function() { return ButtonMinimize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonHideShow", function() { return ButtonHideShow; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonTrash", function() { return ButtonTrash; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonPageView", function() { return ButtonPageView; });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
 
 function ButtonAdd(_ref) {
@@ -743,10 +649,11 @@ function ButtonTitle(_ref2) {
     className: "".concat(prefix, "--button ").concat(prefix, "--button__title"),
     ref: targetRef,
     onClick: function onClick(e) {
-      return callbacks.changeView(e, {
+      return callbacks.updateItem(e, {
         id: data ? data.id : null,
+        menu: false,
         selected: true,
-        menu: false
+        hidden: false
       });
     }
   }, data.title ? data.title : "...");
@@ -768,21 +675,21 @@ function ButtonMenu(_ref3) {
     }
   }, icons.menu);
 }
-function ButtonMinimize(_ref4) {
+function ButtonHideShow(_ref4) {
   var prefix = _ref4.prefix,
       data = _ref4.data,
       icons = _ref4.icons,
       callbacks = _ref4.callbacks;
   return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
-    key: "".concat(prefix, "--button__minmax"),
-    className: "".concat(prefix, "--button ").concat(prefix, "--button__minmax"),
+    key: "".concat(prefix, "--button__hideshow"),
+    className: "".concat(prefix, "--button ").concat(prefix, "--button__hideshow"),
     onClick: function onClick(e) {
-      return callbacks.changeView(e, {
+      return callbacks.updateItem(e, {
         id: data ? data.id : null,
-        viewSize: 'minimized'
+        hidden: !data.hidden
       });
     }
-  }, icons.minimize);
+  }, data.hidden ? icons.hide : icons.show);
 }
 function ButtonTrash(_ref5) {
   var prefix = _ref5.prefix,
@@ -799,6 +706,19 @@ function ButtonTrash(_ref5) {
     }
   }, icons.trash);
 }
+function ButtonPageView(_ref6) {
+  var prefix = _ref6.prefix,
+      icons = _ref6.icons,
+      callbacks = _ref6.callbacks,
+      viewSize = _ref6.viewSize;
+  return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
+    key: "".concat(prefix, "--button__pageview"),
+    className: "".concat(prefix, "--button ").concat(prefix, "--button__pageview"),
+    onClick: function onClick(e) {
+      return callbacks.changeView(e);
+    }
+  }, icons[viewSize] ? icons[viewSize] : "icons.".concat(viewSize));
+}
 
 /***/ }),
 
@@ -806,7 +726,7 @@ function ButtonTrash(_ref5) {
 /*!**********************************************************!*\
   !*** ./src/components/react-sticky-notes/icons/index.js ***!
   \**********************************************************/
-/*! exports provided: add, trash, menu, maximize, minimize */
+/*! exports provided: add, trash, menu, hide, show, normalview, bubbleview, pageview, fullscreen */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -814,13 +734,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "add", function() { return add; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trash", function() { return trash; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "menu", function() { return menu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "maximize", function() { return maximize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "minimize", function() { return minimize; });
-var add = '+';
-var trash = 'x';
-var menu = '•••';
-var maximize = '□';
-var minimize = '‗';
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hide", function() { return hide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "show", function() { return show; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalview", function() { return normalview; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bubbleview", function() { return bubbleview; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageview", function() { return pageview; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fullscreen", function() { return fullscreen; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+
+var iconsClassName = "material-icons";
+var add = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'add');
+var trash = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'delete_outlined');
+var menu = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'more_horiz');
+var hide = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'visibility_off');
+var show = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'minimize');
+var normalview = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'widgets');
+var bubbleview = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'grain');
+var pageview = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'fullscreen');
+var fullscreen = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'fullscreen_exit');
 
 /***/ }),
 
@@ -836,10 +794,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _reducers_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/reducer */ "./src/components/react-sticky-notes/reducers/reducer.js");
-/* harmony import */ var _partials_notes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/notes */ "./src/components/react-sticky-notes/partials/notes.js");
-/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navbar */ "./src/components/react-sticky-notes/navbar/index.js");
-/* harmony import */ var _icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./icons */ "./src/components/react-sticky-notes/icons/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icons */ "./src/components/react-sticky-notes/icons/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _views__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views */ "./src/components/react-sticky-notes/views/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
@@ -869,7 +826,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -922,7 +878,7 @@ function (_Component) {
         payload: {
           index: index,
           data: {
-            id: Object(_utils__WEBPACK_IMPORTED_MODULE_5__["getUUID"])(),
+            id: Object(_utils__WEBPACK_IMPORTED_MODULE_3__["getUUID"])(),
             color: _this.getColor(),
             text: '',
             selected: true,
@@ -944,15 +900,6 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "changeView", function (e, data) {
-      _this.dispatch({
-        type: 'changeview',
-        payload: {
-          data: data
-        }
-      });
-    });
-
     _defineProperty(_assertThisInitialized(_this), "deleteItem", function (e, data) {
       _this.dispatch({
         type: 'delete',
@@ -962,8 +909,15 @@ function (_Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "changeView", function (e) {
+      _this.dispatch({
+        type: 'changeview'
+      });
+    });
+
     _this.state = {
-      items: Object(_utils__WEBPACK_IMPORTED_MODULE_5__["getNotes"])(props.colorCodes, props.notes)
+      viewSize: 'normalview',
+      items: Object(_utils__WEBPACK_IMPORTED_MODULE_3__["getNotes"])(props.colorCodes, props.notes)
     };
     return _this;
   }
@@ -974,6 +928,17 @@ function (_Component) {
       if (this.props.useCSS) {
         __webpack_require__(/*! ./index.scss */ "./src/components/react-sticky-notes/index.scss");
       }
+
+      if (this.props.useMaterialIcons) {
+        var stylesheet = document.createElement('link');
+        stylesheet.href = "https://fonts.googleapis.com/icon?family=Material+Icons";
+        stylesheet.rel = "stylesheet";
+        stylesheet.id = "material-icons-css";
+
+        if (!document.getElementById('material-icons-css')) {
+          document.head.appendChild(stylesheet);
+        }
+      }
     }
   }, {
     key: "getColor",
@@ -983,45 +948,41 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var items = this.state.items;
-      var _this$props = this.props,
-          noteWidth = _this$props.noteWidth,
-          noteHeight = _this$props.noteHeight,
-          containerWidth = _this$props.containerWidth,
-          containerHeight = _this$props.containerHeight,
-          backgroundColor = _this$props.backgroundColor,
-          icons = _this$props.icons,
-          prefix = _this$props.prefix,
-          navbar = _this$props.navbar;
-      return [navbar ? Object(_utils__WEBPACK_IMPORTED_MODULE_5__["h"])(_navbar__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({
-        key: "".concat(prefix, "--navbar")
-      }, this.props, {
+      var _this$state = this.state,
+          items = _this$state.items,
+          viewSize = _this$state.viewSize;
+      var View = null;
+
+      switch (viewSize) {
+        case "pageview":
+          View = _views__WEBPACK_IMPORTED_MODULE_4__["PageView"];
+          break;
+
+        case "bubbleview":
+          View = _views__WEBPACK_IMPORTED_MODULE_4__["BubbleView"];
+          break;
+
+        case "fullscreen":
+          View = _views__WEBPACK_IMPORTED_MODULE_4__["FullscreenView"];
+          break;
+
+        default:
+          View = _views__WEBPACK_IMPORTED_MODULE_4__["NormalView"];
+          break;
+      }
+
+      return Object(_utils__WEBPACK_IMPORTED_MODULE_3__["h"])(View, _objectSpread({}, this.props, {
         items: items,
-        colorCodes: _utils__WEBPACK_IMPORTED_MODULE_5__["colorCodes"],
+        icons: _objectSpread({}, _icons__WEBPACK_IMPORTED_MODULE_2__, this.props.icons),
+        viewSize: viewSize,
+        colorCodes: _utils__WEBPACK_IMPORTED_MODULE_3__["colorCodes"],
         callbacks: {
           changeView: this.changeView,
           addItem: this.addItem,
           updateItem: this.updateItem,
           deleteItem: this.deleteItem
         }
-      })) : null, Object(_utils__WEBPACK_IMPORTED_MODULE_5__["h"])(_partials_notes__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        key: "".concat(prefix, "--notes"),
-        items: items,
-        noteWidth: noteWidth,
-        noteHeight: noteHeight,
-        containerWidth: containerWidth,
-        containerHeight: containerHeight,
-        backgroundColor: backgroundColor,
-        icons: icons,
-        prefix: prefix,
-        colorCodes: _utils__WEBPACK_IMPORTED_MODULE_5__["colorCodes"],
-        callbacks: {
-          changeView: this.changeView,
-          addItem: this.addItem,
-          updateItem: this.updateItem,
-          deleteItem: this.deleteItem
-        }
-      })];
+      }));
     }
   }]);
 
@@ -1031,14 +992,15 @@ function (_Component) {
 _defineProperty(ReactStickyNotes, "defaultProps", {
   useCSS: true,
   prefix: 'rs-notes',
-  colorCodes: _utils__WEBPACK_IMPORTED_MODULE_5__["colorCodes"],
+  colorCodes: _utils__WEBPACK_IMPORTED_MODULE_3__["colorCodes"],
   navbar: true,
   sessionKey: 'react-sticky-notes',
   noteWidth: 220,
   noteHeight: 220,
   containerWidth: '100%',
   containerHeight: '100%',
-  icons: _icons__WEBPACK_IMPORTED_MODULE_4__
+  icons: _icons__WEBPACK_IMPORTED_MODULE_2__,
+  useMaterialIcons: true
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (ReactStickyNotes);
@@ -1092,10 +1054,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function NavBar(_ref) {
-  var prefix = _ref.prefix,
+  var viewSize = _ref.viewSize,
+      prefix = _ref.prefix,
       items = _ref.items,
       callbacks = _ref.callbacks,
       icons = _ref.icons;
+  var buttons = [_buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTitle"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTrash"]];
+
+  if (viewSize === 'pageview' || viewSize === 'fullscreen') {
+    buttons.splice(1, 0, _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonMenu"]);
+  }
+
   return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
     className: "".concat(prefix, "--navbar"),
     style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('navbar')
@@ -1110,15 +1079,16 @@ function NavBar(_ref) {
       prefix: "".concat(prefix, "--navbar__item"),
       icons: icons,
       callbacks: callbacks,
-      buttons: [_buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTitle"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTrash"]]
+      buttons: buttons
     });
   }) : null), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
     key: "navbar-item__options"
   }, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_partials_note_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     prefix: "".concat(prefix, "--navbar__item"),
+    viewSize: viewSize,
     icons: icons,
     callbacks: callbacks,
-    buttons: [_buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonAdd"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTrash"]]
+    buttons: [_buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonAdd"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonPageView"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTrash"]]
   }))]);
 }
 
@@ -1159,6 +1129,98 @@ function NoteBody(props) {
     key: 'note-text'
   }, props)));
 }
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/partials/note-bubble.js":
+/*!*******************************************************************!*\
+  !*** ./src/components/react-sticky-notes/partials/note-bubble.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NoteBubble; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _note_draggable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./note-draggable */ "./src/components/react-sticky-notes/partials/note-draggable.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var NoteBubble =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(NoteBubble, _React$Component);
+
+  function NoteBubble(props) {
+    var _this;
+
+    _classCallCheck(this, NoteBubble);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(NoteBubble).call(this, props));
+    _this.targetRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    return _this;
+  }
+
+  _createClass(NoteBubble, [{
+    key: "render",
+    value: function render() {
+      var props = this.props;
+      return Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])(_note_draggable__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        className: "".concat(props.prefix, "--note ").concat(props.data.selected ? props.prefix + '--note__selected' : ''),
+        position: props.data.position,
+        selected: props.data.selected,
+        target: this.targetRef,
+        onDragComplete: function onDragComplete(pos) {
+          return props.callbacks.updateItem(null, {
+            id: props.data.id,
+            position: pos
+          });
+        },
+        style: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["getElementStyle"])('note', props)
+      }, Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])('div', {
+        ref: this.targetRef,
+        onClick: function onClick() {
+          return props.callbacks.updateItem(null, {
+            id: props.data.id,
+            hidden: false
+          });
+        },
+        style: {
+          width: '15px',
+          height: '15px',
+          borderRadius: '50%',
+          backgroundColor: props.data.color
+        }
+      }));
+    }
+  }]);
+
+  return NoteBubble;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
 
 /***/ }),
 
@@ -1214,7 +1276,7 @@ function (_React$Component) {
     _defineProperty(_assertThisInitialized(_this), "draggable", null);
 
     _defineProperty(_assertThisInitialized(_this), "onMouseDown", function (e) {
-      if (e.target === _this.props.target.current) {
+      if (_this.props.target && e.target === _this.props.target.current) {
         _this.draggable.onMouseDown(e);
       }
     });
@@ -1397,14 +1459,16 @@ function NoteText(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _note_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./note-header */ "./src/components/react-sticky-notes/partials/note-header.js");
-/* harmony import */ var _note_body__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./note-body */ "./src/components/react-sticky-notes/partials/note-body.js");
-/* harmony import */ var _note_draggable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./note-draggable */ "./src/components/react-sticky-notes/partials/note-draggable.js");
-/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../buttons */ "./src/components/react-sticky-notes/buttons/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _note_draggable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./note-draggable */ "./src/components/react-sticky-notes/partials/note-draggable.js");
+/* harmony import */ var _note_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./note-header */ "./src/components/react-sticky-notes/partials/note-header.js");
+/* harmony import */ var _note_body__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./note-body */ "./src/components/react-sticky-notes/partials/note-body.js");
+/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../buttons */ "./src/components/react-sticky-notes/buttons/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1414,15 +1478,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -1442,11 +1504,6 @@ function (_React$Component) {
     _classCallCheck(this, Note);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Note).call(this, props));
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      viewSize: 'normal'
-    });
-
     _this.targetRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
     return _this;
   }
@@ -1454,40 +1511,27 @@ function (_React$Component) {
   _createClass(Note, [{
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          data = _this$props.data,
-          prefix = _this$props.prefix,
-          callbacks = _this$props.callbacks;
-      return Object(_utils__WEBPACK_IMPORTED_MODULE_5__["h"])(_note_draggable__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        className: "".concat(prefix, "--note ").concat(data.selected ? prefix + '--note__selected' : '', " ").concat(data.viewSize ? prefix + '--note__' + data.viewSize : ''),
-        position: data.position,
-        selected: data.selected,
+      var props = this.props;
+      return Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])(_note_draggable__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        className: "".concat(props.prefix, "--note ").concat(props.data.selected ? props.prefix + '--note__selected' : ''),
+        position: props.data.position,
+        selected: props.data.selected,
         target: this.targetRef,
         onDragComplete: function onDragComplete(pos) {
-          return callbacks.updateItem(null, {
-            id: data.id,
+          return props.callbacks.updateItem(null, {
+            id: props.data.id,
             position: pos
           });
         },
-        style: Object(_utils__WEBPACK_IMPORTED_MODULE_5__["getElementStyle"])('note', this.props)
-      }, [data.viewSize === 'minimized' ? Object(_utils__WEBPACK_IMPORTED_MODULE_5__["h"])('div', {
-        key: 'note-header--minimized',
-        ref: this.targetRef,
-        style: Object(_utils__WEBPACK_IMPORTED_MODULE_5__["getElementStyle"])('note-minimized', this.props),
-        onClick: function onClick(e) {
-          return callbacks.changeView(e, {
-            id: data.id,
-            viewSize: null
-          });
-        }
-      }) : null, !data.viewSize ? Object(_utils__WEBPACK_IMPORTED_MODULE_5__["h"])(_note_header__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({}, this.props, {
+        style: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["getElementStyle"])('note', props)
+      }, [Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])(_note_header__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props, {
         key: 'note-header',
         targetRef: this.targetRef,
-        prefix: "".concat(prefix, "--header"),
-        buttons: [_buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonAdd"], _buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonTitle"], _buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonMenu"], _buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonMinimize"], _buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonTrash"]]
-      })) : null, !data.viewSize ? Object(_utils__WEBPACK_IMPORTED_MODULE_5__["h"])(_note_body__WEBPACK_IMPORTED_MODULE_2__["default"], _objectSpread({
+        prefix: "".concat(props.prefix, "--header"),
+        buttons: [_buttons__WEBPACK_IMPORTED_MODULE_5__["ButtonAdd"], _buttons__WEBPACK_IMPORTED_MODULE_5__["ButtonTitle"], _buttons__WEBPACK_IMPORTED_MODULE_5__["ButtonMenu"], _buttons__WEBPACK_IMPORTED_MODULE_5__["ButtonHideShow"], _buttons__WEBPACK_IMPORTED_MODULE_5__["ButtonTrash"]]
+      })), Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])(_note_body__WEBPACK_IMPORTED_MODULE_4__["default"], _objectSpread({
         key: 'note-body'
-      }, this.props)) : null]);
+      }, props))]);
     }
   }]);
 
@@ -1495,100 +1539,6 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Note);
-
-/***/ }),
-
-/***/ "./src/components/react-sticky-notes/partials/notes.js":
-/*!*************************************************************!*\
-  !*** ./src/components/react-sticky-notes/partials/notes.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _note__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./note */ "./src/components/react-sticky-notes/partials/note.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-var Notes =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(Notes, _React$Component);
-
-  function Notes(props) {
-    var _this;
-
-    _classCallCheck(this, Notes);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Notes).call(this, props));
-
-    _defineProperty(_assertThisInitialized(_this), "setToggle", function (toggle) {
-      _this.setState({
-        toggle: _this.state.toggle === toggle ? false : toggle
-      });
-    });
-
-    _this.state = {
-      toggle: false
-    };
-    return _this;
-  }
-
-  _createClass(Notes, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props = this.props,
-          prefix = _this$props.prefix,
-          items = _this$props.items;
-      return Object(_utils__WEBPACK_IMPORTED_MODULE_2__["h"])('div', {
-        key: prefix,
-        className: prefix,
-        style: Object(_utils__WEBPACK_IMPORTED_MODULE_2__["getElementStyle"])('container', this.props)
-      }, items ? items.map(function (data, index) {
-        return Object(_utils__WEBPACK_IMPORTED_MODULE_2__["h"])(_note__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({
-          key: "note-".concat(data.id),
-          data: data
-        }, _this2.props, {
-          toggle: _this2.state.toggle,
-          setToggle: _this2.setToggle
-        }));
-      }) : null);
-    }
-  }]);
-
-  return Notes;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (Notes);
 
 /***/ }),
 
@@ -1606,10 +1556,17 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var reducer = function reducer(state, action) {
-  var params = Object.keys(action.payload.data);
-  var items = state.items;
+  var viewSizes = ['bubbleview', 'normalview', 'pageview', 'fullscreen'];
+  var params = action.payload && action.payload.data ? Object.keys(action.payload.data) : [];
+  var items = state.items,
+      viewSize = state.viewSize;
 
   switch (action.type) {
+    case 'changeview':
+      var currentViewSize = viewSizes.indexOf(viewSize);
+      viewSize = currentViewSize > -1 && currentViewSize < viewSizes.length - 1 ? viewSizes[currentViewSize + 1] : viewSizes[0];
+      break;
+
     case 'add':
       items = items.map(function (item) {
         item.selected = false;
@@ -1649,21 +1606,14 @@ var reducer = function reducer(state, action) {
 
       break;
 
-    case 'changeview':
-      items = items.map(function (item) {
-        item.viewSize = item.id === action.payload.data.id ? action.payload.data.viewSize : item.viewSize;
-        item.selected = item.id === action.payload.data.id ? true : false;
-        return item;
-      });
-      break;
-
     default:
       items = state.items;
       break;
   }
 
   return {
-    items: items
+    items: items,
+    viewSize: viewSize
   };
 };
 
@@ -1858,21 +1808,16 @@ var getElementStyle = function getElementStyle(nodeName, props) {
     case "note":
       style = {
         position: 'absolute',
-        left: "".concat(props.data.position.x, "px"),
-        top: "".concat(props.data.position.y, "px"),
-        backgroundColor: props.data.color,
-        zIndex: props.data.selected ? 1 : 0,
-        borderRadius: props.data.viewSize === "minimized" ? '50%' : '0'
+        left: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? 0 : "".concat(props.data.position.x, "px"),
+        top: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? 0 : "".concat(props.data.position.y, "px"),
+        width: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : null,
+        height: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : null,
+        zIndex: props.data.selected ? 1 : 0
       };
       break;
 
-    case "note-minimized":
-      style.backgroundColor = props.data.color, style.padding = '10px';
-      style.borderRadius = '50%';
-      break;
-
     case "note-body":
-      style.width = props.noteWidth, style.height = props.noteHeight, style.overflow = "auto";
+      style.width = props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : props.noteWidth, style.height = props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : props.noteHeight, style.backgroundColor = props.data.color, style.overflow = "auto";
 
       if (props.data.selected) {
         style.minWidth = props.noteWidth, style.resize = "both";
@@ -1918,6 +1863,12 @@ var getElementStyle = function getElementStyle(nodeName, props) {
     case "note-color-selector":
       style = {
         backgroundColor: props.colorCode
+      };
+      break;
+
+    case "icon":
+      style = {
+        verticalAlign: 'middle'
       };
       break;
   }
@@ -2046,6 +1997,208 @@ __webpack_require__.r(__webpack_exports__);
 var nlToBr = function nlToBr(str) {
   return str ? str.replace(/(?:\r\n|\r|\n)/g, '<br>') : '';
 };
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/views/bubble-view.js":
+/*!****************************************************************!*\
+  !*** ./src/components/react-sticky-notes/views/bubble-view.js ***!
+  \****************************************************************/
+/*! exports provided: BubbleView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BubbleView", function() { return BubbleView; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../navbar */ "./src/components/react-sticky-notes/navbar/index.js");
+/* harmony import */ var _partials_note_bubble__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/note-bubble */ "./src/components/react-sticky-notes/partials/note-bubble.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+function BubbleView(props) {
+  return [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({}, props, {
+    key: 'navbar'
+  })), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+    key: props.prefix,
+    className: props.prefix,
+    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('container', props)
+  }, props.items.map(function (data) {
+    return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_partials_note_bubble__WEBPACK_IMPORTED_MODULE_2__["default"], _objectSpread({
+      key: "note-".concat(data.id)
+    }, props, {
+      data: data
+    }));
+  }))];
+}
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/views/fullscreen-view.js":
+/*!********************************************************************!*\
+  !*** ./src/components/react-sticky-notes/views/fullscreen-view.js ***!
+  \********************************************************************/
+/*! exports provided: FullscreenView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FullscreenView", function() { return FullscreenView; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../navbar */ "./src/components/react-sticky-notes/navbar/index.js");
+/* harmony import */ var _partials_note_body__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/note-body */ "./src/components/react-sticky-notes/partials/note-body.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+function FullscreenView(props) {
+  return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+    style: {
+      position: 'fixed',
+      left: 0,
+      top: 0,
+      width: '100vw',
+      height: '100vh'
+    }
+  }, [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({}, props, {
+    key: 'navbar'
+  })), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+    key: props.prefix,
+    className: props.prefix,
+    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('container', props)
+  }, props.items.map(function (data) {
+    return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+      key: "note-".concat(data.id),
+      className: "".concat(props.prefix, "--note"),
+      style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('note', _objectSpread({}, props, {
+        data: data
+      }))
+    }, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_partials_note_body__WEBPACK_IMPORTED_MODULE_2__["default"], _objectSpread({
+      data: data
+    }, props)));
+  }))]);
+}
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/views/index.js":
+/*!**********************************************************!*\
+  !*** ./src/components/react-sticky-notes/views/index.js ***!
+  \**********************************************************/
+/*! exports provided: NormalView, BubbleView, PageView, FullscreenView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _normal_view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./normal-view */ "./src/components/react-sticky-notes/views/normal-view.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NormalView", function() { return _normal_view__WEBPACK_IMPORTED_MODULE_0__["NormalView"]; });
+
+/* harmony import */ var _bubble_view__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bubble-view */ "./src/components/react-sticky-notes/views/bubble-view.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BubbleView", function() { return _bubble_view__WEBPACK_IMPORTED_MODULE_1__["BubbleView"]; });
+
+/* harmony import */ var _page_view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./page-view */ "./src/components/react-sticky-notes/views/page-view.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageView", function() { return _page_view__WEBPACK_IMPORTED_MODULE_2__["PageView"]; });
+
+/* harmony import */ var _fullscreen_view__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fullscreen-view */ "./src/components/react-sticky-notes/views/fullscreen-view.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FullscreenView", function() { return _fullscreen_view__WEBPACK_IMPORTED_MODULE_3__["FullscreenView"]; });
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/views/normal-view.js":
+/*!****************************************************************!*\
+  !*** ./src/components/react-sticky-notes/views/normal-view.js ***!
+  \****************************************************************/
+/*! exports provided: NormalView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NormalView", function() { return NormalView; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../navbar */ "./src/components/react-sticky-notes/navbar/index.js");
+/* harmony import */ var _partials_note__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/note */ "./src/components/react-sticky-notes/partials/note.js");
+/* harmony import */ var _partials_note_bubble__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../partials/note-bubble */ "./src/components/react-sticky-notes/partials/note-bubble.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+function NormalView(props) {
+  return [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({}, props, {
+    key: 'navbar'
+  })), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+    key: props.prefix,
+    className: props.prefix,
+    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('container', props)
+  }, props.items.map(function (data) {
+    return !data.hidden ? Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_partials_note__WEBPACK_IMPORTED_MODULE_2__["default"], _objectSpread({
+      key: "note-".concat(data.id)
+    }, props, {
+      data: data
+    })) : Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_partials_note_bubble__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({
+      key: "note-".concat(data.id)
+    }, props, {
+      data: data
+    }));
+  }))];
+}
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/views/page-view.js":
+/*!**************************************************************!*\
+  !*** ./src/components/react-sticky-notes/views/page-view.js ***!
+  \**************************************************************/
+/*! exports provided: PageView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageView", function() { return PageView; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../navbar */ "./src/components/react-sticky-notes/navbar/index.js");
+/* harmony import */ var _partials_note_body__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/note-body */ "./src/components/react-sticky-notes/partials/note-body.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+function PageView(props) {
+  return [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({}, props, {
+    key: 'navbar'
+  })), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+    key: props.prefix,
+    className: props.prefix,
+    style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('container', props)
+  }, props.items.map(function (data) {
+    return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+      key: "note-".concat(data.id),
+      className: "".concat(props.prefix, "--note"),
+      style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('note', _objectSpread({}, props, {
+        data: data
+      }))
+    }, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(_partials_note_body__WEBPACK_IMPORTED_MODULE_2__["default"], _objectSpread({
+      data: data
+    }, props)));
+  }))];
+}
 
 /***/ }),
 

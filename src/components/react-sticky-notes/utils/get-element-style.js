@@ -12,21 +12,17 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
         case "note":
                 style = {
                     position: 'absolute',
-                    left: `${props.data.position.x}px`,
-                    top: `${props.data.position.y}px`,
-                    backgroundColor: props.data.color,
+                    left: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:`${props.data.position.x}px`,
+                    top: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:`${props.data.position.y}px`,
+                    width: props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":null,
+                    height: props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":null,
                     zIndex: props.data.selected?1:0,
-                    borderRadius: props.data.viewSize==="minimized"?'50%':'0'
                 }
         break;
-        case "note-minimized":
-            style.backgroundColor=props.data.color,
-            style.padding = '10px';
-            style.borderRadius = '50%';
-        break;
         case "note-body":
-            style.width = props.noteWidth,
-            style.height = props.noteHeight,
+            style.width = props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":props.noteWidth,
+            style.height = props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":props.noteHeight,
+            style.backgroundColor= props.data.color,
             style.overflow = "auto";
             if(props.data.selected){
                 style.minWidth = props.noteWidth,
@@ -66,6 +62,11 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
         case "note-color-selector":
             style = {
                 backgroundColor: props.colorCode
+            }
+        break;
+        case "icon":
+            style = {
+                verticalAlign: 'middle'
             }
         break;
     }
