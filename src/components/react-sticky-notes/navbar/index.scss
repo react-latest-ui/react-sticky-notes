@@ -37,6 +37,7 @@
                 &__title{
                     text-align: left;
                     flex-grow: 1;
+                    min-width: 120px;
                 }
                 &:hover,&:focus{
                     opacity: 1;
