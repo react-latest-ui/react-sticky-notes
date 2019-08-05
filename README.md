@@ -2,7 +2,7 @@
 
 Sticky Notes for React Application
 
-![test image](D87F3CD4-8E41-4D39-84D6-8AB1BD6E7F16.jpeg)
+![Sticky Notes for React Application](react-sticky-notes.jpg)
 
 ## Installation
 
