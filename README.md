@@ -49,12 +49,9 @@ containerHeight: ?String{px|%},
 noteWidth: ?Number,
 noteHeight: ?Number,
 footer: ?Boolean = {true|false},
-
-// Callbacks
 onBeforeChange: (type:String, payload:Object, notes: Array) => {
 	return payload;
 }
-// Callbacks
 onChange: (type:String, payload:Object, notes: Array) => {
 
 }
