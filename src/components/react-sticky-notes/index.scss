@@ -3,6 +3,7 @@
 @import './partials/notes.scss';
 @import './partials/note-header.scss';
 @import './partials/note-text.scss';
+@import './partials/note-bubble.scss';
 @import './partials/note-menu.scss';
 .rs-notes{
     *,*::before,*::after{
@@ -14,4 +15,5 @@
     @include noteHeader();
     @include noteText();
     @include noteMenu();
+    @include noteBubble();
 }
