@@ -1,7 +1,7 @@
 export const getNoteTitle = ({ title, text }, { limit = 10, delimiter = null } ) => {
 	let _title;
 	if(title){
-		_title = title;
+		_title = String( title );
 	}else if(delimiter){
 		_title = String( text ).split(delimiter)[ 0 ];
 	}else{
