@@ -4,11 +4,13 @@ import getUUID from './get-uuid';
 import { nlToBr } from './nl-to-br';
 import { getNotes } from './get-notes';
 import { getElementStyle } from './get-element-style';
+import { getNoteTitle } from './get-note-title';
 export {
     h,
     colorCodes,
     nlToBr,
     getNotes,
     getElementStyle,
-    getUUID
+    getUUID,
+    getNoteTitle
 }
