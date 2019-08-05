@@ -2,6 +2,8 @@
 
 Sticky Notes for React Application
 
+![test image](D87F3CD4-8E41-4D39-84D6-8AB1BD6E7F16.jpeg)
+
 ## Installation
 
 Install the React Sticky Notes [package](https://www.npmjs.com/package/@react-latest-ui/react-sticky-notes) package using [npm](https://www.npmjs.com/):
