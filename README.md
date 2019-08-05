@@ -1,7 +1,5 @@
 # React Sticky Notes
 
-Sticky Notes for React Application
-
 ![Sticky Notes for React Application](react-sticky-notes.jpg)
 
 ## Installation
