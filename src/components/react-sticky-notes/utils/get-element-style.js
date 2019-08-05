@@ -17,8 +17,10 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
                     left: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:`${props.data.position.x}px`,
                     top: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:`${props.data.position.y}px`,
                     width: props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":null,
-                    height: props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":null,
-                    zIndex: props.data.selected?1:0,
+                    height: props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":null
+                }
+                if(props.data.selected){
+                    style.zIndex = 1;
                 }
         break;
         case "note-body":
