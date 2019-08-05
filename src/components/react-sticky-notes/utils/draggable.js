@@ -33,6 +33,8 @@ export default class Draggable {
         const position = this.getPosition(e);
         this.dx = position.left - rect.left;
         this.dy = position.top - rect.top;
+        
+        el.classList.add('draggable');
 
         document.addEventListener('mousemove', this.onMouseMove, null);
         document.addEventListener('mouseup', this.onMouseUp, null);
@@ -47,6 +49,8 @@ export default class Draggable {
                 y:this.currentY
             })
         }
+        
+        this.options.element.classList.remove('draggable');
         
         document.removeEventListener('mousemove', this.onMouseMove);
         document.removeEventListener('mouseup', this.onMouseUp);
