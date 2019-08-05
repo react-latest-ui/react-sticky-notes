@@ -16,10 +16,13 @@ export default class NoteBubble extends React.Component{
                 onDragComplete:(pos)=> props.callbacks.updateItem(null, {id: props.data.id, position:pos }),
                 style: getElementStyle('note', props )
             }, 
-            h('div',{
+            h('button',{
+                className: `${props.prefix}--note__bubble`,
                 ref: this.targetRef,
+                title: props.data.title,
                 onClick: ()=> props.callbacks.updateItem(null, {id: props.data.id, hidden: false }),
                 style: {
+                    "--background-color": props.data.color,
                     width: '15px',
                     height: '15px',
                     borderRadius: '50%',
