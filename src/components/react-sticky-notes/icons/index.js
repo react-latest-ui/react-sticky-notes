@@ -8,4 +8,5 @@ export const show = h('i',{ className: iconsClassName, style: getElementStyle('i
 export const normalview = h('i',{ className: iconsClassName, style: getElementStyle('icon') },'widgets');
 export const bubbleview = h('i',{ className: iconsClassName, style: getElementStyle('icon') },'grain');
 export const pageview = h('i',{ className: iconsClassName, style: getElementStyle('icon') },'fullscreen');
+export const _import = h('i',{ className: iconsClassName, style: getElementStyle('icon') },'arrow_upward');
 export const fullscreen = h('i',{ className: iconsClassName, style: getElementStyle('icon') },'fullscreen_exit');

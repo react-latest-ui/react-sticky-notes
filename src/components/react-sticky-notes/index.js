@@ -3,6 +3,7 @@ import reducer from './reducers/reducer';
 import * as icons from './icons';
 import { h, colorCodes, getNotes, getUUID } from './utils';
 import { NormalView, BubbleView, PageView, FullscreenView } from './views' ;
+import { ImportModal } from './modals' ;
 class ReactStickyNotes extends Component {
 	static defaultProps = {
 		useCSS: true,
@@ -20,6 +21,7 @@ class ReactStickyNotes extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			modal: null,
 			viewSize: 'normalview',
 			items: getNotes(props.colorCodes, props.notes)
 		};
@@ -99,22 +101,46 @@ class ReactStickyNotes extends Component {
 			type: 'changeview'
 		});
 	}
+	changeModal = (e, modal) => {
+		this.dispatch({
+			type: 'changemodal',
+			payload:{
+				modal
+			}
+		});
+	}
+	saveJSON = (e, items) => {
+		this.dispatch({
+			type: 'import',
+			payload:{
+				items
+			}
+		});
+	}
 	render() {
-		const { items, viewSize } = this.state;
+		const { items, viewSize, modal } = this.state;
         let View = null;
-        switch(viewSize){
-            case "pageview":
-                    View = PageView
-                break;
-            case "bubbleview":
-                    View = BubbleView
-                break;
-            case "fullscreen":
-                    View = FullscreenView
-                break;
-            default:
-                    View = NormalView
-                break;
+        if(modal){
+			switch(modal){
+				case "import":
+					View = ImportModal
+				break;
+			}
+		}else{
+			switch(viewSize){
+				case "pageview":
+					View = PageView
+				break;
+				case "bubbleview":
+					View = BubbleView
+				break;
+				case "fullscreen":
+					View = FullscreenView
+				break;
+				default:
+					View = NormalView
+				break;
+			}
 		}
 		return h( View, {
 			...this.props,
@@ -126,7 +152,9 @@ class ReactStickyNotes extends Component {
 				changeView: this.changeView,
 				addItem: this.addItem,
 				updateItem: this.updateItem,
-				deleteItem: this.deleteItem
+				deleteItem: this.deleteItem,
+				changeModal: this.changeModal,
+				saveJSON: this.saveJSON
 			}
 		})
 	}

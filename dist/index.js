@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between;\n    background-color: #999999; }\n    @media screen and (max-width: 800px) {\n      .rs-notes--navbar {\n        flex-direction: column-reverse; } }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle;\n      overflow: hidden; }\n      .rs-notes--navbar__item:before {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 0;\n        pointer-events: none;\n        background-color: rgba(0, 0, 0, 0.15); }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1;\n          min-width: 80px; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1;\n          background-color: rgba(0, 0, 0, 0.15); }\n  .rs-notes--header {\n    position: relative;\n    display: flex;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header:before {\n      content: '';\n      width: 100%;\n      height: 100%;\n      position: absolute;\n      left: 0;\n      top: 0;\n      pointer-events: none;\n      background-color: rgba(0, 0, 0, 0.15); }\n    .rs-notes--header--button {\n      cursor: pointer;\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      width: 32px; }\n      .rs-notes--header--button__title {\n        flex-grow: 1;\n        line-height: 30px;\n        text-align: left;\n        user-select: none;\n        cursor: move; }\n      .rs-notes--header--button:hover, .rs-notes--header--button:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button:disabled {\n        cursor: not-allowed; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n", ""]);
+exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note.draggable {\n    z-index: 9; }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between;\n    background-color: #999999; }\n    @media screen and (max-width: 800px) {\n      .rs-notes--navbar {\n        flex-direction: column-reverse; } }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle;\n      overflow: hidden; }\n      .rs-notes--navbar__item:before {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 0;\n        pointer-events: none;\n        background-color: rgba(0, 0, 0, 0.15); }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1;\n          min-width: 80px; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1;\n          background-color: rgba(0, 0, 0, 0.15); }\n  .rs-notes--header {\n    position: relative;\n    display: flex;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header:before {\n      content: '';\n      width: 100%;\n      height: 100%;\n      position: absolute;\n      left: 0;\n      top: 0;\n      pointer-events: none;\n      background-color: rgba(0, 0, 0, 0.15); }\n    .rs-notes--header--button {\n      cursor: pointer;\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      width: 32px; }\n      .rs-notes--header--button__title {\n        flex-grow: 1;\n        line-height: 30px;\n        text-align: left;\n        user-select: none;\n        cursor: move; }\n      .rs-notes--header--button:hover, .rs-notes--header--button:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button:disabled {\n        cursor: not-allowed; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n  .rs-notes--note__bubble {\n    cursor: move;\n    border: none;\n    outline: none; }\n    .rs-notes--note__bubble::before {\n      display: block;\n      opacity: 0;\n      content: attr(title);\n      transform: translate(-50%, -50%);\n      transform-origin: 0 0;\n      transition: all linear .4s;\n      overflow: hidden;\n      background-color: var(--background-color);\n      white-space: nowrap;\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      padding: 5px 8px;\n      border-radius: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      font-size: .9em; }\n    .rs-notes--note__bubble:hover::before {\n      opacity: 1; }\n    .rs-notes--note__bubble:focus, .rs-notes--note__bubble:active {\n      opacity: .5;\n      z-index: 9999; }\n", ""]);
 
 // exports
 
@@ -704,7 +704,7 @@ module.exports = function (css) {
 /*!************************************************************!*\
   !*** ./src/components/react-sticky-notes/buttons/index.js ***!
   \************************************************************/
-/*! exports provided: ButtonAdd, ButtonTitle, ButtonMenu, ButtonHideShow, ButtonTrash, ButtonPageView */
+/*! exports provided: ButtonAdd, ButtonTitle, ButtonMenu, ButtonHideShow, ButtonTrash, ButtonPageView, ButtonImport */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -715,6 +715,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonHideShow", function() { return ButtonHideShow; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonTrash", function() { return ButtonTrash; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonPageView", function() { return ButtonPageView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonImport", function() { return ButtonImport; });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
 
 function ButtonAdd(_ref) {
@@ -814,6 +815,18 @@ function ButtonPageView(_ref6) {
     }
   }, icons[viewSize] ? icons[viewSize] : "icons.".concat(viewSize));
 }
+function ButtonImport(_ref7) {
+  var prefix = _ref7.prefix,
+      icons = _ref7.icons,
+      callbacks = _ref7.callbacks;
+  return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
+    key: "".concat(prefix, "--button__import"),
+    className: "".concat(prefix, "--button ").concat(prefix, "--button__import"),
+    onClick: function onClick(e) {
+      return callbacks.changeModal(e, 'import');
+    }
+  }, icons._import);
+}
 
 /***/ }),
 
@@ -821,7 +834,7 @@ function ButtonPageView(_ref6) {
 /*!**********************************************************!*\
   !*** ./src/components/react-sticky-notes/icons/index.js ***!
   \**********************************************************/
-/*! exports provided: add, trash, menu, hide, show, normalview, bubbleview, pageview, fullscreen */
+/*! exports provided: add, trash, menu, hide, show, normalview, bubbleview, pageview, _import, fullscreen */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -834,6 +847,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalview", function() { return normalview; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bubbleview", function() { return bubbleview; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageview", function() { return pageview; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_import", function() { return _import; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fullscreen", function() { return fullscreen; });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
 
@@ -870,6 +884,10 @@ var pageview = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
   className: iconsClassName,
   style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
 }, 'fullscreen');
+var _import = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+  className: iconsClassName,
+  style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
+}, 'arrow_upward');
 var fullscreen = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
   className: iconsClassName,
   style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
@@ -892,6 +910,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icons */ "./src/components/react-sticky-notes/icons/index.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./src/components/react-sticky-notes/utils/index.js");
 /* harmony import */ var _views__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views */ "./src/components/react-sticky-notes/views/index.js");
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modals */ "./src/components/react-sticky-notes/modals/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
@@ -921,6 +940,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -1010,7 +1030,26 @@ function (_Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "changeModal", function (e, modal) {
+      _this.dispatch({
+        type: 'changemodal',
+        payload: {
+          modal: modal
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "saveJSON", function (e, items) {
+      _this.dispatch({
+        type: 'import',
+        payload: {
+          items: items
+        }
+      });
+    });
+
     _this.state = {
+      modal: null,
       viewSize: 'normalview',
       items: Object(_utils__WEBPACK_IMPORTED_MODULE_3__["getNotes"])(props.colorCodes, props.notes)
     };
@@ -1045,25 +1084,34 @@ function (_Component) {
     value: function render() {
       var _this$state = this.state,
           items = _this$state.items,
-          viewSize = _this$state.viewSize;
+          viewSize = _this$state.viewSize,
+          modal = _this$state.modal;
       var View = null;
 
-      switch (viewSize) {
-        case "pageview":
-          View = _views__WEBPACK_IMPORTED_MODULE_4__["PageView"];
-          break;
+      if (modal) {
+        switch (modal) {
+          case "import":
+            View = _modals__WEBPACK_IMPORTED_MODULE_5__["ImportModal"];
+            break;
+        }
+      } else {
+        switch (viewSize) {
+          case "pageview":
+            View = _views__WEBPACK_IMPORTED_MODULE_4__["PageView"];
+            break;
 
-        case "bubbleview":
-          View = _views__WEBPACK_IMPORTED_MODULE_4__["BubbleView"];
-          break;
+          case "bubbleview":
+            View = _views__WEBPACK_IMPORTED_MODULE_4__["BubbleView"];
+            break;
 
-        case "fullscreen":
-          View = _views__WEBPACK_IMPORTED_MODULE_4__["FullscreenView"];
-          break;
+          case "fullscreen":
+            View = _views__WEBPACK_IMPORTED_MODULE_4__["FullscreenView"];
+            break;
 
-        default:
-          View = _views__WEBPACK_IMPORTED_MODULE_4__["NormalView"];
-          break;
+          default:
+            View = _views__WEBPACK_IMPORTED_MODULE_4__["NormalView"];
+            break;
+        }
       }
 
       return Object(_utils__WEBPACK_IMPORTED_MODULE_3__["h"])(View, _objectSpread({}, this.props, {
@@ -1075,7 +1123,9 @@ function (_Component) {
           changeView: this.changeView,
           addItem: this.addItem,
           updateItem: this.updateItem,
-          deleteItem: this.deleteItem
+          deleteItem: this.deleteItem,
+          changeModal: this.changeModal,
+          saveJSON: this.saveJSON
         }
       }));
     }
@@ -1129,6 +1179,115 @@ var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addS
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/modals/import-modal.js":
+/*!******************************************************************!*\
+  !*** ./src/components/react-sticky-notes/modals/import-modal.js ***!
+  \******************************************************************/
+/*! exports provided: ImportModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImportModal", function() { return ImportModal; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var ImportModal =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ImportModal, _Component);
+
+  function ImportModal() {
+    var _this;
+
+    _classCallCheck(this, ImportModal);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ImportModal).call(this));
+    _this.jsonInput = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+    return _this;
+  }
+
+  _createClass(ImportModal, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var props = this.props;
+      return [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+        key: 'navbar',
+        className: "".concat(props.prefix, "--form-control"),
+        style: {
+          width: '100%',
+          height: '100%'
+        }
+      }, [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
+        key: 'navbar-button--cancel',
+        className: "".concat(props.prefix, "--form-control"),
+        onClick: function onClick(e) {
+          return props.callbacks.changeModal(e, null);
+        }
+      }, 'cancel'), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
+        key: 'navbar-button--save',
+        className: "".concat(props.prefix, "--form-control"),
+        onClick: function onClick(e) {
+          return props.callbacks.saveJSON(e, JSON.parse(_this2.jsonInput.current.value));
+        }
+      }, 'save')]), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+        key: props.prefix,
+        className: props.prefix,
+        style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('container', props)
+      }, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('textarea', {
+        ref: this.jsonInput,
+        className: "".concat(props.prefix, "--form-control"),
+        style: {
+          width: '100%',
+          height: '100%'
+        }
+      }))];
+    }
+  }]);
+
+  return ImportModal;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/modals/index.js":
+/*!***********************************************************!*\
+  !*** ./src/components/react-sticky-notes/modals/index.js ***!
+  \***********************************************************/
+/*! exports provided: ImportModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _import_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import-modal */ "./src/components/react-sticky-notes/modals/import-modal.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ImportModal", function() { return _import_modal__WEBPACK_IMPORTED_MODULE_0__["ImportModal"]; });
+
+
 
 /***/ }),
 
@@ -1186,7 +1345,7 @@ function NavBar(_ref) {
     viewSize: viewSize,
     icons: icons,
     callbacks: callbacks,
-    buttons: [_buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonAdd"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonPageView"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTrash"]]
+    buttons: [_buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonAdd"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonPageView"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonImport"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTrash"]]
   }))]);
 }
 
@@ -1297,8 +1456,10 @@ function (_React$Component) {
           });
         },
         style: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["getElementStyle"])('note', props)
-      }, Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])('div', {
+      }, Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])('button', {
+        className: "".concat(props.prefix, "--note__bubble"),
         ref: this.targetRef,
+        title: props.data.title,
         onClick: function onClick() {
           return props.callbacks.updateItem(null, {
             id: props.data.id,
@@ -1306,6 +1467,7 @@ function (_React$Component) {
           });
         },
         style: {
+          "--background-color": props.data.color,
           width: '15px',
           height: '15px',
           borderRadius: '50%',
@@ -1660,10 +1822,21 @@ var reducer = function reducer(state, action) {
   var viewSizes = ['bubbleview', 'normalview', 'pageview', 'fullscreen'];
   var params = action.payload && action.payload.data ? Object.keys(action.payload.data) : [];
   var items = state.items,
-      viewSize = state.viewSize;
+      viewSize = state.viewSize,
+      modal = state.modal;
 
   switch (action.type) {
+    case 'changemodal':
+      modal = action.payload.modal;
+      break;
+
+    case 'import':
+      modal = null;
+      items = action.payload.items;
+      break;
+
     case 'changeview':
+      modal = null;
       var currentViewSize = viewSizes.indexOf(viewSize);
       viewSize = currentViewSize > -1 && currentViewSize < viewSizes.length - 1 ? viewSizes[currentViewSize + 1] : viewSizes[0];
       break;
@@ -1714,7 +1887,8 @@ var reducer = function reducer(state, action) {
 
   return {
     items: items,
-    viewSize: viewSize
+    viewSize: viewSize,
+    modal: modal
   };
 };
 
@@ -1816,6 +1990,7 @@ function () {
 
       _this.dx = position.left - rect.left;
       _this.dy = position.top - rect.top;
+      el.classList.add('draggable');
       document.addEventListener('mousemove', _this.onMouseMove, null);
       document.addEventListener('mouseup', _this.onMouseUp, null);
       document.addEventListener('touchmove', _this.onMouseMove, {
@@ -1833,6 +2008,8 @@ function () {
           y: _this.currentY
         });
       }
+
+      _this.options.element.classList.remove('draggable');
 
       document.removeEventListener('mousemove', _this.onMouseMove);
       document.removeEventListener('mouseup', _this.onMouseUp);
@@ -1916,12 +2093,16 @@ var getElementStyle = function getElementStyle(nodeName, props) {
     case "note":
       style = _objectSpread({}, defaultStyle, {
         position: 'absolute',
-        left: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? 0 : "".concat(props.data.position.x, "px"),
-        top: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? 0 : "".concat(props.data.position.y, "px"),
+        left: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? 0 : props.data.position ? "".concat(props.data.position.x, "px") : 0,
+        top: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? 0 : props.data.position ? "".concat(props.data.position.y, "px") : 0,
         width: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : null,
-        height: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : null,
-        zIndex: props.data.selected ? 1 : 0
+        height: props.viewSize === "pageview" || props.viewSize === "fullscreen" ? "100%" : null
       });
+
+      if (props.data.selected) {
+        style.zIndex = 1;
+      }
+
       break;
 
     case "note-body":
@@ -1945,8 +2126,8 @@ var getElementStyle = function getElementStyle(nodeName, props) {
       style = _objectSpread({}, defaultStyle, {
         backgroundColor: props.data.color,
         position: 'absolute',
-        left: "".concat(props.data.position.x, "px"),
-        top: "".concat(props.data.position.y, "px"),
+        left: props.data.position ? "".concat(props.data.position.x, "px") : 0,
+        top: props.data.position ? "".concat(props.data.position.y, "px") : 0,
         width: '10px',
         height: '10px'
       });
@@ -1956,8 +2137,8 @@ var getElementStyle = function getElementStyle(nodeName, props) {
       style = _objectSpread({}, defaultStyle, {
         backgroundColor: props.data.color,
         position: 'absolute',
-        left: "".concat(props.data.position.x, "px"),
-        top: "".concat(props.data.position.y, "px"),
+        left: props.data.position ? "".concat(props.data.position.x, "px") : 0,
+        top: props.data.position ? "".concat(props.data.position.y, "px") : 0,
         width: '10px',
         height: '10px'
       });
@@ -1983,6 +2164,39 @@ var getElementStyle = function getElementStyle(nodeName, props) {
   }
 
   return style;
+};
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/utils/get-note-title.js":
+/*!*******************************************************************!*\
+  !*** ./src/components/react-sticky-notes/utils/get-note-title.js ***!
+  \*******************************************************************/
+/*! exports provided: getNoteTitle */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNoteTitle", function() { return getNoteTitle; });
+var getNoteTitle = function getNoteTitle(_ref) {
+  var title = _ref.title,
+      text = _ref.text,
+      _ref$limit = _ref.limit,
+      limit = _ref$limit === void 0 ? 10 : _ref$limit,
+      _ref$delimiter = _ref.delimiter,
+      delimiter = _ref$delimiter === void 0 ? null : _ref$delimiter;
+
+  var _title;
+
+  if (title) {
+    _title = String(title);
+  } else if (delimiter) {
+    _title = String(text).split(delimiter)[0];
+  } else {
+    _title = String(text).substr(0, limit);
+  }
+
+  return _title.substr(0, 1).toUpperCase() + _title.substr(1, _title.length);
 };
 
 /***/ }),
@@ -2060,7 +2274,7 @@ var h = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /*!**********************************************************!*\
   !*** ./src/components/react-sticky-notes/utils/index.js ***!
   \**********************************************************/
-/*! exports provided: h, colorCodes, nlToBr, getNotes, getElementStyle, getUUID */
+/*! exports provided: h, colorCodes, nlToBr, getNotes, getElementStyle, getUUID, getNoteTitle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2082,6 +2296,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _get_element_style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./get-element-style */ "./src/components/react-sticky-notes/utils/get-element-style.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getElementStyle", function() { return _get_element_style__WEBPACK_IMPORTED_MODULE_5__["getElementStyle"]; });
+
+/* harmony import */ var _get_note_title__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./get-note-title */ "./src/components/react-sticky-notes/utils/get-note-title.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getNoteTitle", function() { return _get_note_title__WEBPACK_IMPORTED_MODULE_6__["getNoteTitle"]; });
+
 
 
 

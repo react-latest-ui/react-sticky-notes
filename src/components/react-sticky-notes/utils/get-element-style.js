@@ -14,8 +14,8 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
                 style = {
                     ...defaultStyle,
                     position: 'absolute',
-                    left: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:`${props.data.position.x}px`,
-                    top: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:`${props.data.position.y}px`,
+                    left: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:props.data.position?`${props.data.position.x}px`:0,
+                    top: props.viewSize==="pageview"||props.viewSize==="fullscreen"?0:props.data.position?`${props.data.position.y}px`:0,
                     width: props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":null,
                     height: props.viewSize==="pageview"||props.viewSize==="fullscreen"?"100%":null
                 }
@@ -44,8 +44,8 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
                 ...defaultStyle,
                 backgroundColor: props.data.color,
                 position: 'absolute',
-                left: `${props.data.position.x}px`,
-                top: `${props.data.position.y}px`,
+                left: props.data.position?`${props.data.position.x}px`:0,
+                top: props.data.position?`${props.data.position.y}px`:0,
                 width: '10px',
                 height: '10px'
             }
@@ -55,8 +55,8 @@ export const getElementStyle = (nodeName, props, defaultStyle={}) => {
                 ...defaultStyle,
                 backgroundColor: props.data.color,
                 position: 'absolute',
-                left: `${props.data.position.x}px`,
-                top: `${props.data.position.y}px`,
+                left: props.data.position?`${props.data.position.x}px`:0,
+                top: props.data.position?`${props.data.position.y}px`:0,
                 width: '10px',
                 height: '10px'
             }

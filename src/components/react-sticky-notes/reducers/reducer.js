@@ -1,9 +1,17 @@
 const reducer = (state, action) => {
     const viewSizes = ['bubbleview', 'normalview', 'pageview','fullscreen'];
     const params = action.payload&&action.payload.data?Object.keys(action.payload.data):[];
-    let { items, viewSize } = state;
+    let { items, viewSize, modal } = state;
     switch (action.type) {
+		case 'changemodal':
+		    modal = action.payload.modal;
+        break;
+		case 'import':
+            modal = null;
+            items = action.payload.items;
+        break;
 		case 'changeview':
+            modal = null;
 		    const currentViewSize = viewSizes.indexOf(viewSize);
 		    viewSize = currentViewSize>-1&&currentViewSize<viewSizes.length-1?viewSizes[currentViewSize+1]:viewSizes[0];
         break;
@@ -40,6 +48,6 @@ const reducer = (state, action) => {
                 items = state.items;
             break;
     }
-    return { items, viewSize };
+    return { items, viewSize, modal };
 }
 export default reducer;
