@@ -61,12 +61,12 @@ export function ButtonPageView({prefix, icons, callbacks, viewSize }){
     );
 }
 
-export function ButtonImport({prefix, icons, callbacks }){
+export function ButtonUpload({prefix, icons, callbacks }){
     return h('button',{
         key: `${prefix}--button__import`,
-        className:`${prefix}--button ${prefix}--button__import`,
+        className:`${prefix}--button ${prefix}--button__upload`,
         onClick:(e)=> callbacks.changeModal(e, 'import')
     }, 
-        icons._import
+        icons.upload
     );
 }
