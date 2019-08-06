@@ -1,6 +1,6 @@
 {
   "name": "@react-latest-ui/react-sticky-notes",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "react sticky notes",
   "main": "dist/index.js",
   "author": "Manmohan Singh <mmsingh31246@gmail.com>",
