@@ -3,7 +3,7 @@ import reducer from './reducers/reducer';
 import * as icons from './icons';
 import { h, colorCodes, getNotes, getUUID } from './utils';
 import { NormalView, BubbleView, PageView, FullscreenView } from './views' ;
-import { ImportModal } from './modals' ;
+import { UploadModal } from './modals' ;
 class ReactStickyNotes extends Component {
 	static defaultProps = {
 		useCSS: true,
@@ -122,8 +122,8 @@ class ReactStickyNotes extends Component {
         let View = null;
         if(modal){
 			switch(modal){
-				case "import":
-					View = ImportModal
+				case "upload":
+					View = UploadModal
 				break;
 			}
 		}else{
