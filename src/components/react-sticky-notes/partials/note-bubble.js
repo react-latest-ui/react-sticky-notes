@@ -1,5 +1,5 @@
 import React from 'react';
-import { h, getElementStyle } from './../utils';
+import { h, getElementStyle, getNoteTitle } from './../utils';
 import NoteDraggable from './note-draggable';
 export default class NoteBubble extends React.Component{
     constructor(props){
@@ -19,7 +19,7 @@ export default class NoteBubble extends React.Component{
             h('button',{
                 className: `${props.prefix}--note__bubble`,
                 ref: this.targetRef,
-                title: props.data.title,
+                title: props.data.title?props.data.title: getNoteTitle(props.data),
                 onClick: ()=> props.callbacks.updateItem(null, {id: props.data.id, hidden: false }),
                 style: {
                     "--background-color": props.data.color,

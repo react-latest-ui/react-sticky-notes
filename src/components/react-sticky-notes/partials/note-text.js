@@ -6,7 +6,6 @@ function NoteText({ data, index, prefix, callbacks }) {
         contentEditable:"true",
         onBlur:(e)=>callbacks.updateItem(index, {
             id:data.id,
-            title: String(e.target.innerText).substr(0,10),
             text: e.target.innerText
         }),
         onFocus:(e)=>callbacks.updateItem(e, {id:data.id, selected:true}),

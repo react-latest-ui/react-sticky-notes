@@ -752,7 +752,7 @@ function ButtonTitle(_ref2) {
         hidden: false
       });
     }
-  }, data.title ? data.title : "...");
+  }, data.title ? data.title : Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getNoteTitle"])(data));
 }
 function ButtonMenu(_ref3) {
   var prefix = _ref3.prefix,
@@ -1039,11 +1039,11 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "saveJSON", function (e, items) {
+    _defineProperty(_assertThisInitialized(_this), "saveJSON", function (e, json) {
       _this.dispatch({
         type: 'import',
         payload: {
-          items: items
+          items: Object(_utils__WEBPACK_IMPORTED_MODULE_3__["getNotes"])(_this.props.colorCodes, json)
         }
       });
     });
@@ -1459,7 +1459,7 @@ function (_React$Component) {
       }, Object(_utils__WEBPACK_IMPORTED_MODULE_1__["h"])('button', {
         className: "".concat(props.prefix, "--note__bubble"),
         ref: this.targetRef,
-        title: props.data.title,
+        title: props.data.title ? props.data.title : Object(_utils__WEBPACK_IMPORTED_MODULE_1__["getNoteTitle"])(props.data),
         onClick: function onClick() {
           return props.callbacks.updateItem(null, {
             id: props.data.id,
@@ -1688,7 +1688,6 @@ function NoteText(_ref) {
     onBlur: function onBlur(e) {
       return callbacks.updateItem(index, {
         id: data.id,
-        title: String(e.target.innerText).substr(0, 10),
         text: e.target.innerText
       });
     },
@@ -2214,16 +2213,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _get_uuid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-uuid */ "./src/components/react-sticky-notes/utils/get-uuid.js");
 
 var getNotes = function getNotes(colorCodes, notes) {
-  var _notes = localStorage.getItem('react-sticky-notes') ? JSON.parse(localStorage.getItem('react-sticky-notes')) : notes ? notes : [{
-    id: Object(_get_uuid__WEBPACK_IMPORTED_MODULE_0__["default"])(),
-    text: '',
-    position: {
-      x: 0,
-      y: 0
-    },
-    color: colorCodes[Math.floor(Math.random() * colorCodes.length)],
-    selected: true
-  }];
+  var _notes = [];
+
+  if (notes) {
+    _notes = notes.map(function (note) {
+      note.id = Object(_get_uuid__WEBPACK_IMPORTED_MODULE_0__["default"])();
+      note.position = note.position ? note.position : {
+        x: 0,
+        y: 0
+      };
+      note.color = note.color ? note.color : colorCodes[Math.floor(Math.random() * colorCodes.length)];
+      return note;
+    });
+  } else if (localStorage.getItem('react-sticky-notes')) {
+    _notes = JSON.parse(localStorage.getItem('react-sticky-notes'));
+  } else {
+    _notes = [{
+      id: Object(_get_uuid__WEBPACK_IMPORTED_MODULE_0__["default"])(),
+      text: '',
+      position: {
+        x: 0,
+        y: 0
+      },
+      color: colorCodes[Math.floor(Math.random() * colorCodes.length)],
+      selected: true
+    }];
+  }
 
   return _notes;
 };

@@ -1,4 +1,4 @@
-import { h, getElementStyle } from './../utils';
+import { h, getNoteTitle } from './../utils';
 
 export function ButtonAdd({prefix, data, icons, callbacks}){
     return h('button',{
@@ -17,7 +17,7 @@ export function ButtonTitle({prefix, data, targetRef, callbacks }){
         ref: targetRef,
         onClick:(e)=>callbacks.updateItem(e, { id: data?data.id:null, menu: false, selected: true, hidden: false })
     },
-        data.title?data.title:"..."
+        data.title?data.title: getNoteTitle(data)
     )
 }
 

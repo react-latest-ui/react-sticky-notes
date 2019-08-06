@@ -109,11 +109,11 @@ class ReactStickyNotes extends Component {
 			}
 		});
 	}
-	saveJSON = (e, items) => {
+	saveJSON = (e, json) => {
 		this.dispatch({
 			type: 'import',
 			payload:{
-				items
+				items: getNotes(this.props.colorCodes, json)
 			}
 		});
 	}
