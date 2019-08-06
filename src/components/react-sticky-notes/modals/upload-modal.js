@@ -15,7 +15,6 @@ export class UploadModal extends Component{
     uploadFile = (e) => {
         const file = e.target.files[0];
         if(file){
-            console.log();
             if(file.type==='application/json'){
                 var reader = new FileReader();
                 reader.onload = (readerEvent) => {
