@@ -1,4 +1,4 @@
-import { h, nlToBr, getElementStyle } from './../utils';
+import { h, nlToBr, getElementStyle, getCurrentDateTime } from './../utils';
 function NoteText({ data, index, prefix, callbacks }) {
     return h('div',{
         className:`${prefix}--text`,
@@ -8,7 +8,7 @@ function NoteText({ data, index, prefix, callbacks }) {
             id:data.id,
             text: e.target.innerText
         }),
-        onFocus:(e)=>callbacks.updateItem(e, {id:data.id, selected:true}),
+        onFocus:(e)=>callbacks.updateItem(e, {id:data.id, selected:true, datetime: getCurrentDateTime() }),
         dangerouslySetInnerHTML:{__html:nlToBr(data.text)},
         style: getElementStyle('note-input')
     })
