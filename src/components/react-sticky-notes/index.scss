@@ -5,6 +5,7 @@
 @import './partials/note-text.scss';
 @import './partials/note-bubble.scss';
 @import './partials/note-menu.scss';
+@import './modals/upload-modal.scss';
 .rs-notes{
     *,*::before,*::after{
         box-sizing: border-box;
@@ -16,4 +17,5 @@
     @include noteText();
     @include noteMenu();
     @include noteBubble();
+    @include uploadForm();
 }
