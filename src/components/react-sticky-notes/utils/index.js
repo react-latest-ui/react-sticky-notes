@@ -4,6 +4,7 @@ import getUUID from './get-uuid';
 import { nlToBr } from './nl-to-br';
 import { getNotes } from './get-notes';
 import { getElementStyle } from './get-element-style';
+import { getCurrentDateTime } from './get-current-datetime';
 import { getNoteTitle } from './get-note-title';
 export {
     h,
@@ -12,5 +13,6 @@ export {
     getNotes,
     getElementStyle,
     getUUID,
-    getNoteTitle
+    getNoteTitle,
+    getCurrentDateTime
 }
