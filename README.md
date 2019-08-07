@@ -76,5 +76,5 @@ If you have a feature request, please add it as an issue or make a pull request.
 - [x] Resizable
 - [x] Draggable
 - [x] Responsive to all devices/desktop
-- [x] import notes from JSON/CSV
+- [x] Import notes from JSON/CSV
 - [ ] ---- 
