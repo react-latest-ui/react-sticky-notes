@@ -1,10 +1,14 @@
+const pkg = require('./package.json');
 const path = require('path');
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'index.js'
+        filename: 'index.js',
+        library: '',
+        libraryTarget: 'commonjs2'
     },
+    devtool: false,
     module: {
         rules: [
             {
@@ -29,5 +33,8 @@ module.exports = {
                 }]
             }]
 
-    }
+    },
+    externals: [
+        ...Object.keys(pkg.peerDependencies)
+    ]
 };

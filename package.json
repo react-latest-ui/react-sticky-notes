@@ -37,10 +37,11 @@
 	},
 	"scripts": {
 		"start": "webpack-dev-server --mode development --config webpack.config.dev-server.js",
-		"watch": "webpack --watch --mode development --config webpack.config.js",
-		"build:dev": "webpack --mode development --config webpack.config.js",
-		"build": "webpack --mode production --config webpack.config.js",
-		"predeploy": "npm run build",
+		"watch": "webpack --watch --mode development --config webpack.config.build.js",
+		"build:dev": "webpack --mode development --config webpack.config.build.js",
+		"build:prod": "webpack --watch --mode production --config webpack.config.build.js",
+		"build:deploy": "webpack --mode production --config webpack.config.js",
+		"predeploy": "npm run build:deploy",
 		"deploy": "gh-pages -d build"
 	},
 	"bugs": {
