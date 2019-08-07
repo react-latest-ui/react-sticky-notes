@@ -31,8 +31,8 @@ module.exports = {
                 }, {
                     loader: "sass-loader"
                 }]
-            }]
-
+            }
+        ]
     },
     externals: [
         ...Object.keys(pkg.peerDependencies)

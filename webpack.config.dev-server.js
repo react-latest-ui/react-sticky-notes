@@ -6,7 +6,7 @@ module.exports = {
     mode: "development",
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: '[name].js',
+        filename: 'index.js',
         publicPath: '/build/',
     },
     devtool: 'inline-source-map',
@@ -36,8 +36,8 @@ module.exports = {
             {
                 test: /\.svg$/,
                 loader: 'svg-url-loader'
-            }]
-
+            }
+        ]
     },
     devServer: {
         contentBase: path.join(__dirname, "public/"),
