@@ -4,6 +4,7 @@
             cursor: move;
             border: none;
             outline: none;
+            position: relative;
             &::before{
                 display: block;
                 opacity: 0;
