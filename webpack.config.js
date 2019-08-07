@@ -3,7 +3,7 @@ module.exports = {
     entry: './src/app.js',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'index.js'
+        filename: 'main.js'
     },
     module: {
         rules: [
