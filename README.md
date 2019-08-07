@@ -1,6 +1,6 @@
 # React Sticky Notes
 
-![Sticky Notes for React Application](screenshot.jpg)
+![Sticky Notes for React Application](screenshot.gif)
 
 ## Installation
 
