@@ -15,6 +15,9 @@ class NoteDraggable extends React.Component {
 		const el = this.element?this.element.current:null;
 		const options = {
 			element: el, 
+			unit: this.props.unit,
+			useBoundaries: this.props.useBoundaries,
+			disabledAxisX: this.props.disabledAxisX,
 			position: this.props.position,
 			onDragComplete:this.props.onDragComplete,
 			onInit:this.props.onInit
