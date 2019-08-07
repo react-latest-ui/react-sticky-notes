@@ -1,6 +1,8 @@
 export default class Draggable {
     dx=0;
     dy=0;
+    percentX = 0;
+    percentY = 0;
     currentX = 0;
     currentY = 0;
     init(options) {
@@ -19,7 +21,26 @@ export default class Draggable {
         this.currentX = x>0?x:0;
         this.currentY = y>0?y:0;
 
-        this.setTranslate(this.currentX, this.currentY);
+        if(this.options.useBoundaries){
+            const maxX = pRect.width-el.offsetWidth;
+            const maxY = pRect.height-el.offsetHeight;
+
+            if(this.currentX>=maxX){
+                this.currentX = maxX;
+            }
+
+            if(this.currentY>=maxY){
+                this.currentY = maxY;
+            }
+        }
+        if(this.options.unit==="%"){
+            this.percentX = this.currentX*100/pRect.width;
+            this.percentY = this.currentY*100/pRect.height;
+            this.setTranslate(`${this.percentX}%`, `${this.percentY}%`);
+        }else{
+            this.setTranslate(`${this.currentX}px`, `${this.currentY}px`);
+        }
+
 
     }
     onMouseDown = (e) => {
@@ -45,8 +66,10 @@ export default class Draggable {
     onMouseUp = (e) => {
         if(this.options.onDragComplete){
             this.options.onDragComplete.call(this, {
-                x:this.currentX,
-                y:this.currentY
+                x: this.currentX,
+                y: this.currentY,
+                px: this.percentX,
+                py: this.percentY
             })
         }
         
@@ -59,8 +82,12 @@ export default class Draggable {
     }
     setTranslate(x, y) {
         if(this.options.element){
-            this.options.element.style.left = `${x}px`;
-            this.options.element.style.top = `${y}px`;
+            if(!this.options.disabledAxisX){
+                this.options.element.style.left = x;
+            }
+            if(!this.options.disabledAxisY){
+                this.options.element.style.top = y;
+            }
         }
     }
     getPosition(e, dx=0, dy=0){
