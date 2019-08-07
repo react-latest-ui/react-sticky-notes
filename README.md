@@ -10,6 +10,14 @@ Install the React Sticky Notes [package](https://www.npmjs.com/package/@react-la
 npm install @react-latest-ui/react-sticky-notes --save
 ```
 
+## Setting Up
+
+```bash
+git clone https://github.com/react-latest-ui/react-sticky-notes.git
+npm install
+npm start run
+```
+
 ## Features
 
 * Pure React Sticky Notes
@@ -68,4 +76,5 @@ If you have a feature request, please add it as an issue or make a pull request.
 - [x] Resizable
 - [x] Draggable
 - [x] Responsive to all devices/desktop
+- [x] import notes from JSON/CSV
 - [ ] ---- 

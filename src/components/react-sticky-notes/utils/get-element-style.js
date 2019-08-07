@@ -1,4 +1,4 @@
-export const getElementStyle = (nodeName, props, defaultStyle={}) => {
+export function getElementStyle(nodeName, props, defaultStyle={}) {
     let style = defaultStyle;
     switch(nodeName){
         case "container":

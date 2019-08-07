@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note.draggable {\n    z-index: 9; }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between;\n    background-color: #999999; }\n    @media screen and (max-width: 800px) {\n      .rs-notes--navbar {\n        flex-direction: column-reverse; } }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle;\n      overflow: hidden; }\n      .rs-notes--navbar__item:before {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 0;\n        pointer-events: none;\n        background-color: rgba(0, 0, 0, 0.15); }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1;\n          min-width: 80px; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1;\n          background-color: rgba(0, 0, 0, 0.15); }\n  .rs-notes--header {\n    position: relative;\n    display: flex;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header:before {\n      content: '';\n      width: 100%;\n      height: 100%;\n      position: absolute;\n      left: 0;\n      top: 0;\n      pointer-events: none;\n      background-color: rgba(0, 0, 0, 0.15); }\n    .rs-notes--header--button {\n      cursor: pointer;\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      width: 32px; }\n      .rs-notes--header--button__title {\n        flex-grow: 1;\n        line-height: 30px;\n        text-align: left;\n        user-select: none;\n        cursor: move; }\n      .rs-notes--header--button:hover, .rs-notes--header--button:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button:disabled {\n        cursor: not-allowed; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n  .rs-notes--note__bubble {\n    cursor: move;\n    border: none;\n    outline: none; }\n    .rs-notes--note__bubble::before {\n      display: block;\n      opacity: 0;\n      content: attr(title);\n      transform: translate(-50%, -50%);\n      transform-origin: 0 0;\n      transition: all linear .4s;\n      overflow: hidden;\n      background-color: var(--background-color);\n      white-space: nowrap;\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      padding: 5px 8px;\n      border-radius: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      font-size: .9em; }\n    .rs-notes--note__bubble:hover::before {\n      opacity: 1; }\n    .rs-notes--note__bubble:focus, .rs-notes--note__bubble:active {\n      opacity: .5;\n      z-index: 9999; }\n", ""]);
+exports.push([module.i, "@keyframes shadowanim {\n  0% {\n    box-shadow: 0px 0px 0px 25px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 15px inset rgba(0, 0, 0, 0.15), 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; }\n  20% {\n    opacity: 0.9; }\n  50% {\n    opacity: 1; }\n  70% {\n    opacity: 0.9; }\n  100% {\n    box-shadow: 0px 0px 0px 0px inset rgba(0, 0, 0, 0.15);\n    opacity: 0.2; } }\n\n.rs-notes {\n  color: #ffffff;\n  text-align: left; }\n  .rs-notes *, .rs-notes *::before, .rs-notes *::after {\n    box-sizing: border-box; }\n  .rs-notes--note.draggable {\n    z-index: 9; }\n  .rs-notes--navbar {\n    white-space: nowrap;\n    display: flex;\n    justify-content: space-between;\n    background-color: #999999; }\n    @media screen and (max-width: 800px) {\n      .rs-notes--navbar {\n        flex-direction: column-reverse; } }\n    .rs-notes--navbar__nav {\n      display: flex;\n      flex-wrap: wrap; }\n    .rs-notes--navbar__options {\n      display: flex; }\n    .rs-notes--navbar__item {\n      display: flex;\n      flex-grow: 1;\n      position: relative;\n      vertical-align: middle;\n      overflow: hidden; }\n      .rs-notes--navbar__item:before {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 0;\n        pointer-events: none;\n        background-color: rgba(0, 0, 0, 0.15); }\n      .rs-notes--navbar__item--button {\n        cursor: pointer;\n        opacity: .8;\n        background: none;\n        border: none;\n        color: #fff;\n        padding: 3px 5px; }\n        .rs-notes--navbar__item--button__title {\n          text-align: left;\n          flex-grow: 1;\n          min-width: 80px; }\n        .rs-notes--navbar__item--button:hover, .rs-notes--navbar__item--button:focus {\n          opacity: 1;\n          background-color: rgba(0, 0, 0, 0.15); }\n  .rs-notes--header {\n    position: relative;\n    display: flex;\n    transition: all .3s linear;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }\n    .rs-notes--header svg {\n      line-height: 1;\n      vertical-align: middle; }\n    .rs-notes--header:before {\n      content: '';\n      width: 100%;\n      height: 100%;\n      position: absolute;\n      left: 0;\n      top: 0;\n      pointer-events: none;\n      background-color: rgba(0, 0, 0, 0.15); }\n    .rs-notes--header--button {\n      cursor: pointer;\n      line-height: 30px;\n      background: none;\n      border: none;\n      transition: all .2s linear;\n      padding: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      width: 32px; }\n      .rs-notes--header--button__title {\n        flex-grow: 1;\n        line-height: 30px;\n        text-align: left;\n        user-select: none;\n        cursor: move; }\n      .rs-notes--header--button:hover, .rs-notes--header--button:focus {\n        background-color: rgba(0, 0, 0, 0.25);\n        outline: none; }\n      .rs-notes--header--button:disabled {\n        cursor: not-allowed; }\n  .rs-notes--text {\n    padding: 10px;\n    font-size: 12px;\n    width: 100%; }\n    .rs-notes--text:empty::before {\n      color: rgba(255, 255, 255, 0.75);\n      content: 'Add your notes...'; }\n  .rs-notes--colors {\n    flex-grow: 1; }\n    .rs-notes--colors__color {\n      text-indent: -99999px;\n      cursor: pointer;\n      margin: 1px;\n      width: 3.6em;\n      height: 3.6em;\n      border-radius: 50%;\n      border: none;\n      outline: none;\n      transition: all 0.4s linear;\n      box-shadow: 0px 0px 0px 5px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color:hover, .rs-notes--colors__color:focus {\n        box-shadow: 0px 0px 0px 10px inset rgba(0, 0, 0, 0.15); }\n      .rs-notes--colors__color--selected {\n        animation-name: shadowanim;\n        animation-duration: 2s;\n        animation-iteration-count: 100;\n        opacity: .75; }\n  .rs-notes--note__bubble {\n    cursor: move;\n    border: none;\n    outline: none; }\n    .rs-notes--note__bubble::before {\n      display: block;\n      opacity: 0;\n      content: attr(title);\n      transform: translate(-50%, -50%);\n      transform-origin: 0 0;\n      transition: all linear .4s;\n      overflow: hidden;\n      background-color: var(--background-color);\n      white-space: nowrap;\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      padding: 5px 8px;\n      border-radius: 5px;\n      color: rgba(255, 255, 255, 0.75);\n      font-size: .9em; }\n    .rs-notes--note__bubble:hover::before {\n      opacity: 1; }\n    .rs-notes--note__bubble:focus, .rs-notes--note__bubble:active {\n      opacity: .5;\n      z-index: 9999; }\n  .rs-notes--file-upload {\n    position: relative;\n    min-height: 100%;\n    display: flex;\n    flex-direction: column; }\n  .rs-notes p {\n    margin: 5px 0; }\n  .rs-notes--file-preview {\n    text-align: left;\n    overflow: auto;\n    width: 100%;\n    border: none;\n    resize: none;\n    flex-grow: 1;\n    min-height: 150px; }\n  .rs-notes--file-drop {\n    padding: 30px;\n    position: relative;\n    background-color: #eeeeee;\n    color: #999999;\n    outline: 2px dashed #999999;\n    outline-offset: -10px;\n    transition: outline-offset .15s ease-in-out, background-color .15s linear;\n    text-align: center; }\n    .rs-notes--file-drop:hover {\n      outline-offset: -20px;\n      outline-color: #cccccc;\n      background-color: #ffffff; }\n    .rs-notes--file-drop__cover {\n      flex-grow: 1; }\n  .rs-notes--upload-link {\n    font-size: 1.25rem; }\n  .rs-notes--file-input {\n    width: 100%;\n    height: 100%;\n    opacity: 0;\n    overflow: hidden;\n    position: absolute;\n    left: 0;\n    top: 0;\n    z-index: 0; }\n  .rs-notes--file-label {\n    position: relative;\n    cursor: pointer;\n    color: #666666; }\n    .rs-notes--file-label:hover {\n      color: #999999; }\n  .rs-notes--upload-actions {\n    padding: 24px; }\n  .rs-notes--form-cancel, .rs-notes--form-save {\n    padding: 8px 15px;\n    border: none;\n    background: #999999;\n    color: #ffffff;\n    cursor: pointer; }\n    .rs-notes--form-cancel:hover, .rs-notes--form-save:hover {\n      background: rgba(0, 0, 0, 0.15); }\n  .rs-notes--upload-error {\n    background-color: #cc0000;\n    font-size: .85em;\n    color: #fff;\n    padding: 3px 5px; }\n  .rs-notes--upload-actions {\n    text-align: center; }\n", ""]);
 
 // exports
 
@@ -704,7 +704,7 @@ module.exports = function (css) {
 /*!************************************************************!*\
   !*** ./src/components/react-sticky-notes/buttons/index.js ***!
   \************************************************************/
-/*! exports provided: ButtonAdd, ButtonTitle, ButtonMenu, ButtonHideShow, ButtonTrash, ButtonPageView, ButtonImport */
+/*! exports provided: ButtonAdd, ButtonTitle, ButtonMenu, ButtonHideShow, ButtonTrash, ButtonPageView, ButtonUpload */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -715,7 +715,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonHideShow", function() { return ButtonHideShow; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonTrash", function() { return ButtonTrash; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonPageView", function() { return ButtonPageView; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonImport", function() { return ButtonImport; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonUpload", function() { return ButtonUpload; });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
 
 function ButtonAdd(_ref) {
@@ -815,17 +815,17 @@ function ButtonPageView(_ref6) {
     }
   }, icons[viewSize] ? icons[viewSize] : "icons.".concat(viewSize));
 }
-function ButtonImport(_ref7) {
+function ButtonUpload(_ref7) {
   var prefix = _ref7.prefix,
       icons = _ref7.icons,
       callbacks = _ref7.callbacks;
   return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
-    key: "".concat(prefix, "--button__import"),
-    className: "".concat(prefix, "--button ").concat(prefix, "--button__import"),
+    key: "".concat(prefix, "--button__upload"),
+    className: "".concat(prefix, "--button ").concat(prefix, "--button__upload"),
     onClick: function onClick(e) {
-      return callbacks.changeModal(e, 'import');
+      return callbacks.changeModal(e, 'upload');
     }
-  }, icons._import);
+  }, icons.upload);
 }
 
 /***/ }),
@@ -834,7 +834,7 @@ function ButtonImport(_ref7) {
 /*!**********************************************************!*\
   !*** ./src/components/react-sticky-notes/icons/index.js ***!
   \**********************************************************/
-/*! exports provided: add, trash, menu, hide, show, normalview, bubbleview, pageview, _import, fullscreen */
+/*! exports provided: add, trash, menu, hide, show, normalview, bubbleview, pageview, upload, fullscreen */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -847,7 +847,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalview", function() { return normalview; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bubbleview", function() { return bubbleview; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageview", function() { return pageview; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_import", function() { return _import; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "upload", function() { return upload; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fullscreen", function() { return fullscreen; });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
 
@@ -884,10 +884,10 @@ var pageview = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
   className: iconsClassName,
   style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
 }, 'fullscreen');
-var _import = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
+var upload = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
   className: iconsClassName,
   style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
-}, 'arrow_upward');
+}, 'cloud_upload');
 var fullscreen = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('i', {
   className: iconsClassName,
   style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('icon')
@@ -1090,8 +1090,8 @@ function (_Component) {
 
       if (modal) {
         switch (modal) {
-          case "import":
-            View = _modals__WEBPACK_IMPORTED_MODULE_5__["ImportModal"];
+          case "upload":
+            View = _modals__WEBPACK_IMPORTED_MODULE_5__["UploadModal"];
             break;
         }
       } else {
@@ -1118,7 +1118,6 @@ function (_Component) {
         items: items,
         icons: _objectSpread({}, _icons__WEBPACK_IMPORTED_MODULE_2__, this.props.icons),
         viewSize: viewSize,
-        colorCodes: _utils__WEBPACK_IMPORTED_MODULE_3__["colorCodes"],
         callbacks: {
           changeView: this.changeView,
           addItem: this.addItem,
@@ -1137,7 +1136,7 @@ function (_Component) {
 _defineProperty(ReactStickyNotes, "defaultProps", {
   useCSS: true,
   prefix: 'rs-notes',
-  colorCodes: _utils__WEBPACK_IMPORTED_MODULE_3__["colorCodes"],
+  colorCodes: Object(_utils__WEBPACK_IMPORTED_MODULE_3__["getColorCodes"])(),
   navbar: true,
   sessionKey: 'react-sticky-notes',
   noteWidth: 220,
@@ -1182,16 +1181,32 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./src/components/react-sticky-notes/modals/import-modal.js":
-/*!******************************************************************!*\
-  !*** ./src/components/react-sticky-notes/modals/import-modal.js ***!
-  \******************************************************************/
-/*! exports provided: ImportModal */
+/***/ "./src/components/react-sticky-notes/modals/index.js":
+/*!***********************************************************!*\
+  !*** ./src/components/react-sticky-notes/modals/index.js ***!
+  \***********************************************************/
+/*! exports provided: UploadModal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImportModal", function() { return ImportModal; });
+/* harmony import */ var _upload_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./upload-modal */ "./src/components/react-sticky-notes/modals/upload-modal.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UploadModal", function() { return _upload_modal__WEBPACK_IMPORTED_MODULE_0__["UploadModal"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/modals/upload-modal.js":
+/*!******************************************************************!*\
+  !*** ./src/components/react-sticky-notes/modals/upload-modal.js ***!
+  \******************************************************************/
+/*! exports provided: UploadModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadModal", function() { return UploadModal; });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utils */ "./src/components/react-sticky-notes/utils/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -1205,89 +1220,176 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-var ImportModal =
+
+var UploadModal =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(ImportModal, _Component);
+  _inherits(UploadModal, _Component);
 
-  function ImportModal() {
+  function UploadModal() {
     var _this;
 
-    _classCallCheck(this, ImportModal);
+    _classCallCheck(this, UploadModal);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ImportModal).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UploadModal).call(this));
+
+    _defineProperty(_assertThisInitialized(_this), "uploadFile", function (e) {
+      var file = e.target.files[0];
+
+      if (file) {
+        if (file.type === 'application/json' || file.type === "application/vnd.ms-excel") {
+          var reader = new FileReader();
+
+          reader.onload = function (readerEvent) {
+            var response, responseText;
+
+            switch (file.type) {
+              case "application/vnd.ms-excel":
+                response = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["parseCSV"])(readerEvent.target.result);
+                break;
+
+              case "application/json":
+                response = JSON.parse(readerEvent.target.result);
+                break;
+            }
+
+            responseText = JSON.stringify(response, null, 4);
+
+            _this.handleResponse(null, responseText, response);
+          };
+
+          reader.onerror = function (readerEvent) {
+            this.handleResponse("File could not be read! Code " + readerEvent.target.error.code);
+          };
+
+          reader.readAsText(file);
+        } else {
+          _this.handleResponse("File type is not allowed. Please upload a JSON or CSV file.");
+        }
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "saveJSON", function (e) {
+      var response = _this.state.response;
+
+      if (response) {
+        _this.props.callbacks.saveJSON(e, response);
+      }
+    });
+
+    _this.state = {
+      error: '',
+      response: null,
+      contents: null
+    };
     _this.jsonInput = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
     return _this;
   }
 
-  _createClass(ImportModal, [{
+  _createClass(UploadModal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.handleResponse(null, null, null);
+    }
+  }, {
+    key: "handleResponse",
+    value: function handleResponse(err, contents, response) {
+      var error = err;
+
+      if (response) {
+        if (!Array.isArray(response)) {
+          error = "Please upload a valid JSON or CSV file.";
+          response = null;
+          contents = null;
+        }
+      }
+
+      this.setState({
+        error: error,
+        contents: contents,
+        response: response
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
+      var _this$state = this.state,
+          error = _this$state.error,
+          contents = _this$state.contents;
       var props = this.props;
-      return [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
-        key: 'navbar',
-        className: "".concat(props.prefix, "--form-control"),
-        style: {
-          width: '100%',
-          height: '100%'
-        }
-      }, [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
-        key: 'navbar-button--cancel',
-        className: "".concat(props.prefix, "--form-control"),
+      return Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+        key: "".concat(props.prefix),
+        className: "".concat(props.prefix, " ").concat(props.prefix, "--file-upload")
+      }, [contents ? Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('textarea', {
+        key: 'file-upload--contents',
+        className: "".concat(props.prefix, "--file-preview"),
+        readOnly: true,
+        defaultValue: contents
+      }) : null, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+        key: "".concat(props.prefix, "--file-drop"),
+        className: "".concat(props.prefix, "--file-drop ").concat(!contents ? props.prefix + '--file-drop__cover' : '')
+      }, [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('input', {
+        key: 'upload-button',
+        type: 'file',
+        id: "".concat(props.prefix, "--file-input"),
+        className: "".concat(props.prefix, "--file-input"),
+        accept: ".json,.csv",
+        onChange: function onChange(e) {
+          return _this2.uploadFile(e);
+        },
+        placeholder: 'upload file'
+      }), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('p', {
+        key: 'upload-link',
+        className: "".concat(props.prefix, "--upload-link")
+      }, [Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('label', {
+        key: "choose-a-file",
+        className: "".concat(props.prefix, "--file-label"),
+        htmlFor: "".concat(props.prefix, "--file-input")
+      }, contents ? "Choose a another file" : "Choose a file"), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('span', {
+        key: "drop-a-file"
+      }, " or drag it here.")])]), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
+        key: 'file-upload--actions',
+        className: "".concat(props.prefix, "--upload-actions")
+      }, [error ? Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('p', {
+        key: 'upload-error',
+        className: "".concat(props.prefix, "--upload-error")
+      }, error) : null, contents ? Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+        key: 'file-upload--save-cancel'
+      }, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
+        key: 'file-upload--cancel',
+        className: "".concat(props.prefix, "--form-cancel"),
         onClick: function onClick(e) {
           return props.callbacks.changeModal(e, null);
         }
-      }, 'cancel'), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
-        key: 'navbar-button--save',
-        className: "".concat(props.prefix, "--form-control"),
+      }, 'Cancel'), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
+        key: 'file-upload--save',
+        className: "".concat(props.prefix, "--form-save"),
+        onClick: this.saveJSON
+      }, 'Save')) : Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('button', {
+        key: 'file-upload--cancel',
+        className: "".concat(props.prefix, "--form-cancel"),
         onClick: function onClick(e) {
-          return props.callbacks.saveJSON(e, JSON.parse(_this2.jsonInput.current.value));
+          return props.callbacks.changeModal(e, null);
         }
-      }, 'save')]), Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('div', {
-        key: props.prefix,
-        className: props.prefix,
-        style: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getElementStyle"])('container', props)
-      }, Object(_utils__WEBPACK_IMPORTED_MODULE_0__["h"])('textarea', {
-        ref: this.jsonInput,
-        className: "".concat(props.prefix, "--form-control"),
-        style: {
-          width: '100%',
-          height: '100%'
-        }
-      }))];
+      }, 'Back to notes.')])]);
     }
   }]);
 
-  return ImportModal;
+  return UploadModal;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
-
-/***/ }),
-
-/***/ "./src/components/react-sticky-notes/modals/index.js":
-/*!***********************************************************!*\
-  !*** ./src/components/react-sticky-notes/modals/index.js ***!
-  \***********************************************************/
-/*! exports provided: ImportModal */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _import_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import-modal */ "./src/components/react-sticky-notes/modals/import-modal.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ImportModal", function() { return _import_modal__WEBPACK_IMPORTED_MODULE_0__["ImportModal"]; });
-
-
 
 /***/ }),
 
@@ -1345,7 +1447,7 @@ function NavBar(_ref) {
     viewSize: viewSize,
     icons: icons,
     callbacks: callbacks,
-    buttons: [_buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonAdd"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonPageView"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonImport"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTrash"]]
+    buttons: [_buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonAdd"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonPageView"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonUpload"], _buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonTrash"]]
   }))]);
 }
 
@@ -1694,7 +1796,8 @@ function NoteText(_ref) {
     onFocus: function onFocus(e) {
       return callbacks.updateItem(e, {
         id: data.id,
-        selected: true
+        selected: true,
+        datetime: Object(_utils__WEBPACK_IMPORTED_MODULE_0__["getCurrentDateTime"])()
       });
     },
     dangerouslySetInnerHTML: {
@@ -1899,12 +2002,13 @@ var reducer = function reducer(state, action) {
 /*!****************************************************************!*\
   !*** ./src/components/react-sticky-notes/utils/color-codes.js ***!
   \****************************************************************/
-/*! exports provided: default */
+/*! exports provided: getColorCodes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var getColorCodes = function getColorCodes() {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getColorCodes", function() { return getColorCodes; });
+function getColorCodes() {
   var codes = [];
 
   for (var i = 0; i < 360; i += 18) {
@@ -1912,9 +2016,8 @@ var getColorCodes = function getColorCodes() {
   }
 
   return codes;
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (getColorCodes());
+}
+;
 
 /***/ }),
 
@@ -2061,6 +2164,22 @@ function () {
 
 /***/ }),
 
+/***/ "./src/components/react-sticky-notes/utils/get-current-datetime.js":
+/*!*************************************************************************!*\
+  !*** ./src/components/react-sticky-notes/utils/get-current-datetime.js ***!
+  \*************************************************************************/
+/*! exports provided: getCurrentDateTime */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCurrentDateTime", function() { return getCurrentDateTime; });
+function getCurrentDateTime() {
+  return new Date().toISOString().replace('T', ' ').substring(0, 19);
+}
+
+/***/ }),
+
 /***/ "./src/components/react-sticky-notes/utils/get-element-style.js":
 /*!**********************************************************************!*\
   !*** ./src/components/react-sticky-notes/utils/get-element-style.js ***!
@@ -2075,7 +2194,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var getElementStyle = function getElementStyle(nodeName, props) {
+function getElementStyle(nodeName, props) {
   var defaultStyle = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   var style = defaultStyle;
 
@@ -2163,7 +2282,7 @@ var getElementStyle = function getElementStyle(nodeName, props) {
   }
 
   return style;
-};
+}
 
 /***/ }),
 
@@ -2177,7 +2296,7 @@ var getElementStyle = function getElementStyle(nodeName, props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNoteTitle", function() { return getNoteTitle; });
-var getNoteTitle = function getNoteTitle(_ref) {
+function getNoteTitle(_ref) {
   var title = _ref.title,
       text = _ref.text,
       _ref$limit = _ref.limit,
@@ -2196,7 +2315,7 @@ var getNoteTitle = function getNoteTitle(_ref) {
   }
 
   return _title.substr(0, 1).toUpperCase() + _title.substr(1, _title.length);
-};
+}
 
 /***/ }),
 
@@ -2212,12 +2331,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNotes", function() { return getNotes; });
 /* harmony import */ var _get_uuid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-uuid */ "./src/components/react-sticky-notes/utils/get-uuid.js");
 
-var getNotes = function getNotes(colorCodes, notes) {
+function getNotes(colorCodes, notes) {
   var _notes = [];
 
   if (notes) {
     _notes = notes.map(function (note) {
-      note.id = Object(_get_uuid__WEBPACK_IMPORTED_MODULE_0__["default"])();
+      note.id = note.id ? note.id : Object(_get_uuid__WEBPACK_IMPORTED_MODULE_0__["getUUID"])();
       note.position = note.position ? note.position : {
         x: 0,
         y: 0
@@ -2229,7 +2348,7 @@ var getNotes = function getNotes(colorCodes, notes) {
     _notes = JSON.parse(localStorage.getItem('react-sticky-notes'));
   } else {
     _notes = [{
-      id: Object(_get_uuid__WEBPACK_IMPORTED_MODULE_0__["default"])(),
+      id: Object(_get_uuid__WEBPACK_IMPORTED_MODULE_0__["getUUID"])(),
       text: '',
       position: {
         x: 0,
@@ -2241,7 +2360,7 @@ var getNotes = function getNotes(colorCodes, notes) {
   }
 
   return _notes;
-};
+}
 
 /***/ }),
 
@@ -2249,11 +2368,12 @@ var getNotes = function getNotes(colorCodes, notes) {
 /*!*************************************************************!*\
   !*** ./src/components/react-sticky-notes/utils/get-uuid.js ***!
   \*************************************************************/
-/*! exports provided: default */
+/*! exports provided: getUUID */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUUID", function() { return getUUID; });
 function getUUID() {
   var dt = new Date().getTime();
   var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -2263,8 +2383,6 @@ function getUUID() {
   });
   return uuid;
 }
-
-/* harmony default export */ __webpack_exports__["default"] = (getUUID);
 
 /***/ }),
 
@@ -2289,7 +2407,7 @@ var h = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /*!**********************************************************!*\
   !*** ./src/components/react-sticky-notes/utils/index.js ***!
   \**********************************************************/
-/*! exports provided: h, colorCodes, nlToBr, getNotes, getElementStyle, getUUID, getNoteTitle */
+/*! exports provided: h, getColorCodes, getUUID, nlToBr, getNotes, getElementStyle, getCurrentDateTime, getNoteTitle, parseCSV */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2298,10 +2416,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "h", function() { return _h__WEBPACK_IMPORTED_MODULE_0__["h"]; });
 
 /* harmony import */ var _color_codes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./color-codes */ "./src/components/react-sticky-notes/utils/color-codes.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "colorCodes", function() { return _color_codes__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getColorCodes", function() { return _color_codes__WEBPACK_IMPORTED_MODULE_1__["getColorCodes"]; });
 
 /* harmony import */ var _get_uuid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./get-uuid */ "./src/components/react-sticky-notes/utils/get-uuid.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getUUID", function() { return _get_uuid__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getUUID", function() { return _get_uuid__WEBPACK_IMPORTED_MODULE_2__["getUUID"]; });
 
 /* harmony import */ var _nl_to_br__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nl-to-br */ "./src/components/react-sticky-notes/utils/nl-to-br.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nlToBr", function() { return _nl_to_br__WEBPACK_IMPORTED_MODULE_3__["nlToBr"]; });
@@ -2312,8 +2430,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _get_element_style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./get-element-style */ "./src/components/react-sticky-notes/utils/get-element-style.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getElementStyle", function() { return _get_element_style__WEBPACK_IMPORTED_MODULE_5__["getElementStyle"]; });
 
-/* harmony import */ var _get_note_title__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./get-note-title */ "./src/components/react-sticky-notes/utils/get-note-title.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getNoteTitle", function() { return _get_note_title__WEBPACK_IMPORTED_MODULE_6__["getNoteTitle"]; });
+/* harmony import */ var _get_current_datetime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./get-current-datetime */ "./src/components/react-sticky-notes/utils/get-current-datetime.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getCurrentDateTime", function() { return _get_current_datetime__WEBPACK_IMPORTED_MODULE_6__["getCurrentDateTime"]; });
+
+/* harmony import */ var _get_note_title__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./get-note-title */ "./src/components/react-sticky-notes/utils/get-note-title.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getNoteTitle", function() { return _get_note_title__WEBPACK_IMPORTED_MODULE_7__["getNoteTitle"]; });
+
+/* harmony import */ var _parse_csv__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./parse-csv */ "./src/components/react-sticky-notes/utils/parse-csv.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseCSV", function() { return _parse_csv__WEBPACK_IMPORTED_MODULE_8__["parseCSV"]; });
+
 
 
 
@@ -2336,9 +2461,79 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nlToBr", function() { return nlToBr; });
-var nlToBr = function nlToBr(str) {
+function nlToBr(str) {
   return str ? str.replace(/(?:\r\n|\r|\n)/g, '<br>') : '';
-};
+}
+
+/***/ }),
+
+/***/ "./src/components/react-sticky-notes/utils/parse-csv.js":
+/*!**************************************************************!*\
+  !*** ./src/components/react-sticky-notes/utils/parse-csv.js ***!
+  \**************************************************************/
+/*! exports provided: parseCSV */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseCSV", function() { return parseCSV; });
+function parseCSV(str) {
+  var arr = [];
+  var quote = false;
+
+  for (var row = 0, col = 0, c = 0; c < str.length; c++) {
+    var currentCharacter = str[c],
+        nextCharacter = str[c + 1];
+    arr[row] = arr[row] || [];
+    arr[row][col] = arr[row][col] || '';
+
+    if (currentCharacter == '"' && quote && nextCharacter == '"') {
+      arr[row][col] += currentCharacter;
+      ++c;
+      continue;
+    }
+
+    if (currentCharacter == '"') {
+      quote = !quote;
+      continue;
+    }
+
+    if (currentCharacter == ',' && !quote) {
+      ++col;
+      continue;
+    }
+
+    if (currentCharacter == '\r' && nextCharacter == '\n' && !quote) {
+      col = 0;
+      ++row;
+      ++c;
+      continue;
+    }
+
+    if ((currentCharacter == '\r' || currentCharacter == '\n') && !quote) {
+      ++row;
+      col = 0;
+      continue;
+    }
+
+    arr[row][col] += currentCharacter;
+  }
+
+  var results = [];
+  var headers = arr[0];
+
+  for (var i = 1; i < arr.length; i++) {
+    var result = {};
+
+    for (var j = 0; j < arr[i].length; j++) {
+      result[headers[j]] = arr[i][j];
+    }
+
+    results.push(result);
+  }
+
+  return results;
+}
 
 /***/ }),
 

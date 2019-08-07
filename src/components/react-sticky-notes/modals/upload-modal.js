@@ -1,54 +1,64 @@
-import { h, getElementStyle } from './../utils';
+import { h, getElementStyle, parseCSV } from './../utils';
 import React, { Component, Fragment } from 'react';
 export class UploadModal extends Component{
     constructor(){
         super();
         this.state = {
             error: '',
+            response: null,
             contents: null
         }
         this.jsonInput = React.createRef();
     }
     componentDidMount(){
-        this.handleResponse(null, null);
+        this.handleResponse(null, null, null);
     }
     uploadFile = (e) => {
         const file = e.target.files[0];
         if(file){
-            if(file.type==='application/json'){
+            if( file.type==='application/json' || file.type==="application/vnd.ms-excel" ){
                 var reader = new FileReader();
                 reader.onload = (readerEvent) => {
-                    this.handleResponse(null, readerEvent.target.result);
+                    let response, responseText;
+                    switch(file.type){
+                        case "application/vnd.ms-excel":
+                            response = parseCSV(readerEvent.target.result);
+                        break;
+                        case "application/json":
+                            response = JSON.parse(readerEvent.target.result);
+                        break;
+                    }
+                    responseText = JSON.stringify(response, null, 4);
+                    this.handleResponse(null, responseText, response);
                 };
                 reader.onerror = function(readerEvent) {
                     this.handleResponse("File could not be read! Code " + readerEvent.target.error.code);
                 };
                 reader.readAsText(file);
             }else{
-                this.handleResponse( "File type is not allowed. Please upload a JSON file." );
+                this.handleResponse( "File type is not allowed. Please upload a JSON or CSV file." );
             }
         }
     }
-    handleResponse(err, response){
-        let error = err, parseContents, contents = response;
+    handleResponse(err, contents, response){
+        let error = err;
         if(response){
-            parseContents = JSON.parse(response);
-            if(!Array.isArray(parseContents)){
-                error = "Please upload a valid JSON file."
-                parseContents = null;
+            if(!Array.isArray(response)){
+                error = "Please upload a valid JSON or CSV file."
+                response = null;
                 contents = null;
             }
         }
         this.setState({
             error, 
-            contents,
-            parseContents
+            contents:contents,
+            response:response
         })
     }
     saveJSON = (e) => {
-        const { parseContents } = this.state;
-        if(parseContents){
-            this.props.callbacks.saveJSON(e, parseContents )
+        const { response } = this.state;
+        if(response){
+            this.props.callbacks.saveJSON(e, response )
         }
     }
     render(){
@@ -73,6 +83,7 @@ export class UploadModal extends Component{
                     type: 'file',
                     id: `${props.prefix}--file-input`,
                     className: `${props.prefix}--file-input`,
+                    accept: ".json,.csv",
                     onChange: (e)=>this.uploadFile(e),
                     placeholder: 'upload file'
                 }),

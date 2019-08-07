@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import reducer from './reducers/reducer';
 import * as icons from './icons';
-import { h, colorCodes, getNotes, getUUID } from './utils';
+import { h, getColorCodes, getNotes, getUUID } from './utils';
 import { NormalView, BubbleView, PageView, FullscreenView } from './views' ;
 import { UploadModal } from './modals' ;
 class ReactStickyNotes extends Component {
 	static defaultProps = {
 		useCSS: true,
 		prefix: 'rs-notes',
-		colorCodes,
+		colorCodes: getColorCodes(),
 		navbar: true,
 		sessionKey: 'react-sticky-notes',
 		noteWidth: 220,
@@ -147,7 +147,6 @@ class ReactStickyNotes extends Component {
 			items,
 			icons: { ...icons, ...this.props.icons },
 			viewSize,
-			colorCodes,
 			callbacks: {
 				changeView: this.changeView,
 				addItem: this.addItem,

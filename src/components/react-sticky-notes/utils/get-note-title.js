@@ -1,4 +1,4 @@
-export const getNoteTitle = ({ title, text, limit = 10, delimiter = null } ) => {
+export function getNoteTitle({ title, text, limit = 10, delimiter = null } ) {
 	let _title;
 	if(title){
 		_title = String( title );

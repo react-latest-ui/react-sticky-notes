@@ -15,11 +15,12 @@
         border: none;
         resize: none;
         flex-grow: 1;
+        min-height: 150px;
     }
     &--file-drop{
         padding: 30px;
         position: relative;
-        background-color: #cccccc;
+        background-color: #eeeeee;
         color: #999999;
         outline: 2px dashed #999999;
         outline-offset: -10px;
