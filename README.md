@@ -1,5 +1,11 @@
 # React Sticky Notes
 
+A sticky library handles stack of stickies without dependencies(like jQuery)
+
+# Demo
+
+https://react-latest-ui.github.io/react-sticky-notes/
+
 ![Sticky Notes for React Application](screenshot.gif)
 
 ## Installation
