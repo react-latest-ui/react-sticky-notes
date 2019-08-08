@@ -8,7 +8,7 @@ https://react-latest-ui.github.io/react-sticky-notes/
 
 screenshot.gif
 
-![Sticky Notes for React Application]()
+![Sticky Notes for React Application](screenshot.gif)
 
 ## Installation
 
