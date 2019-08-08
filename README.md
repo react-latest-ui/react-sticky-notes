@@ -6,7 +6,8 @@ A lightweight react component to handle stickies, notes and reminders without an
 
 https://react-latest-ui.github.io/react-sticky-notes/
 
-![Sticky Notes for React Application](screenshot.gif)
+screenshot.gif
+![Sticky Notes for React Application]()
 
 ## Installation
 
