@@ -1,6 +1,6 @@
 # React Sticky Notes
 
-A sticky library handles stack of stickies without dependencies(like jQuery)
+A lightweight component to handle stickies without any single dependencies(like jQuery) except React.
 
 # Demo
 
