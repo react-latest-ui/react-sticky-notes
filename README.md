@@ -1,6 +1,6 @@
 # React Sticky Notes
 
-A lightweight component to handle stickies without any single dependencies(like jQuery) except React.
+A lightweight react component to handle stickies without any single dependencies(like jQuery) except React.
 
 # Demo
 
